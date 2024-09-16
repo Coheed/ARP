@@ -1,0 +1,161 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% set img = content.field_image['#items'].entity.uri.value %}
+{% if img is not null %}
+	{% set img_url = file_url(img) %}
+{% else %}
+	{% set img_url = '/' %}
+{% endif %}
+<article{{ attributes.addClass(classes) }}>
+	{% if img_url != '/'%}
+		<section class="wrapper pb-90 inner-page-hero blog-page-section image-wrapper bg-image bg-overlay bg--scroll text-white" data-image-src="{{ img_url }}">
+	{% else %}
+		<section class="wrapper pb-90 inner-page-hero blog-page-section">
+	{% endif %}
+		<div class="{{ container }} pt-0">
+			<div class="row">
+				<div class="col-md-10 col-xl-8 mx-auto">
+					<div class="single-post-title text-center">
+
+						<!-- Post Tag -->
+						<span class="post-tag color--green-400">{{ content.field_blog_category }}</span>	
+
+						<!-- Title -->
+						<h2 class="s-46 w-700">{{ label }}</h2>
+
+						<!-- Post Meta -->
+						<div class="blog-post-meta mt-35">
+							<ul class="post-meta-list ico-10">
+								<li><p class="p-md w-500 text-white">By {{ author_name }}</p></li>
+								<li class="meta-list-divider"><p class="text-white"><span class="flaticon-minus"></span></p></li>
+								<li><p class="p-md text-white">{{ node.getCreatedTime|date('d M Y') }}</p></li>
+								<li class="meta-list-divider"><p class="text-white"><span class="flaticon-minus"></span></p></li>
+								<li><p class="p-md text-white"><a href="#comments">{{ node.comment.comment_count }}<span> Comments</span></a></p></li>
+							</ul>
+						</div>
+
+					</div>
+					<!-- /.post-header -->
+				</div>
+				<!-- /column -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+
+	<section class="wrapper">
+		<div class="{{ container }} space-md">
+			<div class="row">
+				<div class="col-lg-10 mx-auto">
+					<div class="single-post-txt pb-15">
+						{{ content|without('field_blog_category','field_image','field_background_image','comment','field_video','field_mainmenu_transparent','field_mainmenu_absolute') }}
+					</div>
+
+					<div class="post-author py-100 x-border">						
+						<!-- Avatar -->	
+						<div class="post-author-avatar">
+							{{ author_picture }}
+						</div>
+
+						<!-- Text -->
+						<div class="post-author-txt">
+							<!-- Title -->
+							<h5 class="s-24 w-700">{{ node.getOwner.field_user_name.value }}</h5>
+
+							<!-- Text -->
+							<p>{{ node.getOwner.field_user_description.value }}</p>
+
+							<!-- Follow Button -->
+							<div class="author-follow-btn r-04"><a href="/user/{{ node.getOwnerId }}">Follow</a></div>
+						</div>
+					</div>	<!-- END ABOUT POST AUTHOR -->	
+
+					<!-- POST COMMENTS -->
+					<div class="post-comments" id="comments">
+						<div class="comments-wrapper">
+							{{ content.comment }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</article>

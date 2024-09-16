@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains formblock.module.
+ */
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function formblock_entity_type_alter(array &$entity_types) {
+
+  // Add a form class for node and user form mode.
+  // Until https://www.drupal.org/project/formblock/issues/2492285 go fixed.
+  $types = ['node', 'user'];
+
+  foreach ($types as $key) {
+    if (isset($entity_types[$key])) {
+      $type = $entity_types[$key];
+      if (isset($type->getHandlerClasses()['form'])) {
+        $entity_form_handlers = $default_handler_class = $type->getHandlerClasses()['form'];
+        $form_modes = \Drupal::service('entity_display.repository')
+          ->getFormModes($key);
+
+        foreach ($form_modes as $form_mode_id => $form_mode) {
+          if (!isset($entity_form_handlers[$form_mode_id])) {
+            // We set the form class, keyed by the machine name
+            // of our custom form mode.
+            $type->setFormClass($form_mode_id, $entity_form_handlers['default']);
+          }
+        }
+      }
+    }
+  }
+}

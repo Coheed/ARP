@@ -1,0 +1,31 @@
+name: Martex
+type: theme
+description: 'A Drupal 10 Multi-Purpose Theme, created by Symphony Themes.'
+core: 10.x
+core_version_requirement: ^9 || ^10
+base theme: bootstrap_barrio
+
+libraries:
+  - martex/global-styling
+
+regions:
+  top_bar: 'Top bar'
+  branding: 'Site branding'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_other: 'Navigation Other'
+  title: 'Title'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'  
+  footer: 'Footer'
+  disabled: 'Disabled'
+
+# Override theme's parent libraries
+libraries-override:
+  bootstrap_barrio/global-styling:
+    css:
+      component:
+        css/components/table.css: false

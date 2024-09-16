@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Theme override to display a one-column layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ */
+#}
+{% if content %}
+  <div{{ attributes.addClass('row') }}>
+    <div{{ region_attributes.first.addClass('col-12') }}>
+      {{ content.first }}
+    </div>
+  </div>
+{% endif %}

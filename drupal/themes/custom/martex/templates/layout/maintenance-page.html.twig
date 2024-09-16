@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Olivero's theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+ #}
+<div class="main-container">
+  <section class="wrapper bg-light">
+    <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
+      <div class="row">
+        <div class="col-lg-9 col-xl-8 mx-auto">
+          <figure class="mb-10"><img class="img-fluid" src="/themes/custom/sandbox/img/maintenance.png" alt=""></figure>
+        </div>
+        <!-- /column -->
+        <div class="col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
+          {{ page.content }}</p>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+</div>

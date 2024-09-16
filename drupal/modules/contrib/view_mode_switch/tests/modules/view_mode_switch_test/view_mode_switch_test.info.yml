@@ -1,0 +1,13 @@
+name: 'View Mode Switch Field Test'
+description: 'Provides view mode switch test assets.'
+type: module
+core_version_requirement: ^10.2 || ^11
+package: Testing
+dependencies:
+  - drupal:entity_test
+  - view_mode_switch:view_mode_switch
+
+# Information added by Drupal.org packaging script on 2024-08-27
+version: '2.1.0'
+project: 'view_mode_switch'
+datestamp: 1724772377

@@ -1,0 +1,42 @@
+{% extends "block--bare.html.twig" %}
+{#
+/**
+ * @file
+ * Default theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ *
+ * @ingroup templates
+ */
+#}
+{% block content %}
+  {% if site_logo %}
+    <!-- MOBILE HEADER -->
+    <div class="wsmobileheader clearfix">	  	
+      <span class="smllogo"><img src="{{ base_path }}/themes/custom/martex/logo.png" alt="mobile-logo"></span>
+      <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>	
+    </div>
+
+    <!-- HEADER BLACK LOGO -->
+    <div class="desktoplogo">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="logo-black" ><img src="{{ site_logo }}" alt="{{ 'Home'|t }}"></a>
+    </div>
+
+    <!-- HEADER WHITE LOGO -->
+    <div class="desktoplogo">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="logo-white"><img src="{{ base_path }}/themes/custom/martex/logo-white.png" alt="{{ 'Home'|t }}"></a>
+    </div>
+  {% endif %}
+  {% if site_name %}
+    <a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+  {% endif %}
+  {% if site_slogan %}
+    <p class="navbar-text">{{ site_slogan }}</p>
+  {% endif %}
+{% endblock %}

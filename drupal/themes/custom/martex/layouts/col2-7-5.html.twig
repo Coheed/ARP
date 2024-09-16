@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a media layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  {% if content.top %}
+    <div {{ region_attributes.top.addClass('region--top') }}>
+      {{ content.top }}
+    </div>
+  {% endif %}
+  <div{{ attributes.addClass('row gx-lg-8 gx-xl-12 gy-10') }}>
+    <div{{ region_attributes.first.addClass('col-lg-7') }}>
+      {{ content.first }}
+    </div>
+
+    <div{{ region_attributes.second.addClass('col-lg-5') }}>
+      {{ content.second }}
+    </div>
+  </div>
+  {% if content.bottom %}
+    <div {{ region_attributes.bottom.addClass('region--bottom') }}>
+      {{ content.bottom }}
+    </div>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,106 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set img = content.field_paragraph_image['#items'].entity.uri.value %}
+{% if img is not null %}
+	{% set img_url = file_url(img) %}
+{% else %}
+	{% set img_url = '/' %}
+{% endif %}
+{% set img_pos = paragraph.field_paragraph_image_position.value|render|trim|default('top') %}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'card',
+    img_pos == 'background' ? 'image-wrapper bg-full bg-image',
+    paragraph.field_paragraph_extra_class.value|render|trim, 
+    paragraph.field_paragraph_shadow.value|render|trim,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
+  ]
+%}
+{% set card_body_attributes = create_attribute() %}
+{%
+ set card_body_classes = [
+  'card-body',
+  paragraph.field_paragraph_padding.value|render|trim
+ ]
+%}
+{% block paragraph %}
+  {# If shadow background #}
+  {% if paragraph.field_paragraph_shadow_bg_class.value|render|trim %}
+    <div class="position-relative">
+      <div class="shape rounded {{ paragraph.field_paragraph_shadow_bg_class.value|render|trim }} rellax d-md-block" data-rellax-speed="0" style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
+  {% endif %}
+  
+  {# Card content #}
+  <div{{ attributes.addClass(classes) }} {% if img_pos == 'background' and img_url != '/' %}data-image-src="{{ img_url }}"{% endif %} >
+    {% if img_url == '/' or img_pos == 'background' %}
+      <div{{ card_body_attributes.addClass(card_body_classes) }}>{{ content.field_paragraph_content }}</div>
+    {% else %}
+      {% if img_pos == 'top' %}
+        <img class="card-img-top" src="{{ img_url }}" alt="image">
+        <div{{ card_body_attributes.addClass(card_body_classes) }}>{{ content.field_paragraph_content }}</div>
+      {% elseif img_pos == 'bottom' %}        
+        <div{{ card_body_attributes.addClass(card_body_classes) }}>{{ content.field_paragraph_content }}</div>
+        <img class="card-img-bottom" src="{{ img_url }}" alt="image">
+      {% elseif img_pos == 'left' %}
+        <div class="row gx-0">
+          <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-start" data-image-src="{{ img_url }}"></div>
+          <div class="col-lg-6">
+            <div{{ card_body_attributes.addClass(card_body_classes) }}>{{ content.field_paragraph_content }}</div>
+          </div>
+        </div>
+      {% elseif img_pos == 'right' %}
+        <div class="row gx-0">
+          <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-end order-md-2" data-image-src="{{ img_url }}"></div>
+          <div class="col-lg-6">
+            <div{{ card_body_attributes.addClass(card_body_classes) }}>{{ content.field_paragraph_content }}</div>
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+    {# End card content #} 
+
+    {% if paragraph.field_paragraph_shadow_bg_class.value|render|trim %}
+      </div>
+    {% endif %}
+  </div>
+{% endblock paragraph %}

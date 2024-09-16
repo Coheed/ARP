@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<article{{ attributes.addClass('profile') }}>
+
+    <section class="wrapper space-0 bg-light">
+      <div class="container pt-16 pt-md-18 pb-12 pb-md-18 pb-lg-20">
+        <div class="row mt-10">
+          <div class="col-lg-3 mx-auto">
+            <div class="img-mask mask-2">{{ content.user_picture }}</div>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="row mt-5">
+          <div class="col-md-10 col-lg-9 col-xxl-8 mx-auto text-center">
+            <h3 class="s-24 text-uppercase text-muted mb-3">{{ content.field_user_role }}</h3>
+            <h2 class="s-48 w-700 mb-5">{{ content.field_user_name }}</h2>
+            <p class="lead fs-22">{{ content.field_user_description}}</p>
+            {# {% if content %} {{- content -}} {% endif %} #}
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <div class="overflow-hidden">
+        <div class="divider text-light mx-n2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 92.26">
+            <path fill="currentColor" d="M1206,21.2c-60-5-119-36.92-291-5C772,51.11,768,48.42,708,43.13c-60-5.68-108-29.92-168-30.22-60,.3-147,27.93-207,28.23-60-.3-122-25.94-182-36.91S30,5.93,0,16.2V92.26H1440v-87l-30,5.29C1348.94,22.29,1266,26.19,1206,21.2Z" />
+          </svg>
+        </div>
+      </div>
+      <!-- /.overflow-hidden -->
+    </section>
+    <section class="wrapper division-bottom">
+      <div class="container pt-12 pb-12">
+        <div class="mt-md-n20 mt-lg-n22">
+          {{ drupal_view('blog_lists', 'block_3') }}
+        </div>
+      </div>
+    </section>
+</article>

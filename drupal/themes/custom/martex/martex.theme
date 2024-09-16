@@ -1,0 +1,186 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+/*function martex_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}*/
+
+function martex_page_attachments(array &$attachments) {
+  // Font Awesome laden.
+  $attachments['#attached']['library'][] = 'martex/fontawesome';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function martex_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Enable 'page_fullwidth' for nodes
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+	if(!is_object($node)) {
+      		$node = \Drupal\node\Entity\Node::load($node);
+    	}
+    $content_type = $node->bundle();
+    if ($content_type == 'landing_page' or $content_type == 'article' or $content_type == 'job' or $content_type == 'project') {
+	  $suggestions[] = 'page__fullwidth';
+	}
+  }
+  
+  // Enable 'page_fullwidth' for user profile
+  if ($node = \Drupal::routeMatch()->getRouteName() == 'entity.user.canonical') {
+  	$suggestions[] = 'page__fullwidth';
+  }
+  
+  // Enable 'page_fullwidth' for views
+  $request = \Drupal::routeMatch()->getRouteObject()->getDefault('view_id');
+  if (!empty($request) && $request == 'portfolio_wide' ) {
+    $suggestions[] = 'page__fullwidth';
+  }
+}
+
+/**
+ * Add color, menu and theme settings
+ */
+function martex_preprocess_page(&$variables) {
+  // Site name
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  
+  // Theme color
+  $color = theme_get_setting('theme_color');
+  if ($color != 'default') {
+    $variables['#attached']['library'][] = 'martex/'.$color.'-styling';
+  }
+  
+  // Theme font
+  $font = theme_get_setting('theme_font');
+  /*if ($color != 'fontdefault') {
+    $variables['#attached']['library'][] = 'martex/'.$font.'-styling';
+  }*/
+  if($font== 'fontjakarta') {
+    $variables['font_class'] = 'font--jakarta';
+  }
+  elseif($font == 'fontinter') {
+    $variables['font_class'] = 'font-inter';
+  }
+  else {
+    $variables['font_class'] = 'font--jakarta';
+  }
+  
+  // Theme menu
+  $menu = theme_get_setting('theme_menu');
+  $variables['mainmenu_class'] = '';
+  if($menu == 'menu_light') {
+    $variables['mainmenu_class'] = 'navbar-light navbar-bg-light';
+  }
+  elseif($menu == 'menu_dark') {
+    $variables['mainmenu_class'] = 'navbar-dark navbar-bg-dark';
+  }
+  else {
+    $variables['mainmenu_class'] = 'navbar-default';
+  }
+  
+  // Theme footer
+  $variables['footer_classes'] = theme_get_setting('footer_classes');
+  
+  // Node menu: get option "transparent" and "absolute"
+  $variables['mainmenu_transparent'] = '';
+  $variables['mainmenu_absolute'] = '';
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    //var_dump($node);
+    if ($node->hasField('field_mainmenu_transparent')) {
+	  $mainmenu_transparent = $node->get('field_mainmenu_transparent')->getValue();
+	  if(count($mainmenu_transparent) > 0 && $mainmenu_transparent[0]['value']) {
+	    $variables['mainmenu_transparent'] = 'transparent';
+	  }
+    }
+    if ($node->hasField('field_mainmenu_absolute')) {
+	  $mainmenu_absolute = $node->get('field_mainmenu_absolute')->getValue();
+	  if(count($mainmenu_absolute) > 0 && $mainmenu_absolute[0]['value']) {
+	    $variables['mainmenu_absolute'] = 'navbar-absolute';
+	  }
+    }
+    if ($node->hasField('field_extra_class')) {    	
+	  $extra_class = $node->get('field_extra_class')->getValue();
+	  if(count($extra_class) > 0 && $extra_class[0]['value']) {
+	    $variables['extra_class'] = $extra_class[0]['value'];
+	  }
+    }
+  }
+  
+  // Check node's view mode, if it is full_content_title_image, set mainmenu to be transparent
+  if (!empty($variables['node']) && $variables['node']->current_view_mode == 'full_content_title_image') {
+    $variables['mainmenu_transparent'] = 'transparent';
+  }  
+}
+
+/**
+ * Process block content
+ */
+function martex_theme_suggestions_block_alter(&$suggestions, $variables) {
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
+    $suggestions[] = 'block__' . $content['#block_content']->bundle();
+  }   
+}
+
+/**
+* Implements hook_preprocess_node() to add node view mode to page's variables
+*/
+function martex_preprocess_node(array &$variables, $hook) {
+  if(isset($variables['view_mode'])) {
+    $node = $variables['node'];
+    $node->current_view_mode = $variables['view_mode'];
+    $variables['current_view_mode'] = $node->current_view_mode; 
+  }
+  $variables['container'] = theme_get_setting('bootstrap_barrio_container') ?? 'container';
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An array of elements to display in view mode.
+ *   - paragraph: The paragraph object.
+ *   - view_mode: View mode; e.g., 'full', 'teaser'...
+ */
+function martex_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  // Get Bootstrap settings for container
+  $variables['container'] = theme_get_setting('bootstrap_barrio_container') ?? 'container';
+}
+
+/**
+ * Add placeholder to search form
+ */
+function martex_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
+  $form['keys']['#attributes']['placeholder'] = t('Type keyword and hit enter');
+}

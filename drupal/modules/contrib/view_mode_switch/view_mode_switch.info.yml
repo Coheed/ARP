@@ -1,0 +1,12 @@
+name: 'View Mode Switch Field'
+type: module
+description: 'Provides a field type that allows editors to switch view modes.'
+package: Field types
+core_version_requirement: ^10.2 || ^11
+dependencies:
+  - drupal:field
+
+# Information added by Drupal.org packaging script on 2024-08-27
+version: '2.1.0'
+project: 'view_mode_switch'
+datestamp: 1724772377

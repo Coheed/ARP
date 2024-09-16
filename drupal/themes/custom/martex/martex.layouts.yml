@@ -1,0 +1,220 @@
+martex_col1:
+  label: 1 Column
+  category: Martex Columns
+  path: layouts
+  template: col1
+  default_region: first
+  icon_map:
+    - [first]
+  regions:
+    first:
+      label: First
+martex_col1-10:
+  label: 1 Column 10/12
+  category: Martex Columns
+  path: layouts
+  template: col1-10
+  default_region: first
+  icon_map:
+    - [first]
+  regions:
+    first:
+      label: First
+martex_col2-equal:
+  label: 2 Columns Equal
+  category: Martex Columns
+  path: layouts
+  template: col2-equal
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col2-3-9:
+  label: 2 Columns 3 and 9
+  category: Martex Columns
+  path: layouts
+  template: col2-3-9
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col2-9-3:
+  label: 2 Columns 9 and 3
+  category: Martex Columns
+  path: layouts
+  template: col2-9-3
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col2-4-8:
+  label: 2 Columns 4 and 8
+  category: Martex Columns
+  path: layouts
+  template: col2-4-8
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col2-8-4:
+  label: 2 Columns 8 and 4
+  category: Martex Columns
+  path: layouts
+  template: col2-8-4
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col2-5-7:
+  label: 2 Columns 5 and 7
+  category: Martex Columns
+  path: layouts
+  template: col2-5-7
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col2-7-5:
+  label: 2 Columns 7 and 5
+  category: Martex Columns
+  path: layouts
+  template: col2-7-5
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
+martex_col3-equal:
+  label: 3 Columns Equal
+  category: Martex Columns
+  path: layouts
+  template: col3-equal
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second, third]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    bottom:
+      label: Bottom
+martex_col3-3-6-3:
+  label: 3 Columns 3-6-3
+  category: Martex Columns
+  path: layouts
+  template: col3-3-6-3
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second, third]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    bottom:
+      label: Bottom
+martex_col4-equal:
+  label: 4 Columns Equal
+  category: Martex Columns
+  path: layouts
+  template: col4-equal
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second, third, fourth]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+    bottom:
+      label: Bottom
