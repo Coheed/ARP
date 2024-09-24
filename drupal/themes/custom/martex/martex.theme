@@ -70,6 +70,7 @@ function martex_theme_suggestions_page_alter(array &$suggestions, array $variabl
  * Add color, menu and theme settings
  */
 function martex_preprocess_page(&$variables) {
+
   // Site name
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   
@@ -139,6 +140,7 @@ function martex_preprocess_page(&$variables) {
   if (!empty($variables['node']) && $variables['node']->current_view_mode == 'full_content_title_image') {
     $variables['mainmenu_transparent'] = 'transparent';
   }  
+
 }
 
 /**
@@ -161,7 +163,11 @@ function martex_preprocess_node(array &$variables, $hook) {
     $variables['current_view_mode'] = $node->current_view_mode; 
   }
   $variables['container'] = theme_get_setting('bootstrap_barrio_container') ?? 'container';
-}
+
+  
+  
+  
+  }
 
 /**
  * Implements template_preprocess_paragraph().
@@ -173,9 +179,13 @@ function martex_preprocess_node(array &$variables, $hook) {
  *   - view_mode: View mode; e.g., 'full', 'teaser'...
  */
 function martex_preprocess_paragraph(&$variables) {
+
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   // Get Bootstrap settings for container
   $variables['container'] = theme_get_setting('bootstrap_barrio_container') ?? 'container';
+
+
+
 }
 
 /**
@@ -184,3 +194,115 @@ function martex_preprocess_paragraph(&$variables) {
 function martex_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
   $form['keys']['#attributes']['placeholder'] = t('Type keyword and hit enter');
 }
+
+function martex_preprocess_field(array &$variables) {
+
+// Prüfe, ob das Feld "field_zahnschema" ist.
+if ($variables['element']['#field_name'] === 'field_zahnschema') {
+  $zahnschema_data = [];
+
+  // Iteriere durch die Paragraphen im Feld.
+  foreach ($variables['items'] as $delta => $item) {
+    // Versuche, den Paragraphen direkt zu laden, falls `entity` nicht vorhanden ist.
+    if (isset($item['#entity'])) {
+      $paragraph = $item['#entity'];
+
+    } elseif (isset($item['content']['#paragraph'])) {
+      $paragraph = $item['content']['#paragraph'];
+
+    } else {
+      continue; // Springe zum nächsten Item.
+    }
+
+    // Prüfe, ob der Paragraph das richtige Bundle hat.
+    if ($paragraph->bundle() === 'zahnschema') {
+      // Prüfe, ob die Felder im Paragraphen vorhanden sind.
+      $zahn = $paragraph->get('field_zahn')->entity ? $paragraph->get('field_zahn')->entity->label() : ' ';
+      $befund = $paragraph->get('field_befund_b')->entity ? $paragraph->get('field_befund_b')->entity->label() : ' ';
+      $regelversorgung = $paragraph->get('field_regelversorgung_r')->entity ? $paragraph->get('field_regelversorgung_r')->entity->label() : ' ';
+      $therapieplanung = $paragraph->get('field_therapieplanung_tp')->entity ? $paragraph->get('field_therapieplanung_tp')->entity->label() : ' ';
+
+      // Füge die Daten in das Array ein.
+      $zahnschema_data[] = [
+        'zahn' => $zahn,
+        'befund' => $befund,
+        'regelversorgung' => $regelversorgung,
+        'therapieplanung' => $therapieplanung,
+      ];
+
+    }
+  }
+
+  // Übergib die Daten an die Twig-Template-Variable.
+  $variables['zahnschema_data'] = $zahnschema_data;
+}
+
+
+  // Prüfen, ob das aktuelle Feld 'field_punktzahl' oder 'field_goa_points' ist.
+  if ($variables['element']['#field_name'] == 'field_punktzahl' || $variables['element']['#field_name'] == 'field_goa_points') {
+
+    // Hartcodierter Punktwert für GOZ.
+    $punktwert = 0.0562421;
+
+    // Finde die Punktzahl innerhalb der Items.
+    if (!empty($variables['items'])) {
+      foreach ($variables['items'] as $item) {
+        // Für 'field_punktzahl' benutze '#markup'.
+        if ($variables['element']['#field_name'] == 'field_punktzahl' && isset($item['content']['#markup'])) {
+          $punktzahl = $item['content']['#markup'];
+
+          // Berechne die Faktoren.
+          $faktor_1 = $punktzahl * $punktwert;
+          $faktor_2_3 = $faktor_1 * 2.3;
+          $faktor_3_5 = $faktor_1 * 3.5;
+
+          // Übergib die berechneten Werte an das Template.
+          $variables['faktor_1'] = round($faktor_1, 2);
+          $variables['faktor_2_3'] = round($faktor_2_3, 2);
+          $variables['faktor_3_5'] = round($faktor_3_5, 2);
+
+        }
+        // Für 'field_goa_points' benutze '#context['value']'.
+        elseif ($variables['element']['#field_name'] == 'field_goa_points' && isset($item['content']['#context']['value'])) {
+          $punktzahl = $item['content']['#context']['value'];
+
+          // Berechne die Faktoren.
+          $faktor_1 = $punktzahl * $punktwert;
+          $faktor_2_3 = $faktor_1 * 2.3;
+          $faktor_3_5 = $faktor_1 * 3.5;
+
+          // Übergib die berechneten Werte an das Template.
+          $variables['faktor_1'] = round($faktor_1, 2);
+          $variables['faktor_2_3'] = round($faktor_2_3, 2);
+          $variables['faktor_3_5'] = round($faktor_3_5, 2);
+
+        } 
+      }
+    }
+  }
+
+
+
+if ($variables['element']['#field_name'] == 'field_abrechnung') {
+  $paragraphs = [];
+  if (!empty($variables['items'])) {
+    foreach ($variables['items'] as $delta => $item) {
+      if (isset($item['content']['#paragraph'])) {
+        $paragraphs[] = $item['content']['#paragraph']; // Paragraphen hinzufügen
+      } 
+    }
+  }
+
+  // Erzeuge die Abrechnungstabelle und füge sie den Variablen hinzu.
+  if (!empty($paragraphs)) {
+    $variables['abrechnung_tabelle'] = build_abrechnungstabelle($paragraphs);
+  } 
+}
+
+
+}
+
+
+
+
+

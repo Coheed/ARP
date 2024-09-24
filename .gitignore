@@ -22,8 +22,8 @@
 /drupal/sites/*/cache
 
 # Ignore Jetbrains
-/idea/
-
+/.idea/
+/drupal/vendor/
 # Ignore drupal core (if not versioning drupal sources)
 /drupal/vendor
 /drupal/core
@@ -62,4 +62,3 @@
 /drush.phar
 /drush
 /drupal.phar
-/drupal

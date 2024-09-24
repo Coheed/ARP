@@ -1730,20 +1730,20 @@ summary[aria-expanded="true"]::before{
   width:100%;
 } */
 
- .menu--bema .nav-item, .menu--goz .nav-item, .menu--goae .nav-item{
+ .menu--bema .nav-item, .menu--goz .nav-item, .menu--goae .nav-item, .menu--festzuschuss .nav-item, .menu--bel-ii .nav-item, .menu--beb-97 .nav-item, .menu--abrechnungsbeispiele .nav-item, .menu--bu .nav-item, .menu--analogien .nav-item{
   width: 100%;
   border-bottom: 2px solid #6a843f30;
  }
  .menu--bema .nav-item:nth-last-child(), .menu--goz .nav-item:nth-last-child(){
   border-bottom: none;
  }
- .menu--bema, .menu--goz, .menu--goae{
+ .menu--bema, .menu--goz, .menu--goae, .menu--festzuschuss, .menu--bel-ii, .menu--beb-97, .menu--abrechnungsbeispiele, .menu--bu, .menu--analogien{
   background: #f9f9f9;
   padding: 10px;
   border-radius: 13px;
   border: 3px solid #dee3d6;
  }
- .menu--bema .nav-item.active, .menu--goz .nav-item.active, .menu--goae .nav-item.active{
+ .menu--bema .nav-item.active, .menu--goz .nav-item.active, .menu--goae .nav-item.active, .menu--festzuschuss .nav-item.active, .menu--bel-ii .nav-item.active, .menu--beb-97 .nav-item.active, .menu--abrechnungsbeispiele .nav-item.active, .menu--bu .nav-item.active, .menu--analogien .nav-item.active{
     color: #c73e9b;
     border-radius: 7px;
     font-weight: 900;
@@ -1752,3 +1752,77 @@ summary[aria-expanded="true"]::before{
   font-size: 28px;
     font-weight: bold;
  }
+
+ .field--name-field-faktor{
+  display:flex;
+  flex-direction:row;
+ }
+ .field--name-field-faktor .field__items{
+  display:flex;
+  flex-direction:row;
+  gap:5px;
+ }
+ .table_zahnschema{
+  border-radius: 9px;
+  border: 2px solid #dee3d6;
+ }
+ .table_zahnschema table{
+  border-collapse: collapse;
+ }
+ .table_zahnschema .zahn.top .zahn-nr{
+  background-image:url("/themes/custom/martex/img/teeth_up.png");
+  background-size: contain;
+  font-weight: 900;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.7);
+ }
+ .table_zahnschema .zahn.bottom .zahn-nr{
+  background-image:url("/themes/custom/martex/img/teeth_bottom.png");
+  background-size: contain;
+  font-weight: 700;
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.7);
+ }
+
+ .table_zahnschema td.zahn-nr.befund {
+  background-color: #ee189714;
+  color: #ec008c !important;
+}
+.table_zahnschema .plan_t, .plan_r, .befund{
+  background:#f3f3f3;
+}
+.table_zahnschema .plan_t td, .plan_r td, .befund td{
+  padding:2px;
+}
+
+.zahnschema_backend{
+  display: flex;
+  flex-direction:row;
+  gap:21px;
+}
+.zahnschema_backend .field--type-entity-reference {
+  margin:0px!important;
+  }
+.zahnschema_backend .field--type-entity-reference .js-form-item {
+margin:0px!important;
+}
+#field-zahnschema-values .paragraph-top{
+  display: none!important;
+}
+.example-calc-table table .text-start p{
+margin:0px!important;
+padding:0px!important;
+}
+.example-calc-table .geb_nr{
+  font-weight: 900;
+}
+.example-calc-table thead{
+  font-weight: 900;
+  background:#e5e4e4;
+}
+.example-calc-table{
+  border: 2px solid #dee3d6;
+  border-radius: 9px;
+  margin-top: 10px;
+  margin-bottom:0px!important;
+}

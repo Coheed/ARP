@@ -58,12 +58,15 @@
 #}
 
 <a id="top"></a>
+
+
 {% if extra_class or font_class %}<div class="{{ extra_class }} {{ font_class }}">{% endif %}
 {# Header Navbar #}
 <header class="wrapper">  
   {% if page.top_bar %}
     {{ page.top_bar }}
   {% endif %}
+  <p>{{ test_variable }}</p>
 
   {% if page.navigation or page.navigation_collapsible or page.branding or page.navigation_other %}
   {% block navbar %}

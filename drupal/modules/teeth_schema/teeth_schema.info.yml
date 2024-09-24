@@ -1,0 +1,8 @@
+name: 'Teeth Schema'
+type: module
+description: 'Generates dynamic teeth schema from sections.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - taxonomy
+  - paragraphs

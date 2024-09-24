@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "doctrine/common": "^3.4",
         "drupal/admin_toolbar": "^3.3",
         "drupal/allowed_formats": "^2.0",
         "drupal/backup_migrate": "^5.0",
