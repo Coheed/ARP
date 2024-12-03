@@ -891,9 +891,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'drupal',
-  'username' => 'root',
-  'password' => '!mCYMtJ53M5z#8??',
+  'database' => 'wonder',
+  'username' => 'wonder',
+  'password' => 'wonder123wonder',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
@@ -909,3 +909,4 @@ $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
+$config['system.logging']['error_level'] = 'verbose';
