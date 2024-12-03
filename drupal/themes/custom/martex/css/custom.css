@@ -1826,3 +1826,11 @@ padding:0px!important;
   margin-top: 10px;
   margin-bottom:0px!important;
 }
+.region-wrapper-top-bar .container{
+  padding:0px!important;
+}
+.region-wrapper-top-bar .navbar-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

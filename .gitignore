@@ -65,3 +65,8 @@
 /drush
 /drupal.phar
 /drupal/sites/default/files/php/
+
+#mizu
+/drupal/modules/contrib/
+/drupal/themes/contrib/
+.ddev

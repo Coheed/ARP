@@ -1,7 +1,0 @@
-field-type-icon:
-  version: 1.0
-  css:
-    theme:
-      css/view_mode_switch.icon.theme.css: {}
-  dependencies:
-    - field_ui/drupal.field_ui.manage_fields

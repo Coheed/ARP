@@ -57,18 +57,10 @@
  */
 #}
 
-<a id="top">
- 
-  </a>
-<div class="container flex-lg-row flex-nowrap align-items-center">
-{% if page.top_bar %}
-  {{ page.top_bar|render|replace({  })|raw }}
-{% endif %}
 
-</div>
 {# Header Navbar #}
 {% if extra_class or font_class %}<div class="{{ extra_class }} {{ font_class }}">{% endif %}
-<header class="wrapper white-scroll">  
+<header class="wrapper white-scroll py-2">  
   <!-- NAVIGATION MENU -->
   {% if page.navigation or page.navigation_collapsible or page.branding or page.navigation_other %}
   {% block navbar %}
@@ -122,6 +114,18 @@
   </div>
 </header>
 <!--end header navbar-->
+
+
+ 
+<div class="w-100" style="background:#e2dff3b0;">
+<div class="container flex-lg-row flex-nowrap align-items-center">
+{% if page.top_bar %}
+  {{ page.top_bar|render|replace({  })|raw }}
+{% endif %}
+
+</div>
+</div>
+
 
 {# Main #}
 {% block main %}

@@ -474,8 +474,7 @@ function bootstrap_barrio_preprocess_block(&$variables) {
     $variables['attributes']['class'][] = 'clearfix';
   }
   $block = $variables['elements'];
-  $blockType = $block['#configuration']['provider'];
-  if ($blockType == "block_content") {
+  if (!empty($block['#configuration']['provider']) && $block['#configuration']['provider'] == "block_content") {
     if (isset($block['content']['#block_content']) && ($block['content']['#block_content'] !== null)) {
       $bundle = $block['content']['#block_content']->bundle();
       $variables['attributes']['class'][] = 'block-content-' . $bundle;
@@ -516,7 +515,7 @@ function bootstrap_barrio_preprocess_form_element(&$variables) {
     $variables['input_attributes'] = new Attribute($variables['element']['#attributes']);
   }
 
-  if ($variables['element']['#type'] == 'radio' || $variables['element']['#type'] == 'checkbox') {
+  if (isset($variables['element']['#type']) && ($variables['element']['#type'] == 'radio' || $variables['element']['#type'] == 'checkbox')) {
     switch (theme_get_setting('bootstrap_barrio_checkbox')) {
       case 'switch':
         $variables['checkbox_style'] = 'form-switch';
@@ -650,8 +649,7 @@ function bootstrap_barrio_theme_suggestions_region_alter(array &$suggestions, ar
  */
 function bootstrap_barrio_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   $block = $variables['elements'];
-  $blockType = $block['#configuration']['provider'];
-  if ($blockType == "block_content") {
+  if (!empty($block['#configuration']['provider']) && $block['#configuration']['provider'] == "block_content") {
     if (isset($block['content']['#block_content']) && ($block['content']['#block_content'] !== null)) {
       $bundle = $block['content']['#block_content']->bundle();
       array_splice($suggestions, 2, 0, 'block__block_' . $bundle);
@@ -721,99 +719,14 @@ function bootstrap_barrio_theme_suggestions_status_messages_alter(array &$sugges
   }
 }
 
-
-use Drupal\Core\Url;
-use Drupal\Core\Menu\MenuLinkManagerInterface;
-use Drupal\Core\Routing\RouteMatchInterface;
-
-
 /**
- * Implements hook_preprocess_breadcrumb().
+ * Implements hook_preprocess_HOOK() for breadcrumb.
  */
 function bootstrap_barrio_preprocess_breadcrumb(&$variables) {
-  // Entferne alle bestehenden Breadcrumbs, um Dopplungen zu verhindern.
-  $variables['breadcrumb'] = [];
-
-  // Füge "Startseite" als erstes Breadcrumb-Element hinzu.
-  $variables['breadcrumb'][] = [
-    'text' => 'Startseite',
-    'url' => Url::fromRoute('<front>')->toString(),
-  ];
-
-  // Hole den aktuellen Pfad und den Alias.
-  $current_path = \Drupal::service('path.current')->getPath();
-  $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
-
-  // Prüfe, ob es sich um eine Node-Seite handelt.
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node instanceof \Drupal\node\Entity\Node) {
-    // Prüfe, ob der letzte Breadcrumb-Eintrag bereits den Node-Titel enthält.
-    $last_breadcrumb = end($variables['breadcrumb']);
-    if ($last_breadcrumb['text'] !== $node->getTitle()) {
-      $variables['breadcrumb'][] = [
-        'text' => $node->getTitle(),  // Titel des Nodes als letztes Breadcrumb hinzufügen.
-        'url' => $node->toUrl()->toString(),
-      ];
-    }
-  } else {
-    // Wenn es keine Node-Seite ist, prüfe die Menüs.
-     // Hole den aktuellen Pfad.
-  $current_path = \Drupal::service('path.current')->getPath();
-  $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
-
-  // Lade den MenuTree-Service.
-  $menu_tree = \Drupal::menuTree();
-
-    // Lade den MenuLinkManager-Service.
-    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-
-    // Lade alle Menüs.
-    $menu_names = \Drupal::entityTypeManager()->getStorage('menu')->loadMultiple();
-
-    $menu_found = false;
-
-    // Durchlaufe alle Menüs und suche nach einem passenden Menü-Link.
-  foreach ($menu_names as $menu_name => $menu) {
-    // Baue die Baum-Parameter für das Menü.
-    $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
-    $tree = $menu_tree->load($menu_name, $parameters);
-
-    // Durchlaufe die Menüpunkte und prüfe, ob ein Link zur aktuellen URL passt.
-    foreach ($tree as $element) {
-      $link = $element->link;
-      // Überprüfen, ob die URL des Links mit dem aktuellen Pfad oder Alias übereinstimmt.
-      $link_url = $link->getUrlObject()->toString();
-      if ($link_url == $current_path || $link_url == $path_alias) {
-        // Menü-Link gefunden, füge den Titel in die Breadcrumbs ein.
-        $variables['breadcrumb'][] = [
-          'text' => $link->getTitle(),
-          'url' => $link->getUrlObject()->toString(),
-        ];
-        $menu_found = true;
-        break 2; // Beende die Schleife, wenn der Menü-Link gefunden wurde.
-      }
-    }
+  if (theme_get_setting('bootstrap_barrio_breadcrumb_divider') && theme_get_setting('bootstrap_barrio_breadcrumb_divider') != '') {
+    $variables['breadcrumb_divider'] = sprintf("--bs-breadcrumb-divider: '%s';", theme_get_setting('bootstrap_barrio_breadcrumb_divider'));
   }
-
-    // Fallback: Wenn kein Menü-Link gefunden wurde, verwende das letzte URL-Segment.
-    if (!$menu_found) {
-      $path_segments = explode('/', trim($path_alias, '/'));
-      $last_segment = end($path_segments);
-      if (!empty($last_segment)) {
-        $variables['breadcrumb'][] = [
-          'text' => ucfirst(str_replace('-', ' ', $last_segment)),  // Letztes Segment formatieren.
-          'url' => Url::fromUserInput($current_path)->toString(),  // URL des letzten Segments.
-        ];
-      }
-    }
-  }
-
-  // Debugging: Ausgabe der Breadcrumbs in den Logs.
-  \Drupal::logger('bootstrap_barrio')->notice(print_r($variables['breadcrumb'], TRUE));
 }
-
-
-
 
 /**
  * Implements hook_preprocess_HOOK() for status_messages.
@@ -825,6 +738,11 @@ function bootstrap_barrio_preprocess_status_messages(&$variables) {
       $variables['title_ids'][$message_type] = Html::getUniqueId("message-$message_type-title");
     }
   }
+
+  if (theme_get_setting('bootstrap_barrio_messages_widget') === 'toasts') {
+    $variables['attributes']['data-bs-delay'] = theme_get_setting('bootstrap_barrio_messages_widget_toast_delay') ?? 10000;
+  }
+
 }
 
 /**
@@ -872,7 +790,7 @@ function bootstrap_barrio_theme_suggestions_input_alter(array &$suggestions, arr
  * Implements hook_preprocess().
  */
 function bootstrap_barrio_preprocess(&$variables, $hook) {
-  if (isset($variables['attributes']['class'])) {
+  if (is_array($variables['attributes'] ?? NULL) && isset($variables['attributes']['class'])) {
     $class = 'is-invalid';
 
     if (is_object($variables['attributes']['class'])) {
@@ -908,7 +826,7 @@ function bootstrap_barrio_preprocess_input(&$variables) {
     ];
     $button_sizes = ['btn-sm', 'btn-lg'];
     $button_is_outline = theme_get_setting('bootstrap_barrio_button_outline');
-    $button_type = theme_get_setting('bootstrap_barrio_button_type');
+    $button_type = theme_get_setting('bootstrap_barrio_button_type') ?? 'primary';
     if (is_object($variables['attributes']['class'])) {
       \Drupal::logger('bootstrap_barrio')->notice(implode($variables['attributes']['class']->value()));
       if (!in_array('btn', $variables['attributes']['class']->value())) {
@@ -1059,5 +977,3 @@ function _get_color($color, $colors) {
   }
   return $color;
 }
-
-

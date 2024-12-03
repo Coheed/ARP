@@ -1,0 +1,577 @@
+<script src="https://kit.fontawesome.com/aa1bbeaf70.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button/assets/css/atcb.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" type="text/css" href="/themes/custom/martex/js/customScripts/upt_style.css">
+<script src="/themes/custom/martex/js/customScripts/upt_calc.js"></script>
+<script src="/themes/custom/martex/js/customScripts/upt_pdf.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<div class="container upt-planer my-5">
+    <form action="" method="post" id="calc_upt" class="form-upt p-4 border rounded shadow-lg bg-white">
+               <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-light p-3 pb-0 rounded">
+                    <span class="fs-6 fw-bold"><i class="fas fa-user me-2"></i>Patienteninfos & Praxiszeiten</span>
+                    <div class="row pb-0">
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label" for="schweregrad">Schweregrad</label>
+                          <div class="d-flex align-items-center gap-2">
+<select name="schweregradInner" id="schweregrad" class="form-select" tabindex="1">
+                                <option value="A">Grad A</option>
+                                <option value="B">Grad B</option>
+                                <option value="C">Grad C</option>
+                            </select>
+                            <a href="" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Grad der Parodontalerkrankung gemäß § 4 PAR-RL" class="fs-4"> <i class="fa-solid fa-circle-info"></i></a>
+</div>  
+                          
+                          <small></small>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="wochentyp" class="form-label">Praxiszeiten</label>
+                            <select name="wochentyp" id="wochentyp" class="form-select" tabindex="2">
+                                <option value="5">5-Tage-Woche (Mo.-Fr.)</option>
+                                <option value="6">6-Tage-Woche (Mo.-Sa.)</option>
+                                <option value="7">7-Tage-Woche (Mo.-So.)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="pflegegrad" class="form-label">Pflegegrad</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="pflegegrad" value="1" tabindex="3">
+                                <label class="form-check-label" for="pflegegrad">
+                                    Patient mit Pflegegrad oder Eingliederungshilfe
+                                    <br><a href="#" target="_blank">(§ 22a SGB V)</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-light p-3 pb-0 rounded">
+                    <div class="row">
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="wochentyp" class="form-label fw-bold"><i class="fa-regular fa-users-medical"></i> Patientennummer</label>
+                            <input type="text" class="form-control" id="patientennummer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="behandlungsmethodeChart" style="display:none;">
+            <div class="behandlungsmethode_a">
+                <button type="button" class="btn upta" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true" data-bs-title="<em>UPT a:</em> Mundhygienekontrolle">
+                    UPT a
+                </button>
+            </div>
+            <div class="behandlungsmethode_b">
+                <button type="button" class="btn uptb" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true" data-bs-title="<em>UPT b:</em> Mundhygieneunterweisung (falls erforderlich)">
+                    UPT b
+                </button>
+            </div>
+            <div class="behandlungsmethode_c">
+                <button type="button" class="btn uptc" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-title="<em>UPT c:</em> supragingivale und gingivale Reinigung aller Zähne">
+                    UPT c
+                </button>
+            </div>
+            <div class="behandlungsmethode_d">
+                <button type="button" class="btn uptd" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-title="<em>UPT d:</em> Messung von Sondierungsbluten und Sondierungstiefen">
+                    UPT d
+                </button>
+            </div>
+            <div class="behandlungsmethode_e">
+                <button type="button" class="btn upte" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-title="<em>UPT e:</em> subgingivale Instrumentierung, einwurzeliger Zahn">
+                    UPT e
+                </button>
+            </div>
+            <div class="behandlungsmethode_f">
+                <button type="button" class="btn uptf" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-title="<em>UPT f:</em>  subgingivale Instrumentierung, mehrwurzeliger Zahn">
+                    UPT f
+                </button>
+            </div>
+            <div class="behandlungsmethode_g">
+                <button type="button" class="btn uptg" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-title="<em>UPT g:</em> Untersuchung des Parodontalzustandes">
+                    UPT g
+                </button>
+            </div>
+        </div>
+
+<div id="uptInner">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-light p-3 rounded">
+                    <span class="fw-bold fs-6"><i class="fas fa-calendar-check me-2"></i>1. UPT Jahr</span>
+                    <div class="row mb-3 d-flex align-items-start" id="date_1">
+                        <div class="col-md-3">
+                            <label for="upt_date_1" class="form-label p-0 m-0">1. UPT Termin</label>
+                            <div class="form-text fs-6 d-flex align-items-center">Start Therapie <a class="ms-1 custom-tooltip-icon-info custom-icon-info-grey custom-icon-size" href="" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Start der UPT-Strecke ist 3 bis 6 Monate nach erfolgter AIT möglich – Voraussetzung BEVa (nach AIT) oder BEVb (nach CPT)"><i class="fs-5 fa-solid fa-circle-info"></i></a></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="upt_dateInner">
+                                <small>Datum & Uhrzeit</small>
+                                <div class="fieldInner">
+                                    <input class="form-control float-start me-md-2 upt_dateField form-control" type="date" name="date_1" id="upt_date_1" placeholder="tt.mm.jjjj" value="" tabindex="4">
+              <input class="form-control float-end me-md-2 upt_dateField form-control" type="time" name="time" id="upt_date1_time" placeholder="00:00" value="" tabindex="5">
+                                </div>
+                              <div class="form-text text-danger js_date_hint hide" ></div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <small>Behandlungsmethoden</small>
+                            <div class="behandlungsmethodes_html">
+                                <button type="button" class="btn upta" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true" data-bs-title="<em>UPT a:</em> Mundhygienekontrolle">
+                                    UPT a
+                                </button>
+
+                                <button type="button" class="btn uptb" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT b:</em> Mundhygieneunterweisung (falls erforderlich)">
+                                    UPT b
+                                </button>
+
+                                <button type="button" class="btn uptc" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT c:</em> supragingivale und gingivale Reinigung aller Zähne">
+                                    UPT c
+                                </button>
+
+                                <button type="button" class="btn uptd" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT d:</em> Messung von Sondierungsbluten und Sondierungstiefen">
+                                    UPT d
+                                </button>
+
+                                <button type="button" class="btn upte" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT e:</em> subgingivale Instrumentierung, einwurzeliger Zahn">
+                                    UPT e
+                                </button>
+
+                                <button type="button" class="btn uptf" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT f:</em>  subgingivale Instrumentierung, mehrwurzeliger Zahn">
+                                    UPT f
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamisch weitere Termine hinzufügen -->
+                    <span id="dynamicElements_1"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-4 custom-row-year-02">
+            <div class="col-12 hidden" id="uptJahr2_title">
+                <div class="bg-light p-3 rounded">
+                    <span class="fw-bold fs-6"><i class="fas fa-calendar-check me-2"></i>2. UPT Jahr</span>
+                    <span id="dynamicElements_2"></span>
+                    <div class="row mb-3 d-flex align-items-start hidden" id="date_2">
+                        <div class="col-md-3">
+                            <label for="upt_date_2" class="form-label p-0 m-0">2. UPT Termin</label>
+                            <div class="form-text">Mindestabstand <span class="text-nowrap" id="upt_date_2_interval">10 Monate</span></div>
+
+                        </div>
+                        <div class="col-md-4">
+                           
+                            <div class="upt_dateInner">
+                                <small>Datum & Uhrzeit</small>
+                                <div class="fieldInner">
+                                    <input class="form-control float-start me-md-2 upt_dateField" type="date" name="date_2" id="upt_date_2" placeholder="tt.mm.jjjj" value="" tabindex="5"  min="2025-11-03" max="2025-12-31">
+              <input class="form-control float-end me-md-2 upt_dateField" type="time" name="time" id="upt_date2_time" placeholder="00:00" value="" tabindex="5">
+                                </div>
+
+
+
+
+                                <div class="form-text d-inline-block">
+                                    vom <span id="upt_date_2_min">03.11.2025</span>
+                                    <span class="custom-text"><span class="custom-wrap">bis</span><span class="d-inline-block ps-lg-1" id="upt_date_2_max">31.12.2025</span></span>
+                                    <input type="hidden" name="date_2_min_txt" value="03.11.2025">
+                                    <input type="hidden" name="date_2_max_txt" value="31.12.2025">
+                                </div>
+                                                                                          <div class="form-text text-danger js_date_hint hide" ></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+                            <small>Behandlungsmethoden</small>
+                            <div class="behandlungsmethodes_html">
+                                <button type="button" class="btn upta" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true" data-bs-title="<em>UPT a:</em> Mundhygienekontrolle">
+                                    UPT a
+                                </button>
+
+                                <button type="button" class="btn uptb" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT b:</em> Mundhygieneunterweisung (falls erforderlich)">
+                                    UPT b
+                                </button>
+
+                                <button type="button" class="btn uptc" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT c:</em> supragingivale und gingivale Reinigung aller Zähne">
+                                    UPT c
+                                </button>
+
+                                <button type="button" class="btn uptd" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT d:</em> Messung von Sondierungsbluten und Sondierungstiefen">
+                                    UPT d
+                                </button>
+
+                                <button type="button" class="btn upte" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT e:</em> subgingivale Instrumentierung, einwurzeliger Zahn">
+                                    UPT e
+                                </button>
+
+                                <button type="button" class="btn uptf" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-html="true"
+                                    data-bs-title="<em>UPT f:</em>  subgingivale Instrumentierung, mehrwurzeliger Zahn">
+                                    UPT f
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <div class="row mb-3 align-items-start hidden" id="date_3" style="display:none;">
+                        <div class="col-md-3">
+                            <label for="upt_date_3" class="form-label p-0 m-0">3. UPT Termin</label>
+                            <div class="form-text">Mindestabstand <span class="text-nowrap" id="upt_date_3_interval">5 Monate</span></div>
+
+                        </div>
+                        <div class="col-md-4">
+                           
+                            <div class="upt_dateInner">
+                                <small>Datum & Uhrzeit</small>
+                                <div class="fieldInner">
+                                    <input class="form-control float-start me-md-2 upt_dateField" type="date" name="date_3" id="upt_date_3" placeholder="tt.mm.jjjj" value="" tabindex="6"  min="2025-11-03" max="2025-12-31" disabled="disabled">
+              <input class="form-control float-end me-md-2 upt_dateField" type="time" name="time" id="upt_date3_time" placeholder="00:00" value="" tabindex="5">
+                                </div>
+
+                                <div class="form-text d-inline-block">
+                                    vom <span id="upt_date_3_min">03.11.2025</span>
+                                    <span class="custom-text"><span class="custom-wrap">bis</span><span class="d-inline-block ps-lg-1" id="upt_date_3_max">31.12.2025</span></span>
+                                    <input type="hidden" name="date_3_min_txt" value="">
+                                    <input type="hidden" name="date_3_max_txt" value="">
+                                </div>
+                                <div class="form-text text-danger js_date_hint hide" ></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+                            <small>Behandlungsmethoden</small>
+                            <span class="behandlungsmethodes_html"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-start hidden" id="date_4" style="display:none;">
+                        <div class="col-md-3">
+                            <label for="upt_date_4" class="form-label p-0 m-0">4. UPT Termin</label>
+                            <div class="form-text">Mindestabstand <span class="text-nowrap" id="upt_date_4_interval">5 Monate</span></div>
+
+                        </div>
+                        <div class="col-md-4">
+                           
+                            <div class="upt_dateInner">
+                                <small>Datum & Uhrzeit</small>
+                                <div class="fieldInner">
+                                    <input class="form-control float-start me-md-2 upt_dateField" type="date" name="date_4" id="upt_date_4" placeholder="tt.mm.jjjj" value="" tabindex="7"  min="2026-04-07" max="2026-06-30" disabled="disabled">
+                <input class="form-control float-end me-md-2 upt_dateField" type="time" name="time" id="upt_date4_time" placeholder="00:00" value="" tabindex="5">
+                                </div>
+
+                                <div class="form-text d-inline-block">
+                                    vom <span id="upt_date_4_min">07.04.2026</span>
+                                    <span class="custom-text"><span class="custom-wrap">bis</span><span class="d-inline-block ps-lg-1" id="upt_date_4_max">30.06.2026</span></span>
+                                    <input type="hidden" name="date_4_min_txt" value="">
+                                    <input type="hidden" name="date_4_max_txt" value="">
+                                </div>
+                              <div class="form-text text-danger js_date_hint hide" ></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+                            <small>Behandlungsmethoden</small>
+                            <span class="behandlungsmethodes_html"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3  align-items-start hidden" id="date_5" style="display:none;">
+                        <div class="col-md-3">
+                            <label for="upt_date_5" class="form-label p-0 m-0">5. UPT Termin</label>
+                            <div class="form-text">Mindestabstand <span class="text-nowrap" id="upt_date_5_interval">3 Monate</span></div>
+
+                        </div>
+                        <div class="col-md-4">
+                           
+                            <div class="upt_dateInner">
+                                <small>Datum & Uhrzeit</small>
+                                <div class="fieldInner">
+                                    <input class="form-control float-start me-md-2 upt_dateField" type="date" name="date_5" id="upt_date_5" placeholder="tt.mm.jjjj" value="" tabindex="8"  min="2026-07-03" max="2026-08-31" disabled="disabled">
+                <input class="form-control float-end me-md-2 upt_dateField" type="time" name="time" id="upt_date5_time" placeholder="00:00" value="" tabindex="5">
+                                </div>
+
+                                <div class="form-text d-inline-block">
+                                    vom <span id="upt_date_5_min">03.07.2026</span>
+                                    <span class="custom-text"><span class="custom-wrap">bis</span><span class="d-inline-block ps-lg-1" id="upt_date_5_max">31.08.2026</span></span>
+                                    <input type="hidden" name="date_5_min_txt" value="">
+                                    <input type="hidden" name="date_5_max_txt" value="">
+                                </div>
+                              <div class="form-text text-danger js_date_hint hide" ></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+                            <small>Behandlungsmethoden</small>
+                            <span class="behandlungsmethodes_html"></span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row mb-3 align-items-center-start" id="date_6" style="display:none;">
+                        <div class="col-md-3">
+                            <label for="upt_date_6" class="form-label p-0 m-0">6. UPT Termin</label>
+                            <div class="form-text">Mindestabstand <span class="text-nowrap" id="upt_date_6_interval">3 Monate</span></div>
+
+                        </div>
+                        <div class="col-md-4">
+                           
+                            <div class="upt_dateInner">
+                                <small>Datum & Uhrzeit</small>
+                                <div class="fieldInner">
+                                    <input class="form-control float-start me-md-2 upt_dateField" type="date" name="date_6" id="upt_date_6" placeholder="tt.mm.jjjj" value="" tabindex="9"  min="2026-10-05" max="2026-12-31" disabled="disabled">
+                <input class="form-control float-end me-md-2 upt_dateField" type="time" name="time" id="upt_date6_time" placeholder="00:00" value="" tabindex="5">
+                                </div>
+
+                                <div class="form-text d-inline-block">
+                                    vom <span id="upt_date_6_min">05.10.2026</span>
+                                    <span class="custom-text"><span class="custom-wrap">bis</span><span class="d-inline-block ps-lg-1" id="upt_date_6_max">31.12.2026</span></span>
+                                    <input type="hidden" name="date_6_min_txt" value="">
+                                    <input type="hidden" name="date_6_max_txt" value="">
+                                </div>
+                              <div class="form-text text-danger js_date_hint hide" ></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+                            <small>Behandlungsmethoden</small>
+                            <span class="behandlungsmethodes_html"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+ <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-light p-3 rounded">
+                    <div class="row">
+                        
+                        <div class="col-md-12 mb-3">
+                            <label for="wochentyp" class="form-label fw-bold"><i class="fa-regular fa-memo-circle-info"></i> Legende </label>
+                          <div class="d-flex align-items-center justify-content-start flex-wrap gap-2">
+                            <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT a</button>
+                            <span class="ms-2">Mundhygienekontrolle </span>
+                            </div>
+                            
+                             <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT b</button>
+                            <span class="ms-2">Mundhygieneunterweisung (falls nötig)</span>
+                            </div>
+                            
+                              <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT c</button>
+                            <span class="ms-2">supragingivale und gingivale Reinigung aller Zähne</span>
+                            </div>
+                            
+                               <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT d</button>
+                            <span class="ms-2">Messung von Sondierungsbluten und Sondierungstiefen</span>
+                            </div>
+                            
+                              <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT e</button>
+                            <span class="ms-2">subgingivale Instrumentierung, einwurzeliger Zahn</span>
+                            </div>
+                            
+                              <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT f</button>
+                            <span class="ms-2">subgingivale Instrumentierung, mehrwurzeliger Zahn</span>
+                            </div>
+                            
+                              <div class="d-flex align-items-center">
+                            <button class="legend_button">UPT g</button>
+                            <span class="ms-2">Untersuchung des Parodontalzustandes</span>
+                            </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+  <div id="calendar-container"></div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("calendar-container");
+    if (!container) return;
+
+    // Funktion zur Generierung des Add-to-Calendar-Buttons
+    const generateAddToCalendarButton = () => {
+        const grade = document.getElementById("schweregrad").value; // Schweregrad auswählen
+        const isPflegegrad = document.getElementById("pflegegrad").checked; // Pflegegrad-Status
+        let maxAppointments;
+
+        // Anzahl der Termine basierend auf Schweregrad und Pflegegrad
+        if (isPflegegrad) {
+            maxAppointments = 4; // Bei Pflegegrad immer 4 Termine
+        } else {
+            if (grade === "A") {
+                maxAppointments = 2;
+            } else if (grade === "B") {
+                maxAppointments = 4;
+            } else if (grade === "C") {
+                maxAppointments = 6;
+            } else {
+                console.error("Ungültiger Schweregrad: ", grade);
+                return;
+            }
+        }
+
+        const appointments = [];
+        for (let i = 1; i <= maxAppointments; i++) {
+            const dateInput = document.getElementById(`upt_date_${i}`);
+            const timeInput = document.getElementById(`upt_date${i}_time`);
+            const dateValue = dateInput?.value || null;
+
+            if (dateValue && dateValue.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                const timeValue = timeInput?.value || "09:00"; // Standardzeit, falls keine Zeit gesetzt
+                const [hours, minutes] = timeValue.split(":").map(Number);
+                const endTime = `${String((hours + 1) % 24).padStart(2, "0")}:${String(minutes).padStart(2, "0")}`;
+
+                // Behandlungsmethoden abhängig vom Termin und Pflegegrad
+                let methods;
+                if (isPflegegrad) {
+                    methods = "UPT c, UPT d, UPT e, UPT f"; // Bei Pflegegrad sind alle Methoden gleich
+                } else {
+                    if (grade === "A") {
+                        methods = i === 1 ? "UPT a, UPT b, UPT c, UPT e, UPT f" : "UPT a, UPT b, UPT c, UPT e, UPT f, UPT g";
+                    } else if (grade === "B") {
+                        methods = i % 2 === 0 ? "UPT a, UPT b, UPT c, UPT d, UPT e, UPT f" : "UPT a, UPT b, UPT c, UPT e, UPT f, UPT g";
+                    } else if (grade === "C") {
+                        methods = i === 4 || i === 6 ? "UPT a, UPT b, UPT c, UPT e, UPT f, UPT g" : "UPT a, UPT b, UPT c, UPT d, UPT e, UPT f";
+                    }
+                }
+
+                appointments.push({
+                    name: `${i}. UPT Termin`,
+                    description: `Behandlungsmethoden: ${methods}`,
+                    startDate: dateValue,
+                    startTime: timeValue,
+                    endTime: endTime,
+                    location: "Zahnarztpraxis",
+                });
+            }
+        }
+
+        if (appointments.length === 0) {
+            console.log("Keine gültigen Termine gefunden.");
+            container.innerHTML = ""; // Button entfernen, wenn keine Termine existieren
+            return;
+        }
+
+        // Button-Container aktualisieren
+        container.innerHTML = ""; // Bestehenden Button entfernen
+
+        const buttonHtml = `
+          <add-to-calendar-button
+            name="UPT-Termine"
+            dates='${JSON.stringify(appointments)}'
+            timeZone="Europe/Berlin"
+            options="['Apple','Google','Microsoft365','Outlook.com']"
+            trigger="click"
+            listStyle="modal"
+            iCalFileName="UPT-Termine"
+          ></add-to-calendar-button>
+        `;
+
+        container.insertAdjacentHTML("beforeend", buttonHtml);
+        console.log("Add-to-Calendar Button aktualisiert:", appointments);
+    };
+
+    // Event-Listener für Änderungen an den Feldern
+    document.getElementById("schweregrad").addEventListener("change", generateAddToCalendarButton);
+    document.getElementById("pflegegrad").addEventListener("change", generateAddToCalendarButton);
+    document.querySelectorAll(".upt_dateField, .upt_dateField_time").forEach((field) => {
+        field.addEventListener("input", generateAddToCalendarButton);
+    });
+
+    // Initiale Anzeige
+    generateAddToCalendarButton();
+});
+  </script>
+
+<script>
+    function sendHeightToParent() {
+    const height = document.body.scrollHeight; // Höhe des Inhalts
+    window.parent.postMessage({ iframeHeight: height }, "*");
+}
+
+// Event-Listener für Änderungen (z. B. beim Wechseln des Grads)
+document.addEventListener("DOMContentLoaded", sendHeightToParent); // Initiale Höhe senden
+window.addEventListener("resize", sendHeightToParent); // Auf Resizing reagieren
+
+// Spezielle Änderungen im DOM (z. B. neue Felder)
+const observer = new MutationObserver(sendHeightToParent);
+observer.observe(document.body, { childList: true, subtree: true });
+</script>

@@ -1,0 +1,248 @@
+.container{
+    font-family: "Poppins", sans-serif;
+    padding:0px!important;
+}
+input[type="date"]{
+  width:100%;
+}
+input[type="time"]{
+    width:100%;
+}
+.fieldInner{
+    display:flex;
+}
+.bg-light{
+  border-radius:13px;
+}
+.upt-planer a{
+  color:#ec008c;
+}
+.behandlungsmethodes_html{
+    display: flex;
+        align-items: self-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap:4px;
+}
+.behandlungsmethodes_html button:hover {
+    background: #6A843F !important;
+    color: white !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Standardfarben und Blurring */
+.behandlungsmethodes_html button {
+    color: white;
+    filter: blur(1px);
+    padding: 3px 10px;
+background:lightgrey;
+font-size:13px;
+}
+
+
+
+/* Regeln für Grad A, nicht checked */
+#date_1:not([class^="checked"]).schweregrad_a .upta,
+#date_1:not([class^="checked"]).schweregrad_a .uptb,
+#date_1:not([class^="checked"]).schweregrad_a .uptc,
+#date_1:not([class^="checked"]).schweregrad_a .upte,
+#date_1:not([class^="checked"]).schweregrad_a .uptf {
+    filter: none;
+  background: #AECD65;
+  font-weight:500;
+  
+}
+#date_2:not([class^="checked"]).schweregrad_a .upta,
+#date_2:not([class^="checked"]).schweregrad_a .uptb,
+#date_2:not([class^="checked"]).schweregrad_a .uptc,
+#date_2:not([class^="checked"]).schweregrad_a .upte,
+#date_2:not([class^="checked"]).schweregrad_a .uptf,
+#date_2:not([class^="checked"]).schweregrad_a .uptg {
+    filter: none;
+ background: #AECD65;
+  font-weight:500;
+}
+#date_2:not([class^="checked"]).schweregrad_a .uptg {
+    font-weight: bold;
+   background: #6A843F;
+  
+}
+
+/* Regeln für Grad B, nicht checked */
+#date_1:not([class^="checked"]).schweregrad_b .upta,
+#date_1:not([class^="checked"]).schweregrad_b .uptb,
+#date_1:not([class^="checked"]).schweregrad_b .uptc,
+#date_1:not([class^="checked"]).schweregrad_b .upte,
+#date_1:not([class^="checked"]).schweregrad_b .uptf {
+    filter: none;
+  background: #AECD65;
+  font-weight:500;
+}
+#date_2:not([class^="checked"]).schweregrad_b .upta,
+#date_2:not([class^="checked"]).schweregrad_b .uptb,
+#date_2:not([class^="checked"]).schweregrad_b .uptc,
+#date_2:not([class^="checked"]).schweregrad_b .uptd,
+#date_2:not([class^="checked"]).schweregrad_b .upte,
+#date_2:not([class^="checked"]).schweregrad_b .uptf {
+    filter: none;
+   filter: none;
+  background: #AECD65;
+  font-weight:500;
+}
+#date_2:not([class^="checked"]).schweregrad_b .uptd {
+       font-weight: bold;
+   background: #6A843F;
+}
+#date_3:not([class^="checked"]).schweregrad_b .upta,
+#date_3:not([class^="checked"]).schweregrad_b .uptb,
+#date_3:not([class^="checked"]).schweregrad_b .uptc,
+#date_3:not([class^="checked"]).schweregrad_b .upte,
+#date_3:not([class^="checked"]).schweregrad_b .uptf,
+#date_3:not([class^="checked"]).schweregrad_b .uptg {
+    filter: none;
+  background: #AECD65;
+  font-weight:500;
+}
+#date_3:not([class^="checked"]).schweregrad_b .uptg {
+       font-weight: bold;
+   background: #6A843F;
+}
+#date_4:not([class^="checked"]).schweregrad_b .upta,
+#date_4:not([class^="checked"]).schweregrad_b .uptb,
+#date_4:not([class^="checked"]).schweregrad_b .uptc,
+#date_4:not([class^="checked"]).schweregrad_b .uptd,
+#date_4:not([class^="checked"]).schweregrad_b .upte,
+#date_4:not([class^="checked"]).schweregrad_b .uptf {
+    filter: none;
+  background: #AECD65;
+  font-weight:500;
+}
+#date_4:not([class^="checked"]).schweregrad_b .uptd {
+       font-weight: bold;
+   background: #6A843F;
+}
+
+/* Regeln für Grad C, nicht checked */
+#date_1:not([class^="checked"]).schweregrad_c .upta,
+#date_1:not([class^="checked"]).schweregrad_c .uptb,
+#date_1:not([class^="checked"]).schweregrad_c .uptc,
+#date_1:not([class^="checked"]).schweregrad_c .upte,
+#date_1:not([class^="checked"]).schweregrad_c .uptf {
+    filter: none;
+    background: #AECD65;
+    font-weight: 500;
+}
+#date_2:not([class^="checked"]).schweregrad_c .upta,
+#date_2:not([class^="checked"]).schweregrad_c .uptb,
+#date_2:not([class^="checked"]).schweregrad_c .uptc,
+#date_2:not([class^="checked"]).schweregrad_c .uptd,
+#date_2:not([class^="checked"]).schweregrad_c .upte,
+#date_2:not([class^="checked"]).schweregrad_c .uptf {
+    filter: none;
+    background: #AECD65;
+    font-weight: 500;
+}
+#date_2:not([class^="checked"]).schweregrad_c .uptd {
+    font-weight: bold;
+    background: #6A843F;
+}
+#date_3:not([class^="checked"]).schweregrad_c .upta,
+#date_3:not([class^="checked"]).schweregrad_c .uptb,
+#date_3:not([class^="checked"]).schweregrad_c .uptc,
+#date_3:not([class^="checked"]).schweregrad_c .uptd,
+#date_3:not([class^="checked"]).schweregrad_c .upte,
+#date_3:not([class^="checked"]).schweregrad_c .uptf {
+    filter: none;
+    background: #AECD65;
+    font-weight: 500;
+}
+#date_3:not([class^="checked"]).schweregrad_c .uptd {
+    font-weight: bold;
+    background: #6A843F;
+}
+#date_4:not([class^="checked"]).schweregrad_c .upta,
+#date_4:not([class^="checked"]).schweregrad_c .uptb,
+#date_4:not([class^="checked"]).schweregrad_c .uptc,
+#date_4:not([class^="checked"]).schweregrad_c .upte,
+#date_4:not([class^="checked"]).schweregrad_c .uptf,
+#date_4:not([class^="checked"]).schweregrad_c .uptg {
+    filter: none;
+    background: #AECD65;
+    font-weight: 500;
+}
+#date_4:not([class^="checked"]).schweregrad_c .uptg {
+    font-weight: bold;
+    background: #6A843F;
+}
+#date_5:not([class^="checked"]).schweregrad_c .upta,
+#date_5:not([class^="checked"]).schweregrad_c .uptb,
+#date_5:not([class^="checked"]).schweregrad_c .uptc,
+#date_5:not([class^="checked"]).schweregrad_c .uptd,
+#date_5:not([class^="checked"]).schweregrad_c .upte,
+#date_5:not([class^="checked"]).schweregrad_c .uptf {
+    filter: none;
+    background: #AECD65;
+    font-weight: 500;
+}
+#date_5:not([class^="checked"]).schweregrad_c .uptd {
+    font-weight: bold;
+    background: #6A843F;
+}
+#date_6:not([class^="checked"]).schweregrad_c .upta,
+#date_6:not([class^="checked"]).schweregrad_c .uptb,
+#date_6:not([class^="checked"]).schweregrad_c .uptc,
+#date_6:not([class^="checked"]).schweregrad_c .uptd,
+#date_6:not([class^="checked"]).schweregrad_c .upte,
+#date_6:not([class^="checked"]).schweregrad_c .uptf {
+    filter: none;
+    background: #AECD65;
+    font-weight: 500;
+}
+#date_6:not([class^="checked"]).schweregrad_c .uptd {
+    font-weight: bold;
+    background: #6A843F;
+}
+
+/* Regeln bei checked (alle gleich) */
+.checked .uptc,
+.checked .upte,
+.checked .uptf{
+    filter: none!important;
+    background: #AECD65!important;
+    font-weight: 500!important;
+}
+
+.checked .uptd{
+    background: #6A843F !important;
+    font-weight: bold!important;
+    filter: none!important;
+    cursor: pointer !important;
+}
+
+.legend_button{
+    background: #AECD65;
+    border-radius: .25rem;
+    border:0px;
+    color: white;
+    font-weight: semibold;
+    padding: 3px 10px 3px 10px;
+    transition: all 0.2s ease-in-out;
+    cursor:auto!important;
+  
+}
+.checked .upta,
+.checked .uptb,
+.checked .uptg {
+    background: lightgrey !important;
+    color: white !important;
+  font-weight:500!important;
+    filter: blur(1px)!important;
+}
+.js_date_hint.show{
+  color:#ec008c!important;
+  font-weight:400;
+}
+form{
+  border-radius:28px!important;
+  box-shadow: 0 1px 14px rgb(0 0 0 / 16%) !important;
+}
