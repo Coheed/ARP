@@ -36,7 +36,6 @@ bootstrap_barrio_navbar_background: 'bg-primary'
 # Messages.
 # ----------------------------
 bootstrap_barrio_messages_widget: 'toasts'
-bootstrap_barrio_messages_widget_toast_delay: 10000
 
 # Colors.
 # ----------------------------

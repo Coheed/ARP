@@ -5,14 +5,24 @@
  *
  * Available variables:
  * - breadcrumb: Breadcrumb trail items.
- * - breadcrumb_divider: Breadcrumb divider character
  */
 #}
+{{ attach_library('bootstrap_barrio/breadcrumb') }}
 
 {% if breadcrumb %}
-  {{ include('bootstrap_barrio:breadcrumb',
-    { breadcrumb: breadcrumb,
-      breadcrumb_divider: breadcrumb_divider
-    })
-  }}
+  <nav role="navigation" aria-label="breadcrumb" style="{{breadcrumb_divider}}">
+    <ol class="breadcrumb">
+    {% for item in breadcrumb %}
+      {% if item.url %}
+        <li class="breadcrumb-item">
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+      {% else %}
+        <li class="breadcrumb-item active">
+          {{ item.text }}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+  </nav>
 {% endif %}
