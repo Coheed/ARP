@@ -1,0 +1,5 @@
+enable_override: true
+view: blog_lists
+view_display: page_2
+inherit_settings: true
+pass_arguments: true

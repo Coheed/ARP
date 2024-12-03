@@ -1,0 +1,23 @@
+uuid: b1035f10-a3ca-48ad-819b-43bd575e4d81
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_betrag
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+id: paragraph.abrechnungskalkulation.field_betrag
+field_name: field_betrag
+entity_type: paragraph
+bundle: abrechnungskalkulation
+label: Betrag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

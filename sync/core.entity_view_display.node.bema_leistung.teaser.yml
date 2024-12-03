@@ -1,0 +1,121 @@
+uuid: 9614d8a2-bb14-4aee-9460-6e718bc2839a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bema_leistung.field_abkuerzung
+    - field.field.node.bema_leistung.field_abrechenbar_je
+    - field.field.node.bema_leistung.field_abrechnungsart
+    - field.field.node.bema_leistung.field_abrechnungsbeispiele
+    - field.field.node.bema_leistung.field_abrechnungsbestimmungen
+    - field.field.node.bema_leistung.field_behandlungsbereich
+    - field.field.node.bema_leistung.field_bema_bewertungszahl
+    - field.field.node.bema_leistung.field_bema_kategorie
+    - field.field.node.bema_leistung.field_bema_nr
+    - field.field.node.bema_leistung.field_beschreibung
+    - field.field.node.bema_leistung.field_dokumentation
+    - field.field.node.bema_leistung.field_dokumentation_pdf
+    - field.field.node.bema_leistung.field_dokumente
+    - field.field.node.bema_leistung.field_edv_nr
+    - field.field.node.bema_leistung.field_gerichtsurteil
+    - field.field.node.bema_leistung.field_kfo_leistung
+    - field.field.node.bema_leistung.field_kommentare_hinweise
+    - field.field.node.bema_leistung.field_kurzbeschreibung
+    - field.field.node.bema_leistung.field_leistung
+    - field.field.node.bema_leistung.field_quelle
+    - field.field.node.bema_leistung.field_referenzziffer
+    - field.field.node.bema_leistung.field_suche
+    - field.field.node.bema_leistung.field_suchwoerter_search
+    - field.field.node.bema_leistung.field_synonyme_search
+    - field.field.node.bema_leistung.field_zielgruppe
+    - field.field.node.bema_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.bema_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.bema_leistung
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_bema_bewertungszahl
+        - field_bema_nr
+        - field_abkuerzung
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.bema_leistung.teaser
+targetEntityType: node
+bundle: bema_leistung
+mode: teaser
+content:
+  field_abkuerzung:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_bema_bewertungszahl:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_bema_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_beschreibung:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_abrechenbar_je: true
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_behandlungsbereich: true
+  field_bema_kategorie: true
+  field_dokumentation: true
+  field_dokumentation_pdf: true
+  field_dokumente: true
+  field_edv_nr: true
+  field_gerichtsurteil: true
+  field_kfo_leistung: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_leistung: true
+  field_quelle: true
+  field_referenzziffer: true
+  field_suche: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  field_zusatzleistung_abrechenbar: true
+  field_zusatzleistung_nicht_abrec: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

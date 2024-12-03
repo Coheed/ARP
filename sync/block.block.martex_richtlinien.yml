@@ -1,0 +1,29 @@
+uuid: 59028ae3-d840-420f-82a3-17d2e35056cc
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.richtlinien
+  module:
+    - system
+  theme:
+    - martex
+id: martex_richtlinien
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:richtlinien'
+settings:
+  id: 'system_menu_block:richtlinien'
+  label: Richtlinien
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/richtlinien\r\n/richtlinien/*"

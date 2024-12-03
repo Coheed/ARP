@@ -1,0 +1,23 @@
+uuid: 5e0b6441-4371-45b7-a55f-4e1a2ff1575a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faktor
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+id: paragraph.abrechnungskalkulation.field_faktor
+field_name: field_faktor
+entity_type: paragraph
+bundle: abrechnungskalkulation
+label: Faktor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

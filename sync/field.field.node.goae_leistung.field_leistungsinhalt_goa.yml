@@ -1,0 +1,24 @@
+uuid: ac1fbe84-1b79-4dba-8386-1b5852a5e236
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leistungsinhalt_goa
+    - filter.format.full_html
+    - node.type.goae_leistung
+  module:
+    - text
+id: node.goae_leistung.field_leistungsinhalt_goa
+field_name: field_leistungsinhalt_goa
+entity_type: node
+bundle: goae_leistung
+label: Leistungsinhalt
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

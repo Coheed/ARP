@@ -1,0 +1,19 @@
+uuid: 446b08d4-e89c-47d2-b7cc-419d59d50370
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.goz_leistung
+id: node.goz_leistung.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: goz_leistung
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

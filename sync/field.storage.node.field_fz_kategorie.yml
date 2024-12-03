@@ -1,0 +1,20 @@
+uuid: 0173d9ad-0f35-47a8-a727-6b1443fa542b
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_fz_kategorie
+field_name: field_fz_kategorie
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

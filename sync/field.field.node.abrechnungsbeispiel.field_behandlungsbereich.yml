@@ -1,0 +1,29 @@
+uuid: e3f222fc-d12e-406c-8843-94c12d9eca61
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_behandlungsbereich
+    - node.type.abrechnungsbeispiel
+    - taxonomy.vocabulary.behandlungsbereich
+id: node.abrechnungsbeispiel.field_behandlungsbereich
+field_name: field_behandlungsbereich
+entity_type: node
+bundle: abrechnungsbeispiel
+label: 'Behandlungsbereich/ Versorgungsform'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      behandlungsbereich: behandlungsbereich
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 50a922ca-2afc-4437-90dd-b1a471b39081
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_synonyme_search
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_synonyme_search
+field_name: field_synonyme_search
+entity_type: node
+bundle: goz_analogleistung
+label: Synonyme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

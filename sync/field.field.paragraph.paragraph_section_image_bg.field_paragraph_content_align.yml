@@ -1,0 +1,21 @@
+uuid: 664db529-0997-4c3f-a4a4-67fbb40335f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_content_align
+    - paragraphs.paragraphs_type.paragraph_section_image_bg
+  module:
+    - options
+id: paragraph.paragraph_section_image_bg.field_paragraph_content_align
+field_name: field_paragraph_content_align
+entity_type: paragraph
+bundle: paragraph_section_image_bg
+label: 'Content Align'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

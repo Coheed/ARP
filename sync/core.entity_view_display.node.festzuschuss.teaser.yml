@@ -1,0 +1,87 @@
+uuid: df888654-4e0e-415a-94a4-c75811588fd1
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.festzuschuss.field_abrechnungsart
+    - field.field.node.festzuschuss.field_abrechnungsbeispiele
+    - field.field.node.festzuschuss.field_abrechnungsbestimmungen
+    - field.field.node.festzuschuss.field_beachte
+    - field.field.node.festzuschuss.field_befund_nr
+    - field.field.node.festzuschuss.field_befundbeschreibung
+    - field.field.node.festzuschuss.field_betrag_ohne_bonus
+    - field.field.node.festzuschuss.field_dokumente
+    - field.field.node.festzuschuss.field_fz_kategorie
+    - field.field.node.festzuschuss.field_kombinierbar_mit
+    - field.field.node.festzuschuss.field_kommentare_hinweise
+    - field.field.node.festzuschuss.field_kurzbeschreibung
+    - field.field.node.festzuschuss.field_material
+    - field.field.node.festzuschuss.field_quelle
+    - field.field.node.festzuschuss.field_regelversorgung_zahnaerztl
+    - field.field.node.festzuschuss.field_regelversorgung_zahntechni
+    - field.field.node.festzuschuss.field_suchwoerter_search
+    - field.field.node.festzuschuss.field_synonyme_search
+    - field.field.node.festzuschuss.field_zielgruppe
+    - node.type.festzuschuss
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_befund_nr
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.festzuschuss.teaser
+targetEntityType: node
+bundle: festzuschuss
+mode: teaser
+content:
+  field_befund_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_befundbeschreibung:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_beachte: true
+  field_betrag_ohne_bonus: true
+  field_dokumente: true
+  field_fz_kategorie: true
+  field_kombinierbar_mit: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_material: true
+  field_quelle: true
+  field_regelversorgung_zahnaerztl: true
+  field_regelversorgung_zahntechni: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

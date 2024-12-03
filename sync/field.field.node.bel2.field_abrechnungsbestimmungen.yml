@@ -1,0 +1,24 @@
+uuid: f3f21f51-eabb-49f5-b2dd-331bde511bba
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsbestimmungen
+    - filter.format.full_html
+    - node.type.bel2
+  module:
+    - text
+id: node.bel2.field_abrechnungsbestimmungen
+field_name: field_abrechnungsbestimmungen
+entity_type: node
+bundle: bel2
+label: Abrechnungsbestimmungen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: 6ceb8cc0-c058-4773-823f-520d848c0259
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.goz
+  module:
+    - system
+  theme:
+    - martex
+id: martex_goz
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:goz'
+settings:
+  id: 'system_menu_block:goz'
+  label: GOZ
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/goz/*\r\n/goz"

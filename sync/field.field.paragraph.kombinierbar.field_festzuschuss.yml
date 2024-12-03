@@ -1,0 +1,29 @@
+uuid: 6559c0da-c35c-4270-a9a1-c18976a0488e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_festzuschuss
+    - node.type.festzuschuss
+    - paragraphs.paragraphs_type.kombinierbar
+id: paragraph.kombinierbar.field_festzuschuss
+field_name: field_festzuschuss
+entity_type: paragraph
+bundle: kombinierbar
+label: Festzuschuss
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      festzuschuss: festzuschuss
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

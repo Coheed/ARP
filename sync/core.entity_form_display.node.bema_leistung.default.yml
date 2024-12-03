@@ -1,0 +1,371 @@
+uuid: 7e04299b-3edb-4676-9f40-e23c6467a0cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.bema_leistung.field_abkuerzung
+    - field.field.node.bema_leistung.field_abrechenbar_je
+    - field.field.node.bema_leistung.field_abrechnungsart
+    - field.field.node.bema_leistung.field_abrechnungsbeispiele
+    - field.field.node.bema_leistung.field_abrechnungsbestimmungen
+    - field.field.node.bema_leistung.field_behandlungsbereich
+    - field.field.node.bema_leistung.field_bema_bewertungszahl
+    - field.field.node.bema_leistung.field_bema_kategorie
+    - field.field.node.bema_leistung.field_bema_nr
+    - field.field.node.bema_leistung.field_beschreibung
+    - field.field.node.bema_leistung.field_dokumentation
+    - field.field.node.bema_leistung.field_dokumentation_pdf
+    - field.field.node.bema_leistung.field_dokumente
+    - field.field.node.bema_leistung.field_edv_nr
+    - field.field.node.bema_leistung.field_gerichtsurteil
+    - field.field.node.bema_leistung.field_kfo_leistung
+    - field.field.node.bema_leistung.field_kommentare_hinweise
+    - field.field.node.bema_leistung.field_kurzbeschreibung
+    - field.field.node.bema_leistung.field_leistung
+    - field.field.node.bema_leistung.field_quelle
+    - field.field.node.bema_leistung.field_referenzziffer
+    - field.field.node.bema_leistung.field_suche
+    - field.field.node.bema_leistung.field_suchwoerter_search
+    - field.field.node.bema_leistung.field_synonyme_search
+    - field.field.node.bema_leistung.field_zielgruppe
+    - field.field.node.bema_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.bema_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.bema_leistung
+  module:
+    - field_group
+    - layout_paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_intern:
+      children:
+        - field_edv_nr
+        - field_zielgruppe
+        - field_quelle
+      label: Intern
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+    group_suche:
+      children:
+        - field_kurzbeschreibung
+        - field_suchwoerter_search
+        - field_synonyme_search
+      label: Suche
+      region: content
+      parent_name: ''
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+id: node.bema_leistung.default
+targetEntityType: node
+bundle: bema_leistung
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abkuerzung:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechenbar_je:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsart:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechnungsbeispiele:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsbestimmungen:
+    type: text_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_behandlungsbereich:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bema_bewertungszahl:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_bema_kategorie:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bema_nr:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 25
+      placeholder: ''
+    third_party_settings: {  }
+  field_beschreibung:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumentation:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumentation_pdf:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumente:
+    type: entity_reference_autocomplete
+    weight: 20
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_edv_nr:
+    type: string_textfield
+    weight: 37
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gerichtsurteil:
+    type: layout_paragraphs
+    weight: 18
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_kfo_leistung:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_kommentare_hinweise:
+    type: layout_paragraphs
+    weight: 17
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_kurzbeschreibung:
+    type: string_textarea
+    weight: 40
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistung:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_quelle:
+    type: options_select
+    weight: 39
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_referenzziffer:
+    type: entity_reference_autocomplete
+    weight: 21
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_suchwoerter_search:
+    type: string_textfield
+    weight: 41
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_synonyme_search:
+    type: string_textfield
+    weight: 42
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_zielgruppe:
+    type: options_buttons
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_zusatzleistung_abrechenbar:
+    type: layout_paragraphs
+    weight: 15
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_zusatzleistung_nicht_abrec:
+    type: layout_paragraphs
+    weight: 16
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 23
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 29
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_suche: true

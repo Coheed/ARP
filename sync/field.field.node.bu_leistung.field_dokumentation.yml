@@ -1,0 +1,24 @@
+uuid: 89b41a78-9549-4ba9-8d7f-65cfca9d4427
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumentation
+    - filter.format.full_html
+    - node.type.bu_leistung
+  module:
+    - text
+id: node.bu_leistung.field_dokumentation
+field_name: field_dokumentation
+entity_type: node
+bundle: bu_leistung
+label: Dokumentation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

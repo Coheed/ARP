@@ -1,0 +1,21 @@
+uuid: f2d2b1f6-7456-4c6f-9db5-4c96eb98b401
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_beschlossen_durch
+    - paragraphs.paragraphs_type.gerichtsurteil
+  module:
+    - options
+id: paragraph.gerichtsurteil.field_beschlossen_durch
+field_name: field_beschlossen_durch
+entity_type: paragraph
+bundle: gerichtsurteil
+label: 'Beschlossen durch'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

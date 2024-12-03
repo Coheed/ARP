@@ -1,0 +1,24 @@
+uuid: cb58357f-6933-4d9e-b848-773e98c2c7ce
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_leistung_calc
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+  module:
+    - text
+id: paragraph.abrechnungskalkulation.field_leistung_calc
+field_name: field_leistung_calc
+entity_type: paragraph
+bundle: abrechnungskalkulation
+label: Leistung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

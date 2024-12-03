@@ -1,0 +1,21 @@
+uuid: ce1c80ae-cef7-472f-9e6e-60c0eb1a7d1a
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_eindeutige_analognummer_zf
+field_name: field_eindeutige_analognummer_zf
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

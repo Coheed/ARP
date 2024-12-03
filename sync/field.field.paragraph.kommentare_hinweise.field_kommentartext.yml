@@ -1,0 +1,24 @@
+uuid: dcbe8280-8980-40c9-a208-71313af5cd87
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kommentartext
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.kommentare_hinweise
+  module:
+    - text
+id: paragraph.kommentare_hinweise.field_kommentartext
+field_name: field_kommentartext
+entity_type: paragraph
+bundle: kommentare_hinweise
+label: Kommentartext
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

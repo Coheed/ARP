@@ -1,0 +1,11 @@
+uuid: 87f8764b-30bd-48fd-bcb0-602891a96aad
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.kommentarquelle
+id: taxonomy_term.kommentarquelle
+target_entity_type_id: taxonomy_term
+target_bundle: kommentarquelle
+default_langcode: site_default
+language_alterable: false

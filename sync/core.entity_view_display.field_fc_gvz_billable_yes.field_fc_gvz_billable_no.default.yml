@@ -1,0 +1,30 @@
+uuid: ac4c8865-e9c5-457e-85cf-9901df61cc17
+langcode: de
+status: true
+dependencies:
+  config:
+    - eck.eck_type.field_fc_gvz_billable_yes.field_fc_gvz_billable_no
+    - field.field.field_fc_gvz_billable_yes.field_fc_gvz_billable_no.field_bedingung_optional
+    - field.field.field_fc_gvz_billable_yes.field_fc_gvz_billable_no.field_leistung
+id: field_fc_gvz_billable_yes.field_fc_gvz_billable_no.default
+targetEntityType: field_fc_gvz_billable_yes
+bundle: field_fc_gvz_billable_no
+mode: default
+content:
+  field_bedingung_optional:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_leistung:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

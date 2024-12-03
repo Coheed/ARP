@@ -1,0 +1,32 @@
+uuid: 0a8e53c5-e624-4beb-a973-995787fdae28
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zusaetzlich_berechnungsfaehig.field_bedingung_optional
+    - field.field.paragraph.zusaetzlich_berechnungsfaehig.field_leistung_bel2
+    - paragraphs.paragraphs_type.zusaetzlich_berechnungsfaehig
+  module:
+    - text
+id: paragraph.zusaetzlich_berechnungsfaehig.default
+targetEntityType: paragraph
+bundle: zusaetzlich_berechnungsfaehig
+mode: default
+content:
+  field_bedingung_optional:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_leistung_bel2:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

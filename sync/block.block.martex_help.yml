@@ -1,0 +1,20 @@
+uuid: 81276990-d6fd-4db4-bcca-2c5b51e79615
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - martex
+id: martex_help
+theme: martex
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

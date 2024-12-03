@@ -1,0 +1,29 @@
+uuid: 1f5be174-8377-4b6c-a98d-ce41f1793fd5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_analogien_kategorie
+    - node.type.goz_analogleistung
+    - taxonomy.vocabulary.analogien
+id: node.goz_analogleistung.field_analogien_kategorie
+field_name: field_analogien_kategorie
+entity_type: node
+bundle: goz_analogleistung
+label: 'Analogien Kategorie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      analogien: analogien
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

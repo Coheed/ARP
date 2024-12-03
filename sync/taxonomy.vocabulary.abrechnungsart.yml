@@ -1,0 +1,15 @@
+uuid: 80243771-7958-4c58-a648-e698da80f85f
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Abrechnungsart
+vid: abrechnungsart
+description: null
+weight: 0
+new_revision: false

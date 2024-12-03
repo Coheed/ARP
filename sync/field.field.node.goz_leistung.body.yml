@@ -1,0 +1,24 @@
+uuid: fdf84ded-76b3-4bbd-b9d3-04040a16f5f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.goz_leistung
+  module:
+    - text
+id: node.goz_leistung.body
+field_name: body
+entity_type: node
+bundle: goz_leistung
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

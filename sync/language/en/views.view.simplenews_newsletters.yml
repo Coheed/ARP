@@ -1,0 +1,56 @@
+label: 'Newsletter issues'
+description: 'Find and manage newsletter issues.'
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« first'
+            last: 'last »'
+      fields:
+        node_bulk_form:
+          label: 'Node operations bulk form'
+          action_title: 'With selection'
+        title:
+          label: Issue
+        simplenews_issue:
+          label: Newsletter
+          separator: ', '
+        status:
+          label: Published
+          separator: ', '
+        created:
+          label: Updated
+        send_status:
+          label: 'Send status'
+        operations:
+          label: 'Operations links'
+      filters:
+        simplenews_issue_target_id_1:
+          expose:
+            label: Newsletter
+      title: 'Newsletter issues'
+      empty:
+        area:
+          content:
+            value: 'No newsletter issues found.'
+  page_1:
+    display_title: Page
+    display_options:
+      menu:
+        title: 'Newsletter issues'

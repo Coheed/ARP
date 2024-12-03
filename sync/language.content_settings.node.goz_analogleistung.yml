@@ -1,0 +1,11 @@
+uuid: bc10421a-3673-4067-9281-db9843b58edf
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung
+target_entity_type_id: node
+target_bundle: goz_analogleistung
+default_langcode: site_default
+language_alterable: false

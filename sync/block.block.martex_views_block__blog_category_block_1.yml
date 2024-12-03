@@ -1,0 +1,29 @@
+uuid: 3432a4d7-662a-4476-8191-4e581deb8085
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_category
+  module:
+    - system
+    - views
+  theme:
+    - martex
+id: martex_views_block__blog_category_block_1
+theme: martex
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:blog_category-block_1'
+settings:
+  id: 'views_block:blog_category-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/blog-sidebar\r\n/blog-category/*"

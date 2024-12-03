@@ -1,0 +1,39 @@
+uuid: ba20a5a4-f9d6-4e1d-b35b-375c4cb29538
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_job_type
+field_name: field_job_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fulltime
+      label: 'Full time'
+    -
+      value: parttime
+      label: 'Part time'
+    -
+      value: intern
+      label: Internship
+    -
+      value: remote
+      label: Remote
+    -
+      value: contract
+      label: Contract
+    -
+      value: temporary
+      label: Temporary
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

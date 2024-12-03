@@ -1,0 +1,29 @@
+uuid: d56c0692-8e7a-4236-bae9-1d5baa749a0a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumente_goa
+    - media.type.document
+    - node.type.goae_leistung
+id: node.goae_leistung.field_dokumente_goa
+field_name: field_dokumente_goa
+entity_type: node
+bundle: goae_leistung
+label: Dokumente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

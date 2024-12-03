@@ -1,0 +1,23 @@
+uuid: 0d4d439b-f31d-4912-823f-333ecd41fea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mainmenu_absolute
+    - node.type.landing_page
+id: node.landing_page.field_mainmenu_absolute
+field_name: field_mainmenu_absolute
+entity_type: node
+bundle: landing_page
+label: 'Main menu absolute'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

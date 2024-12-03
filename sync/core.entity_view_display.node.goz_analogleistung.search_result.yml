@@ -1,0 +1,58 @@
+uuid: 252a828b-6ce6-4108-9835-497d408d1c15
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.goz_analogleistung.field_abrechnungsart
+    - field.field.node.goz_analogleistung.field_abrechnungsbeispiele
+    - field.field.node.goz_analogleistung.field_analogien_kategorie
+    - field.field.node.goz_analogleistung.field_analognummer
+    - field.field.node.goz_analogleistung.field_analogziffer
+    - field.field.node.goz_analogleistung.field_behandlungsbereich
+    - field.field.node.goz_analogleistung.field_beschreibung_analog
+    - field.field.node.goz_analogleistung.field_dokumente
+    - field.field.node.goz_analogleistung.field_eindeutige_analognummer_zf
+    - field.field.node.goz_analogleistung.field_es_handelt_sich_um_eine_ve
+    - field.field.node.goz_analogleistung.field_kommentare_hinweise
+    - field.field.node.goz_analogleistung.field_kurzbeschreibung
+    - field.field.node.goz_analogleistung.field_punktzahl
+    - field.field.node.goz_analogleistung.field_quelle
+    - field.field.node.goz_analogleistung.field_suchwoerter_search
+    - field.field.node.goz_analogleistung.field_synonyme_search
+    - field.field.node.goz_analogleistung.field_zeit_in_min
+    - field.field.node.goz_analogleistung.field_zielgruppe
+    - node.type.goz_analogleistung
+  module:
+    - user
+id: node.goz_analogleistung.search_result
+targetEntityType: node
+bundle: goz_analogleistung
+mode: search_result
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_analogien_kategorie: true
+  field_analognummer: true
+  field_analogziffer: true
+  field_behandlungsbereich: true
+  field_beschreibung_analog: true
+  field_dokumente: true
+  field_eindeutige_analognummer_zf: true
+  field_es_handelt_sich_um_eine_ve: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_punktzahl: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zeit_in_min: true
+  field_zielgruppe: true
+  langcode: true
+  search_api_excerpt: true

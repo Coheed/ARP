@@ -1,0 +1,30 @@
+uuid: 8ea67b4a-6dc8-4e28-9719-54635db06b6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_paragraph_accordion_style
+field_name: field_paragraph_accordion_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: plain
+      label: Plain
+    -
+      value: accordion-card
+      label: Card
+    -
+      value: icon
+      label: Icon
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

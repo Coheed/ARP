@@ -1,0 +1,29 @@
+uuid: 80a512e0-5bbd-4fe3-8c21-02e9fdcfe521
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_goz_kategorie
+    - node.type.goz_leistung
+    - taxonomy.vocabulary.goz
+id: node.goz_leistung.field_goz_kategorie
+field_name: field_goz_kategorie
+entity_type: node
+bundle: goz_leistung
+label: 'GOZ Kategorie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      goz: goz
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

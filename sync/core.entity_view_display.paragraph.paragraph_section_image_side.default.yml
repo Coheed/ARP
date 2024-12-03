@@ -1,0 +1,62 @@
+uuid: b9a5f011-b94f-490d-a228-d7b0264ea2d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_section_image_side.field_paragraph_content
+    - field.field.paragraph.paragraph_section_image_side.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_section_image_side.field_paragraph_id
+    - field.field.paragraph.paragraph_section_image_side.field_paragraph_image
+    - field.field.paragraph.paragraph_section_image_side.field_paragraph_image_side_pos
+    - paragraphs.paragraphs_type.paragraph_section_image_side
+  module:
+    - image
+    - options
+    - text
+id: paragraph.paragraph_section_image_side.default
+targetEntityType: paragraph
+bundle: paragraph_section_image_side
+mode: default
+content:
+  field_paragraph_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph_extra_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_paragraph_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraph_image_side_pos:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

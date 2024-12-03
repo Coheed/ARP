@@ -1,0 +1,16 @@
+uuid: 00e2c825-eb79-464b-a700-df195b4da8ba
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'CAD/ CAM / 3D Druck'
+vid: cad_cam_3d_druck
+description: null
+weight: 0
+new_revision: false

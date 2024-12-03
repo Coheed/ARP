@@ -1,0 +1,10 @@
+uuid: 3d074e2a-4efd-454b-8430-aa67c957b6d8
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zglzjmYxi0G0ag9MZ02y0LSJOdpWRwJxyP_OvFojFyo
+id: basic
+label: 'Normaler Block'
+revision: false
+description: 'Ein normaler Block enthält einen Titel und einen Textkörper.'

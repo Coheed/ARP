@@ -1,0 +1,11 @@
+uuid: f78f960e-5ed1-405b-a774-09411d82f3fe
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.beb_zahntechnik
+id: node.beb_zahntechnik
+target_entity_type_id: node
+target_bundle: beb_zahntechnik
+default_langcode: site_default
+language_alterable: false

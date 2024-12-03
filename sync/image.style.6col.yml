@@ -1,0 +1,15 @@
+uuid: 581d55e7-7d90-4605-bae5-8552c2e6a629
+langcode: en
+status: true
+dependencies: {  }
+name: 6col
+label: 6col
+effects:
+  e36911de-693a-4125-8cd6-737745f6c48c:
+    uuid: e36911de-693a-4125-8cd6-737745f6c48c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

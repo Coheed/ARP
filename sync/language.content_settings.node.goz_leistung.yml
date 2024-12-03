@@ -1,0 +1,11 @@
+uuid: 614ccfe9-da43-45ca-ba27-73e32d36893a
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.goz_leistung
+id: node.goz_leistung
+target_entity_type_id: node
+target_bundle: goz_leistung
+default_langcode: site_default
+language_alterable: false

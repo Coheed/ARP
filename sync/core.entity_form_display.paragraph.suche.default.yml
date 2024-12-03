@@ -1,0 +1,41 @@
+uuid: ae7aef3e-fb2b-4848-aef4-e3063bd95e95
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.suche.field_kurzbeschreibung_fuer_teas
+    - field.field.paragraph.suche.field_suchwoerter
+    - field.field.paragraph.suche.field_synonyme
+    - paragraphs.paragraphs_type.suche
+id: paragraph.suche.default
+targetEntityType: paragraph
+bundle: suche
+mode: default
+content:
+  field_kurzbeschreibung_fuer_teas:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_suchwoerter:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_synonyme:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

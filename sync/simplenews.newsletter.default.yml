@@ -1,0 +1,20 @@
+uuid: 35f611b0-125d-4234-abf9-0c2d74b43510
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6wgXMbTWVfjhYZ3wFXLy3vAISxQeKEJz9SdNqt9SLMY
+name: 'Default newsletter'
+id: default
+description: 'This is an example newsletter. Change it.'
+format: plain
+priority: 0
+receipt: true
+from_name: 'Drush Site-Install'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: admin@example.com
+hyperlinks: false
+allowed_handlers: {  }
+new_account: none
+access: default
+weight: 0

@@ -1,0 +1,52 @@
+uuid: 6e57dfdb-5b99-4874-be62-347d737a6b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_layout.field_paragraph_content_align
+    - field.field.paragraph.paragraph_layout.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_layout.field_paragraph_gutter_class
+    - field.field.paragraph.paragraph_layout.field_paragraph_switch_column
+    - paragraphs.paragraphs_type.paragraph_layout
+id: paragraph.paragraph_layout.default
+targetEntityType: paragraph
+bundle: paragraph_layout
+mode: default
+content:
+  field_paragraph_content_align:
+    type: options_select
+    weight: -198
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraph_extra_class:
+    type: string_textfield
+    weight: -199
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_gutter_class:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_switch_column:
+    type: boolean_checkbox
+    weight: -197
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  layout_paragraphs_fields:
+    weight: -200
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

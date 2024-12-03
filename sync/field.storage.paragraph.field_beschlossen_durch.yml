@@ -1,0 +1,33 @@
+uuid: 427aa4e1-6dac-4363-820d-35dc30999e75
+langcode: de
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_beschlossen_durch
+field_name: field_beschlossen_durch
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: oberlandesgericht
+      label: Oberlandesgericht
+    -
+      value: landesgericht
+      label: Landesgericht
+    -
+      value: sozialgericht
+      label: Sozialgericht
+    -
+      value: amtsgericht
+      label: Amtsgericht
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

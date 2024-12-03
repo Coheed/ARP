@@ -1,0 +1,115 @@
+uuid: 34407cfa-1af4-4927-95b7-b9d4f233ed5e
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.goz_leistung.body
+    - field.field.node.goz_leistung.field_abrechenbar_je
+    - field.field.node.goz_leistung.field_abrechnungsart
+    - field.field.node.goz_leistung.field_abrechnungsbeispiele
+    - field.field.node.goz_leistung.field_abrechnungsbestimmungen
+    - field.field.node.goz_leistung.field_begruendungen
+    - field.field.node.goz_leistung.field_behandlungsbereich
+    - field.field.node.goz_leistung.field_beschreibung
+    - field.field.node.goz_leistung.field_dokumentation
+    - field.field.node.goz_leistung.field_dokumentation_pdf
+    - field.field.node.goz_leistung.field_dokumente_musterformulare
+    - field.field.node.goz_leistung.field_gebuehrenziffer
+    - field.field.node.goz_leistung.field_gerichtsurteil
+    - field.field.node.goz_leistung.field_goz_kategorie
+    - field.field.node.goz_leistung.field_kfo_leistung
+    - field.field.node.goz_leistung.field_kommentare_hinweise
+    - field.field.node.goz_leistung.field_kurzbeschreibung
+    - field.field.node.goz_leistung.field_leistungsinhalt
+    - field.field.node.goz_leistung.field_musterbeispiele_fuer_moegl
+    - field.field.node.goz_leistung.field_punktzahl
+    - field.field.node.goz_leistung.field_quelle
+    - field.field.node.goz_leistung.field_referenzziffer
+    - field.field.node.goz_leistung.field_suche
+    - field.field.node.goz_leistung.field_suchwoerter_search
+    - field.field.node.goz_leistung.field_synonyme_search
+    - field.field.node.goz_leistung.field_zielgruppe
+    - field.field.node.goz_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.goz_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.goz_leistung
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_punktzahl
+        - field_gebuehrenziffer
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.goz_leistung.teaser
+targetEntityType: node
+bundle: goz_leistung
+mode: teaser
+content:
+  field_beschreibung:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_gebuehrenziffer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_punktzahl:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  body: true
+  field_abrechenbar_je: true
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_begruendungen: true
+  field_behandlungsbereich: true
+  field_dokumentation: true
+  field_dokumentation_pdf: true
+  field_dokumente_musterformulare: true
+  field_gerichtsurteil: true
+  field_goz_kategorie: true
+  field_kfo_leistung: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_leistungsinhalt: true
+  field_musterbeispiele_fuer_moegl: true
+  field_quelle: true
+  field_referenzziffer: true
+  field_suche: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  field_zusatzleistung_abrechenbar: true
+  field_zusatzleistung_nicht_abrec: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

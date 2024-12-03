@@ -1,0 +1,19 @@
+uuid: 2c2379eb-cf08-49c1-8823-38bd5d52f6d4
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_berechnungsfaehige_laborpo
+field_name: field_berechnungsfaehige_laborpo
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

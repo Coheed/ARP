@@ -1,0 +1,39 @@
+uuid: 8422ff02-7b20-46a6-96be-4330512913ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.feeds_item
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - pdf
+_core:
+  default_config_hash: XxUyhaTuM0OUUZpr8G6jdrFBEh5eag7auWxBKhm6cvY
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  field_media_document:
+    type: pdf_default
+    label: hidden
+    settings:
+      keep_pdfjs: '1'
+      width: 100%
+      height: 1000px
+      page: ''
+      zoom: ''
+      custom_zoom: ''
+      pagemode: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

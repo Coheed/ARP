@@ -1,0 +1,13 @@
+uuid: e7379251-b753-4d9d-9390-ac8d5b487997
+langcode: de
+status: true
+dependencies:
+  module:
+    - feeds
+_core:
+  default_config_hash: Ur7RuR5ew0bsKEMwJUA7ZY0oY1mfXrSzcw4Tlt8FMJ0
+id: feeds_feed_clear_action
+label: 'Importierte Elemente ausgewählter Feeds löschen'
+type: feeds_feed
+plugin: feeds_feed_clear_action
+configuration: {  }

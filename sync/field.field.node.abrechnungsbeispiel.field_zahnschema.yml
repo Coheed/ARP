@@ -1,0 +1,115 @@
+uuid: 96f2fe3a-2d5d-4828-b316-6b39608f5e8d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zahnschema
+    - node.type.abrechnungsbeispiel
+    - paragraphs.paragraphs_type.zahnschema
+  module:
+    - entity_reference_revisions
+id: node.abrechnungsbeispiel.field_zahnschema
+field_name: field_zahnschema
+entity_type: node
+bundle: abrechnungsbeispiel
+label: Zahnschema
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      zahnschema: zahnschema
+    negate: 0
+    target_bundles_drag_drop:
+      berechnung_daneben_ausgeschlosse:
+        weight: 30
+        enabled: false
+      from_library:
+        weight: 31
+        enabled: false
+      gerichtsurteil:
+        weight: 32
+        enabled: false
+      intern:
+        weight: 33
+        enabled: false
+      kombinierbar:
+        weight: 34
+        enabled: false
+      kommentare_hinweise:
+        weight: 35
+        enabled: false
+      paragraph_accordion:
+        weight: 36
+        enabled: false
+      paragraph_accordion_item:
+        weight: 37
+        enabled: false
+      paragraph_card:
+        weight: 38
+        enabled: false
+      paragraph_content:
+        weight: 39
+        enabled: false
+      paragraph_content_video:
+        weight: 40
+        enabled: false
+      paragraph_layout:
+        weight: 41
+        enabled: false
+      paragraph_section:
+        weight: 42
+        enabled: false
+      paragraph_section_image_bg:
+        weight: 43
+        enabled: false
+      paragraph_section_image_side:
+        weight: 44
+        enabled: false
+      paragraph_section_video_bg:
+        weight: 45
+        enabled: false
+      paragraph_slider_block:
+        weight: 46
+        enabled: false
+      paragraph_slider_item:
+        weight: 47
+        enabled: false
+      paragraph_tab_item:
+        weight: 49
+        enabled: false
+      paragraph_tabs:
+        weight: 48
+        enabled: false
+      paragraph_views_reference:
+        weight: 50
+        enabled: false
+      referenzen:
+        weight: 51
+        enabled: false
+      suche:
+        weight: 52
+        enabled: false
+      zahnschema:
+        weight: 53
+        enabled: true
+      zusaetzlich_berechnungsfaehig:
+        weight: 54
+        enabled: false
+      zusatzleistung_abrechenbar:
+        weight: 55
+        enabled: false
+      zusatzleistung_abrechenbar_goa:
+        weight: 56
+        enabled: false
+      zusatzleistung_nicht_abrechenbar:
+        weight: 57
+        enabled: false
+      zusatzleistung_nicht_goa:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions

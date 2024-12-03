@@ -1,0 +1,97 @@
+uuid: c0982c45-9fd6-4400-b94b-b58869991ba4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suche
+    - node.type.bema_leistung
+    - paragraphs.paragraphs_type.suche
+  module:
+    - entity_reference_revisions
+id: node.bema_leistung.field_suche
+field_name: field_suche
+entity_type: node
+bundle: bema_leistung
+label: Suche
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      suche: suche
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 24
+        enabled: false
+      gerichtsurteil:
+        weight: 25
+        enabled: false
+      intern:
+        weight: 26
+        enabled: false
+      kommentare_hinweise:
+        weight: 27
+        enabled: false
+      paragraph_accordion:
+        weight: 28
+        enabled: false
+      paragraph_accordion_item:
+        weight: 29
+        enabled: false
+      paragraph_card:
+        weight: 30
+        enabled: false
+      paragraph_content:
+        weight: 31
+        enabled: false
+      paragraph_content_video:
+        weight: 32
+        enabled: false
+      paragraph_layout:
+        weight: 33
+        enabled: false
+      paragraph_section:
+        weight: 34
+        enabled: false
+      paragraph_section_image_bg:
+        weight: 35
+        enabled: false
+      paragraph_section_image_side:
+        weight: 36
+        enabled: false
+      paragraph_section_video_bg:
+        weight: 37
+        enabled: false
+      paragraph_slider_block:
+        weight: 38
+        enabled: false
+      paragraph_slider_item:
+        weight: 39
+        enabled: false
+      paragraph_tab_item:
+        weight: 41
+        enabled: false
+      paragraph_tabs:
+        weight: 40
+        enabled: false
+      paragraph_views_reference:
+        weight: 42
+        enabled: false
+      referenzen:
+        weight: 43
+        enabled: false
+      suche:
+        weight: 44
+        enabled: true
+      zusatzleistung_abrechenbar:
+        weight: 45
+        enabled: false
+      zusatzleistung_nicht_abrechenbar:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

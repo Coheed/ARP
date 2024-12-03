@@ -1,0 +1,16 @@
+uuid: 0289d314-1eef-4432-8517-a3415c333835
+langcode: und
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - goz
+    parent: 'goz:'
+name: 'GOZ Kategorie'
+vid: goz
+description: null
+weight: 0
+new_revision: false

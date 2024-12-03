@@ -1,0 +1,29 @@
+uuid: 408ef508-23bc-496f-8009-6ba660ff403d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechenbar_je
+    - node.type.goz_leistung
+    - taxonomy.vocabulary.abrechnungsobjekt
+id: node.goz_leistung.field_abrechenbar_je
+field_name: field_abrechenbar_je
+entity_type: node
+bundle: goz_leistung
+label: 'Abrechenbar je'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsobjekt: abrechnungsobjekt
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 8cbaeee3-49b9-4209-8cea-e88236061012
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suchwoerter_search
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_suchwoerter_search
+field_name: field_suchwoerter_search
+entity_type: node
+bundle: goz_analogleistung
+label: Suchwörter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

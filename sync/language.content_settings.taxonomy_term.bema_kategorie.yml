@@ -1,0 +1,11 @@
+uuid: 9cc8ae86-6e29-4aca-8228-23f05de1af18
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bema_kategorie
+id: taxonomy_term.bema_kategorie
+target_entity_type_id: taxonomy_term
+target_bundle: bema_kategorie
+default_langcode: site_default
+language_alterable: false

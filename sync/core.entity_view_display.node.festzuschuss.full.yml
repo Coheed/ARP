@@ -1,0 +1,98 @@
+uuid: 60914e18-f94b-47b9-853c-2965e56a2a22
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.festzuschuss.field_abrechnungsart
+    - field.field.node.festzuschuss.field_abrechnungsbeispiele
+    - field.field.node.festzuschuss.field_abrechnungsbestimmungen
+    - field.field.node.festzuschuss.field_beachte
+    - field.field.node.festzuschuss.field_befund_nr
+    - field.field.node.festzuschuss.field_befundbeschreibung
+    - field.field.node.festzuschuss.field_betrag_ohne_bonus
+    - field.field.node.festzuschuss.field_dokumente
+    - field.field.node.festzuschuss.field_fz_kategorie
+    - field.field.node.festzuschuss.field_kombinierbar_mit
+    - field.field.node.festzuschuss.field_kommentare_hinweise
+    - field.field.node.festzuschuss.field_kurzbeschreibung
+    - field.field.node.festzuschuss.field_material
+    - field.field.node.festzuschuss.field_quelle
+    - field.field.node.festzuschuss.field_regelversorgung_zahnaerztl
+    - field.field.node.festzuschuss.field_regelversorgung_zahntechni
+    - field.field.node.festzuschuss.field_suchwoerter_search
+    - field.field.node.festzuschuss.field_synonyme_search
+    - field.field.node.festzuschuss.field_zielgruppe
+    - node.type.festzuschuss
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.festzuschuss.full
+targetEntityType: node
+bundle: festzuschuss
+mode: full
+content:
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_abrechnungsbestimmungen:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_beachte: true
+  field_befund_nr: true
+  field_befundbeschreibung: true
+  field_betrag_ohne_bonus: true
+  field_fz_kategorie: true
+  field_kombinierbar_mit: true
+  field_kurzbeschreibung: true
+  field_material: true
+  field_quelle: true
+  field_regelversorgung_zahnaerztl: true
+  field_regelversorgung_zahntechni: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  search_api_excerpt: true

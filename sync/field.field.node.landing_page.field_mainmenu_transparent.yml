@@ -1,0 +1,23 @@
+uuid: eb7d88b7-0286-4830-8b5e-3f5e7b6c4f63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mainmenu_transparent
+    - node.type.landing_page
+id: node.landing_page.field_mainmenu_transparent
+field_name: field_mainmenu_transparent
+entity_type: node
+bundle: landing_page
+label: 'Main menu transparent'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

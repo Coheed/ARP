@@ -1,0 +1,23 @@
+uuid: ee278550-c25e-450f-9428-71f05bd4511d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_spacing
+    - paragraphs.paragraphs_type.paragraph_section
+  module:
+    - options
+id: paragraph.paragraph_section.field_paragraph_spacing
+field_name: field_paragraph_spacing
+entity_type: paragraph
+bundle: paragraph_section
+label: Spacing
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: space-md
+default_value_callback: ''
+settings: {  }
+field_type: list_string

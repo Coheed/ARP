@@ -1,0 +1,11 @@
+uuid: 2150c7c8-365b-461e-8b40-e80028482f8c
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.chairside_leistungen
+id: taxonomy_term.chairside_leistungen
+target_entity_type_id: taxonomy_term
+target_bundle: chairside_leistungen
+default_langcode: site_default
+language_alterable: false

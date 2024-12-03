@@ -1,0 +1,63 @@
+uuid: 55bc0086-b03a-492d-8e52-e8637d49d0ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_id
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_image
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_section_video_bg
+  module:
+    - file
+    - image
+    - imce
+id: paragraph.paragraph_section_video_bg.default
+targetEntityType: paragraph
+bundle: paragraph_section_video_bg
+mode: default
+content:
+  field_paragraph_extra_class:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_id:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_image:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      imce:
+        enabled: true
+  field_paragraph_video:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: true
+  layout_paragraphs_fields:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

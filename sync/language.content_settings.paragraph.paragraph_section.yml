@@ -1,0 +1,11 @@
+uuid: ebadd10c-9408-4675-9b50-de969f0c97d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.paragraph_section
+id: paragraph.paragraph_section
+target_entity_type_id: paragraph
+target_bundle: paragraph_section
+default_langcode: site_default
+language_alterable: false

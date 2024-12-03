@@ -1,0 +1,30 @@
+uuid: 795f4c55-68f8-4697-bd1b-8e856248f169
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.checklisten.body
+    - node.type.checklisten
+  module:
+    - text
+    - user
+id: node.checklisten.default
+targetEntityType: node
+bundle: checklisten
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

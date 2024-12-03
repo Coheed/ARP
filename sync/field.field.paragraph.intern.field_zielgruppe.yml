@@ -1,0 +1,29 @@
+uuid: 6ae2da4a-396f-4297-8a49-b41e9004cde7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_zielgruppe
+    - paragraphs.paragraphs_type.intern
+    - taxonomy.vocabulary.gvz_zielgruppe
+id: paragraph.intern.field_zielgruppe
+field_name: field_zielgruppe
+entity_type: paragraph
+bundle: intern
+label: Zielgruppe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_zielgruppe: gvz_zielgruppe
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

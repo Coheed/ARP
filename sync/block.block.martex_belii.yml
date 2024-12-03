@@ -1,0 +1,29 @@
+uuid: 7295fb3e-daa1-43cd-8ef5-582fff9419e7
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.bel-ii
+  module:
+    - system
+  theme:
+    - martex
+id: martex_belii
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:bel-ii'
+settings:
+  id: 'system_menu_block:bel-ii'
+  label: 'BEL II'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/bel2\r\n/bel2/*"

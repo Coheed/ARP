@@ -1,0 +1,28 @@
+uuid: 4af707ca-725c-4799-9631-99f23913bbdd
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pRtugufdcuY7Mt1qFFUc2exdM7_YyYmpv_GNbYN31lA
+id: member
+label: Mitgliedsprofil
+description: 'Konfiguration für Benutzer'
+conf:
+  usertab: false
+  extensions: 'jpg png gif'
+  maxsize: 2.0
+  quota: 50.0
+  maxwidth: 1024
+  maxheight: 1024
+  replace: 0
+  thumbnail_style: ''
+  thumbnail_grid_style: false
+  ignore_usage: false
+  url_alter: false
+  folders:
+    -
+      path: 'users/user[user:uid]'
+      permissions:
+        browse_files: true
+        upload_files: true
+        delete_files: true

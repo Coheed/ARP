@@ -1,0 +1,52 @@
+uuid: e0a1510d-257a-4c97-9652-759a71f06d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_items
+    - paragraphs.paragraphs_type.paragraph_slider_block
+    - paragraphs.paragraphs_type.paragraph_slider_item
+  module:
+    - entity_reference_revisions
+id: paragraph.paragraph_slider_block.field_paragraph_items
+field_name: field_paragraph_items
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: Items
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      paragraph_slider_item: paragraph_slider_item
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 10
+        enabled: false
+      paragraph_accordion:
+        weight: 11
+        enabled: false
+      paragraph_accordion_item:
+        weight: 12
+        enabled: false
+      paragraph_content:
+        weight: 13
+        enabled: false
+      paragraph_content_video:
+        weight: 14
+        enabled: false
+      paragraph_section:
+        weight: 15
+        enabled: false
+      paragraph_slider_block:
+        weight: 16
+        enabled: false
+      paragraph_slider_item:
+        weight: 9
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,8 @@
+uuid: 0ad7c12b-594f-4c20-92d9-4eceeab2e1e6
+langcode: de
+status: true
+dependencies: {  }
+id: richtlinien
+label: Richtlinien
+description: ''
+locked: false

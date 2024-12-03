@@ -1,0 +1,11 @@
+uuid: 747eb2dc-1792-41b2-8efa-d86c2b9121e4
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bu_kategorie
+id: taxonomy_term.bu_kategorie
+target_entity_type_id: taxonomy_term
+target_bundle: bu_kategorie
+default_langcode: site_default
+language_alterable: false

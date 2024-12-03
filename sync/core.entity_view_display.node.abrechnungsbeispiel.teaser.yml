@@ -1,0 +1,60 @@
+uuid: d1e3e750-3422-45e9-9c7c-4b69c8a4e0ef
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.abrechnungsbeispiel.field_abrechnung
+    - field.field.node.abrechnungsbeispiel.field_abrechnungs_kategorie
+    - field.field.node.abrechnungsbeispiel.field_abrechnungsart
+    - field.field.node.abrechnungsbeispiel.field_abrechnungsbereiche
+    - field.field.node.abrechnungsbeispiel.field_behandlungsbereich
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_gebuehr
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_laborpo
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_materia
+    - field.field.node.abrechnungsbeispiel.field_fallbeschreibung_dokumenta
+    - field.field.node.abrechnungsbeispiel.field_hinweise_zur_abrechnung
+    - field.field.node.abrechnungsbeispiel.field_kurzbeschreibung
+    - field.field.node.abrechnungsbeispiel.field_quelle
+    - field.field.node.abrechnungsbeispiel.field_suchwoerter_search
+    - field.field.node.abrechnungsbeispiel.field_synonyme_search
+    - field.field.node.abrechnungsbeispiel.field_zahnschema
+    - field.field.node.abrechnungsbeispiel.field_zielgruppe
+    - field.field.node.abrechnungsbeispiel.field_zuzuordnende_gebuehrennumm
+    - node.type.abrechnungsbeispiel
+  module:
+    - text
+    - user
+id: node.abrechnungsbeispiel.teaser
+targetEntityType: node
+bundle: abrechnungsbeispiel
+mode: teaser
+content:
+  field_fallbeschreibung_dokumenta:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 250
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_abrechnung: true
+  field_abrechnungs_kategorie: true
+  field_abrechnungsart: true
+  field_abrechnungsbereiche: true
+  field_behandlungsbereich: true
+  field_berechnungsfaehige_gebuehr: true
+  field_berechnungsfaehige_laborpo: true
+  field_berechnungsfaehige_materia: true
+  field_hinweise_zur_abrechnung: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zahnschema: true
+  field_zielgruppe: true
+  field_zuzuordnende_gebuehrennumm: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

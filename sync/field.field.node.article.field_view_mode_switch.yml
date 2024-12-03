@@ -1,0 +1,24 @@
+uuid: 003f56a1-1b2e-45d5-93eb-eb5b27b99850
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full_content_title_image
+    - field.storage.node.field_view_mode_switch
+    - node.type.article
+  module:
+    - view_mode_switch
+id: node.article.field_view_mode_switch
+field_name: field_view_mode_switch
+entity_type: node
+bundle: article
+label: 'View mode switch'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_view_modes:
+    full_content_title_image: full_content_title_image
+field_type: view_mode_switch

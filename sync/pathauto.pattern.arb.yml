@@ -1,0 +1,22 @@
+uuid: c012893f-c2d6-4b34-8279-0d06e4edb8e0
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: arb
+label: Abrechnungsbeispiele
+type: 'canonical_entities:node'
+pattern: 'arb/[node:title]'
+selection_criteria:
+  1992d6d4-b9c9-4920-9b57-17fc1662751e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 1992d6d4-b9c9-4920-9b57-17fc1662751e
+    context_mapping:
+      node: node
+    bundles:
+      abrechnungsbeispiel: abrechnungsbeispiel
+selection_logic: and
+weight: -5
+relationships: {  }

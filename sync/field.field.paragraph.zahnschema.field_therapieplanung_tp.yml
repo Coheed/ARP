@@ -1,0 +1,29 @@
+uuid: 542b31e2-512b-4a9d-9e38-54a5c4f016ff
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_therapieplanung_tp
+    - paragraphs.paragraphs_type.zahnschema
+    - taxonomy.vocabulary.gvz_planungskuerzel
+id: paragraph.zahnschema.field_therapieplanung_tp
+field_name: field_therapieplanung_tp
+entity_type: paragraph
+bundle: zahnschema
+label: 'Therapieplanung (TP)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_planungskuerzel: gvz_planungskuerzel
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

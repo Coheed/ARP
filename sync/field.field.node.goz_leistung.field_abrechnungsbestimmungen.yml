@@ -1,0 +1,24 @@
+uuid: 45d0d40c-2d36-48a0-81de-09c30862d80a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsbestimmungen
+    - filter.format.full_html
+    - node.type.goz_leistung
+  module:
+    - text
+id: node.goz_leistung.field_abrechnungsbestimmungen
+field_name: field_abrechnungsbestimmungen
+entity_type: node
+bundle: goz_leistung
+label: Abrechnungsbestimmungen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

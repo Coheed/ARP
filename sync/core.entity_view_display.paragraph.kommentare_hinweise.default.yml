@@ -1,0 +1,41 @@
+uuid: 33babbb7-4955-4034-9d82-91708c1c10b2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kommentare_hinweise.field_kommentarquelle
+    - field.field.paragraph.kommentare_hinweise.field_kommentartext
+    - field.field.paragraph.kommentare_hinweise.field_verfasser
+    - paragraphs.paragraphs_type.kommentare_hinweise
+  module:
+    - text
+id: paragraph.kommentare_hinweise.default
+targetEntityType: paragraph
+bundle: kommentare_hinweise
+mode: default
+content:
+  field_kommentarquelle:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_kommentartext:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_verfasser:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

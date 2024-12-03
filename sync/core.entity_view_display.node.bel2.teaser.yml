@@ -1,0 +1,90 @@
+uuid: 8daf9c38-1d66-423e-81e0-f09a92e35261
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bel2.field_abrechenbar_je
+    - field.field.node.bel2.field_abrechnungsart
+    - field.field.node.bel2.field_abrechnungsbeispiele
+    - field.field.node.bel2.field_abrechnungsbestimmungen
+    - field.field.node.bel2.field_beachte
+    - field.field.node.bel2.field_beb_97_leistung
+    - field.field.node.bel2.field_beb_zahntechnik_leistung
+    - field.field.node.bel2.field_bel2_kategorie
+    - field.field.node.bel2.field_bel_nr
+    - field.field.node.bel2.field_berechnung_daneben_bel2
+    - field.field.node.bel2.field_dokumentation_laborauftrag
+    - field.field.node.bel2.field_dokumente
+    - field.field.node.bel2.field_festzuschuesse_die_in_zusa
+    - field.field.node.bel2.field_hoechstpreis_fremdlabor
+    - field.field.node.bel2.field_kommentare_hinweise
+    - field.field.node.bel2.field_kurzbeschreibung
+    - field.field.node.bel2.field_leistungsinhalt
+    - field.field.node.bel2.field_quelle
+    - field.field.node.bel2.field_suchwoerter_search
+    - field.field.node.bel2.field_synonyme_search
+    - field.field.node.bel2.field_verbrauchsmaterial
+    - field.field.node.bel2.field_zahnaerztliche_leistungen
+    - field.field.node.bel2.field_zielgruppe
+    - field.field.node.bel2.field_zusaetzlich_bel2
+    - node.type.bel2
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_kategorie:
+      children:
+        - field_bel_nr
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.bel2.teaser
+targetEntityType: node
+bundle: bel2
+mode: teaser
+content:
+  field_bel_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  field_abrechenbar_je: true
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_beachte: true
+  field_beb_97_leistung: true
+  field_beb_zahntechnik_leistung: true
+  field_bel2_kategorie: true
+  field_berechnung_daneben_bel2: true
+  field_dokumentation_laborauftrag: true
+  field_dokumente: true
+  field_festzuschuesse_die_in_zusa: true
+  field_hoechstpreis_fremdlabor: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_leistungsinhalt: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_verbrauchsmaterial: true
+  field_zahnaerztliche_leistungen: true
+  field_zielgruppe: true
+  field_zusaetzlich_bel2: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

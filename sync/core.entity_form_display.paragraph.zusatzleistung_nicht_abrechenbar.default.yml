@@ -1,0 +1,36 @@
+uuid: e94a4c1e-80af-4080-9adf-a91db2b8d5fe
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zusatzleistung_nicht_abrechenbar.field_bedingung_optional_no
+    - field.field.paragraph.zusatzleistung_nicht_abrechenbar.field_leistung_no
+    - paragraphs.paragraphs_type.zusatzleistung_nicht_abrechenbar
+  module:
+    - text
+id: paragraph.zusatzleistung_nicht_abrechenbar.default
+targetEntityType: paragraph
+bundle: zusatzleistung_nicht_abrechenbar
+mode: default
+content:
+  field_bedingung_optional_no:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistung_no:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

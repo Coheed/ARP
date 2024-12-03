@@ -1,0 +1,33 @@
+uuid: 68e43be0-f0d9-4272-8670-cbc80aa2433a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_leistung_bel2
+    - node.type.beb_97
+    - node.type.beb_zahntechnik
+    - node.type.bel2
+    - paragraphs.paragraphs_type.zusaetzlich_berechnungsfaehig
+id: paragraph.zusaetzlich_berechnungsfaehig.field_leistung_bel2
+field_name: field_leistung_bel2
+entity_type: paragraph
+bundle: zusaetzlich_berechnungsfaehig
+label: Leistung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      beb_97: beb_97
+      beb_zahntechnik: beb_zahntechnik
+      bel2: bel2
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: beb_97
+field_type: entity_reference

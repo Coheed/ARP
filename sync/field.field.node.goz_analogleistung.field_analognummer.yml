@@ -1,0 +1,19 @@
+uuid: b3cd805d-e316-41f5-b658-f8f3743aa522
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_analognummer
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_analognummer
+field_name: field_analognummer
+entity_type: node
+bundle: goz_analogleistung
+label: Analognummer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 0da3b034-7275-47f0-8af4-dafd393150d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_data_margin
+    - paragraphs.paragraphs_type.paragraph_slider_block
+id: paragraph.paragraph_slider_block.field_paragraph_data_margin
+field_name: field_paragraph_data_margin
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Data margin'
+description: 'Distance between slides in px'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

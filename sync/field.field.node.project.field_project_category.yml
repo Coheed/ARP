@@ -1,0 +1,29 @@
+uuid: 24e7bd52-5b30-41fb-8370-780f8bbf222f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_category
+    - node.type.project
+    - taxonomy.vocabulary.project_category
+id: node.project.field_project_category
+field_name: field_project_category
+entity_type: node
+bundle: project
+label: 'Project Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      project_category: project_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

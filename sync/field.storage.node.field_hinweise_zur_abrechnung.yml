@@ -1,0 +1,19 @@
+uuid: 3e249332-e1ed-496d-b2c2-738017115ea3
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_hinweise_zur_abrechnung
+field_name: field_hinweise_zur_abrechnung
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

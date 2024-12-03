@@ -1,0 +1,24 @@
+uuid: 5770afef-c179-461e-9bb6-839c6da7b5fa
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beachte
+    - filter.format.full_html
+    - node.type.bel2
+  module:
+    - text
+id: node.bel2.field_beachte
+field_name: field_beachte
+entity_type: node
+bundle: bel2
+label: Beachte
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

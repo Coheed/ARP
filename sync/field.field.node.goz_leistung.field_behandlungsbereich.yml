@@ -1,0 +1,29 @@
+uuid: 243ca067-fb12-4492-a258-0abfd53bc34a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_behandlungsbereich
+    - node.type.goz_leistung
+    - taxonomy.vocabulary.behandlungsbereich
+id: node.goz_leistung.field_behandlungsbereich
+field_name: field_behandlungsbereich
+entity_type: node
+bundle: goz_leistung
+label: Behandlungsbereich
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      behandlungsbereich: behandlungsbereich
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

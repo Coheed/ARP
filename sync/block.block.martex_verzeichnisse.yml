@@ -1,0 +1,25 @@
+uuid: 480ec85f-4a23-445b-a890-87790c5272bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.verzeichnisse
+  module:
+    - system
+  theme:
+    - martex
+id: martex_verzeichnisse
+theme: martex
+region: top_bar
+weight: -15
+provider: null
+plugin: 'system_menu_block:verzeichnisse'
+settings:
+  id: 'system_menu_block:verzeichnisse'
+  label: Verzeichnisse
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

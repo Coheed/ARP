@@ -1,0 +1,15 @@
+uuid: 709e6e89-f7b7-42de-9a88-6cd0ed3dba9a
+langcode: en
+status: true
+dependencies: {  }
+name: 6col_square
+label: 6col-square
+effects:
+  38451c1d-da0a-41fc-9380-1bf9a452305b:
+    uuid: 38451c1d-da0a-41fc-9380-1bf9a452305b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center

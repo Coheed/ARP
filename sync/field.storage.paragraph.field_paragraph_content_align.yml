@@ -1,0 +1,30 @@
+uuid: 347e3d81-2080-43f5-b2bf-bea829968871
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_paragraph_content_align
+field_name: field_paragraph_content_align
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: align-items-start
+      label: Start
+    -
+      value: align-items-center
+      label: Center
+    -
+      value: align-items-end
+      label: End
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

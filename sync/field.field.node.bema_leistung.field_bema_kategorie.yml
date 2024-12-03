@@ -1,0 +1,29 @@
+uuid: c08c982d-addb-4f57-874c-627c664a5694
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bema_kategorie
+    - node.type.bema_leistung
+    - taxonomy.vocabulary.bema_kategorie
+id: node.bema_leistung.field_bema_kategorie
+field_name: field_bema_kategorie
+entity_type: node
+bundle: bema_leistung
+label: 'BEMA Kategorie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bema_kategorie: bema_kategorie
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

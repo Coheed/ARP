@@ -1,0 +1,19 @@
+uuid: 4797c0b0-c6b9-4943-a878-0b92915980d9
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_musterbeispiele_fuer_moegl
+field_name: field_musterbeispiele_fuer_moegl
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

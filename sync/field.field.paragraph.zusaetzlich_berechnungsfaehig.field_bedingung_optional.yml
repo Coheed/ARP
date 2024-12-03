@@ -1,0 +1,24 @@
+uuid: 9579693a-7f4b-4e62-a7e3-a6b0f1019aea
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bedingung_optional
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.zusaetzlich_berechnungsfaehig
+  module:
+    - text
+id: paragraph.zusaetzlich_berechnungsfaehig.field_bedingung_optional
+field_name: field_bedingung_optional
+entity_type: paragraph
+bundle: zusaetzlich_berechnungsfaehig
+label: 'Bedingung (optional)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,10 @@
+uuid: 84d87c68-08f4-42e8-b725-f66b8cbc7c31
+langcode: de
+status: true
+dependencies: {  }
+id: kommentare_hinweise
+label: 'Kommentare / Hinweise'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

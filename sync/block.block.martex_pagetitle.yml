@@ -1,0 +1,18 @@
+uuid: 9b12ef60-277a-4d10-b2a4-cdf03f12be1b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - martex
+id: martex_pagetitle
+theme: martex
+region: disabled
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

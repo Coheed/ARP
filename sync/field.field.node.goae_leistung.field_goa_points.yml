@@ -1,0 +1,19 @@
+uuid: 27df93c2-a3c7-4822-9340-b21ff2163a31
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_goa_points
+    - node.type.goae_leistung
+id: node.goae_leistung.field_goa_points
+field_name: field_goa_points
+entity_type: node
+bundle: goae_leistung
+label: Punktzahl
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

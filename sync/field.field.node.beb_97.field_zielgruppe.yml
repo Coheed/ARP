@@ -1,0 +1,29 @@
+uuid: f8786046-16f1-4e48-a1d3-e81fb9ada7df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zielgruppe
+    - node.type.beb_97
+    - taxonomy.vocabulary.gvz_zielgruppe
+id: node.beb_97.field_zielgruppe
+field_name: field_zielgruppe
+entity_type: node
+bundle: beb_97
+label: Zielgruppe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_zielgruppe: gvz_zielgruppe
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

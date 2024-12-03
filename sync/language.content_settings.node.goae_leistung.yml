@@ -1,0 +1,11 @@
+uuid: c8a184ad-b846-4035-a897-c64c62f35570
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.goae_leistung
+id: node.goae_leistung
+target_entity_type_id: node
+target_bundle: goae_leistung
+default_langcode: site_default
+language_alterable: false

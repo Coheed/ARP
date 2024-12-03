@@ -1,0 +1,21 @@
+uuid: 8b2ca86e-e8eb-4341-897e-a410cddb5bde
+langcode: en
+status: true
+dependencies:
+  module:
+    - formblock
+  theme:
+    - martex
+id: martex_userregistrationform
+theme: martex
+region: disabled
+weight: -7
+provider: null
+plugin: formblock_user_register
+settings:
+  id: formblock_user_register
+  label: 'User registration form'
+  label_display: '0'
+  provider: formblock
+  form_mode: register
+visibility: {  }

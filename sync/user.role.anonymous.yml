@@ -1,0 +1,30 @@
+uuid: 405c5865-95cf-4919-aa52-edc07d42e236
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+    - search_api_autocomplete.search.suche
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - search_api_autocomplete
+    - simplenews
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: Gast
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'subscribe to newsletters'
+  - 'use search_api_autocomplete for suche'
+  - 'use text format restricted_html'
+  - 'view media'

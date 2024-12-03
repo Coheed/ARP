@@ -1,0 +1,101 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://Logo_test_neu.png'
+favicon:
+  use_default: 1
+bootstrap_barrio_source: bootstrap_barrio/bootstrap_cdn
+bootstrap_barrio_enable_color: 0
+bootstrap_barrio_container: container
+bootstrap_barrio_region_clean_top_bar: 0
+bootstrap_barrio_region_class_top_bar: ''
+bootstrap_barrio_region_clean_branding: 0
+bootstrap_barrio_region_class_branding: ''
+bootstrap_barrio_region_clean_navigation: 0
+bootstrap_barrio_region_class_navigation: ''
+bootstrap_barrio_region_clean_navigation_collapsible: 0
+bootstrap_barrio_region_class_navigation_collapsible: ''
+bootstrap_barrio_region_clean_navigation_other: 0
+bootstrap_barrio_region_class_navigation_other: ms-auto
+bootstrap_barrio_region_clean_title: 0
+bootstrap_barrio_region_class_title: ''
+bootstrap_barrio_region_clean_highlighted: 1
+bootstrap_barrio_region_class_highlighted: ''
+bootstrap_barrio_region_clean_help: 0
+bootstrap_barrio_region_class_help: ''
+bootstrap_barrio_region_clean_content: 1
+bootstrap_barrio_region_class_content: ''
+bootstrap_barrio_region_clean_sidebar_first: 1
+bootstrap_barrio_region_class_sidebar_first: ''
+bootstrap_barrio_region_clean_sidebar_second: 1
+bootstrap_barrio_region_class_sidebar_second: ''
+bootstrap_barrio_region_clean_footer: 0
+bootstrap_barrio_region_class_footer: ''
+bootstrap_barrio_region_clean_disabled: 0
+bootstrap_barrio_region_class_disabled: ''
+bootstrap_barrio_sidebar_position: both
+bootstrap_barrio_content_offset: '0'
+bootstrap_barrio_sidebar_collapse: 0
+bootstrap_barrio_sidebar_first_width: '2'
+bootstrap_barrio_sidebar_first_offset: '0'
+bootstrap_barrio_sidebar_second_width: '2'
+bootstrap_barrio_sidebar_second_offset: '0'
+bootstrap_barrio_hide_node_label: 0
+bootstrap_barrio_breadcrumb_divider: ''
+bootstrap_barrio_button: 0
+bootstrap_barrio_button_type: primary
+bootstrap_barrio_button_size: ''
+bootstrap_barrio_button_outline: 0
+bootstrap_barrio_image_fluid: 0
+bootstrap_barrio_navbar_container: 0
+bootstrap_barrio_navbar_toggle: navbar-toggleable-xl
+bootstrap_barrio_navbar_top_navbar: 0
+bootstrap_barrio_navbar_top_position: ''
+bootstrap_barrio_navbar_top_color: ''
+bootstrap_barrio_navbar_top_background: ''
+bootstrap_barrio_navbar_position: ''
+bootstrap_barrio_navbar_color: ''
+bootstrap_barrio_navbar_background: ''
+bootstrap_barrio_navbar_top_class: ''
+bootstrap_barrio_navbar_class: ''
+bootstrap_barrio_navbar_offcanvas: ''
+bootstrap_barrio_navbar_flyout: 0
+bootstrap_barrio_navbar_slide: 0
+bootstrap_barrio_tabs_style: ''
+bootstrap_barrio_messages_widget: default
+bootstrap_barrio_float_label: 0
+bootstrap_barrio_checkbox: ''
+bootstrap_barrio_navbar_top_affix: 0
+bootstrap_barrio_navbar_affix: 0
+bootstrap_barrio_sidebar_first_affix: 0
+bootstrap_barrio_sidebar_second_affix: 0
+bootstrap_barrio_scroll_spy: ''
+bootstrap_barrio_google_fonts: ''
+bootstrap_barrio_bootstrap_icons: 0
+bootstrap_barrio_icons: ''
+theme_menu: menudefault
+footer_classes: ''
+theme_color: magenta
+theme_font: fontjakarta
+bootstrap_barrio_system_messages: ''
+bootstrap_barrio_table_style: ''
+bootstrap_barrio_table_hover: 0
+bootstrap_barrio_table_head: ''
+bootstrap_barrio_region_width_top_bar: 1
+bootstrap_barrio_region_width_branding: 0
+bootstrap_barrio_region_width_navigation: 0
+bootstrap_barrio_region_width_navigation_collapsible: 0
+bootstrap_barrio_region_width_navigation_other: 0
+bootstrap_barrio_region_width_title: 0
+bootstrap_barrio_region_width_highlighted: 0
+bootstrap_barrio_region_width_help: 0
+bootstrap_barrio_region_width_content: 0
+bootstrap_barrio_region_width_sidebar_first: 0
+bootstrap_barrio_region_width_sidebar_second: 0
+bootstrap_barrio_region_width_footer: 0
+bootstrap_barrio_region_width_disabled: 0
+bootstrap_barrio_messages_widget_toast_delay: '10000'

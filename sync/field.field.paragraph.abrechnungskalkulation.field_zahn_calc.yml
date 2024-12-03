@@ -1,0 +1,19 @@
+uuid: ff6d0de9-48e1-4ca9-9629-01c1f83d78f7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_zahn_calc
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+id: paragraph.abrechnungskalkulation.field_zahn_calc
+field_name: field_zahn_calc
+entity_type: paragraph
+bundle: abrechnungskalkulation
+label: Zahn
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

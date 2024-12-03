@@ -1,0 +1,11 @@
+uuid: f0288b32-290d-4b36-ba1a-8ca33216a806
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.analogien
+id: taxonomy_term.analogien
+target_entity_type_id: taxonomy_term
+target_bundle: analogien
+default_langcode: site_default
+language_alterable: false

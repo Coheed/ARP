@@ -1,0 +1,44 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+          tags:
+            previous: '‹ vorherige Seite'
+            next: 'nächste Seite ›'
+            first: '« erste Seite'
+            last: 'letzte Seite »'
+      fields:
+        node_bulk_form:
+          label: 'Node Massenbearbeitung Formular'
+        title:
+          label: Ausgabe
+        simplenews_issue:
+          label: Newsletter
+          separator: ', '
+        status:
+          label: Veröffentlicht
+          separator: ', '
+        created:
+          label: Aktualisiert
+        send_status:
+          label: Versandstatus
+        operations:
+          label: Aktionslinks
+      filters:
+        simplenews_issue_target_id_1:
+          expose:
+            label: Newsletter
+  page_1:
+    display_title: Seite

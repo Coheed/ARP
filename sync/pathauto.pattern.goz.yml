@@ -1,0 +1,22 @@
+uuid: 04cda45b-5c9e-4cff-b64e-e01499f29a3a
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: goz
+label: GOZ
+type: 'canonical_entities:node'
+pattern: 'goz/[node:title]'
+selection_criteria:
+  953c4564-c865-4a66-8a67-a13ec2a11e21:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 953c4564-c865-4a66-8a67-a13ec2a11e21
+    context_mapping:
+      node: node
+    bundles:
+      goz_leistung: goz_leistung
+selection_logic: and
+weight: -5
+relationships: {  }

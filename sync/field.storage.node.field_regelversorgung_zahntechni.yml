@@ -1,0 +1,19 @@
+uuid: cb29b9c0-615e-465b-be82-09d7bb746cc2
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_regelversorgung_zahntechni
+field_name: field_regelversorgung_zahntechni
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

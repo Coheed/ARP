@@ -1,0 +1,19 @@
+uuid: 41195ef7-0b34-4803-b30b-5e9d736a2450
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.festzuschuss
+id: node.festzuschuss.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: festzuschuss
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

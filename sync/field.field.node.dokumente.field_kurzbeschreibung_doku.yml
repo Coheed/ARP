@@ -1,0 +1,24 @@
+uuid: 08d6fef8-3148-499f-b94a-d06094cbc631
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung_doku
+    - filter.format.full_html
+    - node.type.dokumente
+  module:
+    - text
+id: node.dokumente.field_kurzbeschreibung_doku
+field_name: field_kurzbeschreibung_doku
+entity_type: node
+bundle: dokumente
+label: Kurzbeschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

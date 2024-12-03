@@ -1,0 +1,29 @@
+uuid: efa84036-ac7f-4b08-a6a4-0f38eb2d8273
+langcode: de
+status: true
+dependencies:
+  config:
+    - eck.eck_type.field_fc_gvz_billable_yes.field_fc_gvz_billable_no
+    - field.storage.field_fc_gvz_billable_yes.field_leistung
+    - node.type.bema_leistung
+id: field_fc_gvz_billable_yes.field_fc_gvz_billable_no.field_leistung
+field_name: field_leistung
+entity_type: field_fc_gvz_billable_yes
+bundle: field_fc_gvz_billable_no
+label: Leistung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bema_leistung: bema_leistung
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: bema_leistung
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 42d3946a-1b00-4482-ad69-2ce467d94a13
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_chairside_leistung
+field_name: field_chairside_leistung
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

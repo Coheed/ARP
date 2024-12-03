@@ -1,0 +1,40 @@
+uuid: 4ed86cd8-d598-4eae-9da1-77b61c6a3f8a
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dokumente.field_beschreibung
+    - field.field.node.dokumente.field_dokumente
+    - field.field.node.dokumente.field_dokumentenart
+    - field.field.node.dokumente.field_kurzbeschreibung
+    - field.field.node.dokumente.field_kurzbeschreibung_doku
+    - field.field.node.dokumente.field_suchwoerter_search
+    - field.field.node.dokumente.field_synonyme_search
+    - node.type.dokumente
+  module:
+    - text
+    - user
+id: node.dokumente.teaser
+targetEntityType: node
+bundle: dokumente
+mode: teaser
+content:
+  field_beschreibung:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_dokumente: true
+  field_dokumentenart: true
+  field_kurzbeschreibung: true
+  field_kurzbeschreibung_doku: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

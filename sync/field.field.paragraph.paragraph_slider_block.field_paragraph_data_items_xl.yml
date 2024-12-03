@@ -1,0 +1,23 @@
+uuid: 893c2a5a-5f87-4759-93ee-a50142d09d1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_data_items_xl
+    - paragraphs.paragraphs_type.paragraph_slider_block
+id: paragraph.paragraph_slider_block.field_paragraph_data_items_xl
+field_name: field_paragraph_data_items_xl
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Data Items XL'
+description: 'Number of items on screen width 1200px - 1400px'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

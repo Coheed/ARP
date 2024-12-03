@@ -1,0 +1,23 @@
+uuid: 2bcf72ec-74b0-40fd-a85b-41f14902d848
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_punktzahl
+    - node.type.goz_leistung
+id: node.goz_leistung.field_punktzahl
+field_name: field_punktzahl
+entity_type: node
+bundle: goz_leistung
+label: Punktzahl
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

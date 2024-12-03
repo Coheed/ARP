@@ -1,0 +1,19 @@
+uuid: da44380a-22aa-4c58-9c01-9ec9b65903fe
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_beachte
+field_name: field_beachte
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 75a6f0dd-ced6-4a89-b404-f5728c7ba41e
+langcode: und
+status: true
+dependencies: {  }
+id: beb-zahntechnik
+label: 'BEB Zahntechnik'
+description: ''
+locked: false

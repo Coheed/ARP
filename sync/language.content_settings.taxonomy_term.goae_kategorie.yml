@@ -1,0 +1,11 @@
+uuid: 0ad9961c-a0c1-4368-ad7e-c71f9eb9b977
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.goae_kategorie
+id: taxonomy_term.goae_kategorie
+target_entity_type_id: taxonomy_term
+target_bundle: goae_kategorie
+default_langcode: site_default
+language_alterable: false

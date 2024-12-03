@@ -1,0 +1,16 @@
+uuid: 1cb7ab43-ce94-4e9f-87eb-991626d2484c
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - bel-ii
+    parent: 'bel-ii:'
+name: 'BEL2 Kategorie'
+vid: bel2_kategorie
+description: null
+weight: 0
+new_revision: false

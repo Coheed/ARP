@@ -1,0 +1,22 @@
+uuid: ade7ca0a-1191-4618-a411-10cf73c0cff3
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: richtlinien
+label: Richtlinien
+type: 'canonical_entities:node'
+pattern: 'richtlinien/[node:title]'
+selection_criteria:
+  74d539ec-22d9-4dc9-8015-7d7a654e0d77:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 74d539ec-22d9-4dc9-8015-7d7a654e0d77
+    context_mapping:
+      node: node
+    bundles:
+      richtlinien: richtlinien
+selection_logic: and
+weight: -5
+relationships: {  }

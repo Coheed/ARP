@@ -1,0 +1,20 @@
+uuid: d280a2f3-b512-42a9-8db7-c4f0873194b3
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_goz_kategorie
+field_name: field_goz_kategorie
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

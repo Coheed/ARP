@@ -1,0 +1,19 @@
+uuid: 016e73cf-982f-4fdc-bf2e-ffa59a57c08b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eindeutige_analognummer_zf
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_eindeutige_analognummer_zf
+field_name: field_eindeutige_analognummer_zf
+entity_type: node
+bundle: goz_analogleistung
+label: 'Eindeutige Analognummer (ZFV intern)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

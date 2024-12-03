@@ -1,0 +1,24 @@
+uuid: 1f9a1f50-d513-4eb6-8d7e-f53dcdf34c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_swiper_static
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_slider_block
+  module:
+    - text
+id: paragraph.paragraph_slider_block.field_paragraph_swiper_static
+field_name: field_paragraph_swiper_static
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Swiper Static'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,36 @@
+uuid: 5c8c8f72-3a79-4b14-99ec-7d279b3bc835
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zusatzleistung_nicht_goa.field_bedingung_optional_no
+    - field.field.paragraph.zusatzleistung_nicht_goa.field_leistung_no
+    - paragraphs.paragraphs_type.zusatzleistung_nicht_goa
+  module:
+    - text
+id: paragraph.zusatzleistung_nicht_goa.default
+targetEntityType: paragraph
+bundle: zusatzleistung_nicht_goa
+mode: default
+content:
+  field_bedingung_optional_no:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistung_no:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

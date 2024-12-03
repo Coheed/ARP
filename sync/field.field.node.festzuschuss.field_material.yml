@@ -1,0 +1,24 @@
+uuid: bc61cce2-2f49-47fc-ad5a-6cf98d4d0352
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_material
+    - filter.format.full_html
+    - node.type.festzuschuss
+  module:
+    - text
+id: node.festzuschuss.field_material
+field_name: field_material
+entity_type: node
+bundle: festzuschuss
+label: Material
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

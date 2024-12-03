@@ -1,0 +1,19 @@
+uuid: f1a8d65b-0015-44f3-b605-899c8bb90912
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_synonyme
+    - paragraphs.paragraphs_type.suche
+id: paragraph.suche.field_synonyme
+field_name: field_synonyme
+entity_type: paragraph
+bundle: suche
+label: Synonyme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

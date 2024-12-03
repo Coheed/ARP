@@ -1,0 +1,32 @@
+uuid: 7e6f9438-182c-46d5-a15c-4d2b1291e515
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kombinierbar.field_bedingung
+    - field.field.paragraph.kombinierbar.field_festzuschuss
+    - paragraphs.paragraphs_type.kombinierbar
+  module:
+    - options
+id: paragraph.kombinierbar.default
+targetEntityType: paragraph
+bundle: kombinierbar
+mode: default
+content:
+  field_bedingung:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_festzuschuss:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

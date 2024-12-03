@@ -1,0 +1,29 @@
+uuid: 44f10af5-2040-4de6-a499-533e87819c83
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsart
+    - node.type.goz_analogleistung
+    - taxonomy.vocabulary.abrechnungsart
+id: node.goz_analogleistung.field_abrechnungsart
+field_name: field_abrechnungsart
+entity_type: node
+bundle: goz_analogleistung
+label: Abrechnungsart
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsart: abrechnungsart
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

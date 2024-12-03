@@ -1,0 +1,11 @@
+uuid: e5228bad-8dee-47d3-84b4-927f1f7ad0e4
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.beb_97_kategorie
+id: taxonomy_term.beb_97_kategorie
+target_entity_type_id: taxonomy_term
+target_bundle: beb_97_kategorie
+default_langcode: site_default
+language_alterable: false

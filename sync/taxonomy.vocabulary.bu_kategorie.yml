@@ -1,0 +1,16 @@
+uuid: 95df82b5-143b-4ebb-9c77-08050fc89e82
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'BU Kategorie'
+vid: bu_kategorie
+description: null
+weight: 0
+new_revision: false

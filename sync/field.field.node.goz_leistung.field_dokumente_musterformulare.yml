@@ -1,0 +1,29 @@
+uuid: b6c26ef5-5366-436b-9cfb-34f2840435c0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumente_musterformulare
+    - media.type.document
+    - node.type.goz_leistung
+id: node.goz_leistung.field_dokumente_musterformulare
+field_name: field_dokumente_musterformulare
+entity_type: node
+bundle: goz_leistung
+label: 'Dokumente/Musterformulare (PDF)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

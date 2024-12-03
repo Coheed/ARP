@@ -1,0 +1,23 @@
+uuid: 84dfffa3-59c4-4623-84f4-2d0b08ed3275
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bema_bewertungszahl
+    - node.type.bema_leistung
+id: node.bema_leistung.field_bema_bewertungszahl
+field_name: field_bema_bewertungszahl
+entity_type: node
+bundle: bema_leistung
+label: 'BEMA Bewertungszahl'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,24 @@
+uuid: 6691d585-a8dd-4756-8ea1-ea7f6ea33420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_tab_item
+  module:
+    - text
+id: paragraph.paragraph_tab_item.field_paragraph_title
+field_name: field_paragraph_title
+entity_type: paragraph
+bundle: paragraph_tab_item
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

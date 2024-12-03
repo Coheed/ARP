@@ -1,0 +1,11 @@
+uuid: b1559fcf-3f89-4f6e-bb12-2f96bf28de59
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.beb_97
+id: node.beb_97
+target_entity_type_id: node
+target_bundle: beb_97
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,16 @@
+uuid: f1672624-8626-489e-9167-cf81beef3dcb
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'BEB-97 Kategorie'
+vid: beb_97_kategorie
+description: null
+weight: 0
+new_revision: false

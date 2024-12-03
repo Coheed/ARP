@@ -1,0 +1,25 @@
+uuid: dea6be42-1538-47e7-91ce-10544dc625ce
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.referenzen.field_referenz
+    - paragraphs.paragraphs_type.referenzen
+  module:
+    - link
+id: paragraph.referenzen.default
+targetEntityType: paragraph
+bundle: referenzen
+mode: default
+content:
+  field_referenz:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

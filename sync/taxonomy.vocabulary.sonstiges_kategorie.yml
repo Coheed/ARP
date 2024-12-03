@@ -1,0 +1,16 @@
+uuid: eb295552-b5df-4bb9-8cba-3a0acc935d81
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - sonstiges
+    parent: 'sonstiges:'
+name: 'Sonstiges Kategorie'
+vid: sonstiges_kategorie
+description: null
+weight: 0
+new_revision: false

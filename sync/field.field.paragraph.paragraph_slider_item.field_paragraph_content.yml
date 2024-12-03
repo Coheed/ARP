@@ -1,0 +1,24 @@
+uuid: 59376216-7ebd-48c0-99bb-6dead0947db5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_content
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_slider_item
+  module:
+    - text
+id: paragraph.paragraph_slider_item.field_paragraph_content
+field_name: field_paragraph_content
+entity_type: paragraph
+bundle: paragraph_slider_item
+label: 'Item Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

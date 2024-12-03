@@ -1,0 +1,56 @@
+uuid: 4660697e-856a-4719-9f4b-aabb05dbbf5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_views_reference
+    - paragraphs.paragraphs_type.paragraph_views_reference
+  module:
+    - viewsreference
+id: paragraph.paragraph_views_reference.field_paragraph_views_reference
+field_name: field_paragraph_views_reference
+entity_type: paragraph
+bundle: paragraph_views_reference
+label: 'Views Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    block_content: 0
+    blog_category: 0
+    blog_lists: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    job_listing: 0
+    media: 0
+    paragraphs_library: 0
+    simplenews_newsletters: 0
+    simplenews_subscribers: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    title: 0
+    pager: 0
+    offset: 0
+    argument: 0
+    limit: 0
+field_type: viewsreference

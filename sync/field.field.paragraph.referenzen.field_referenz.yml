@@ -1,0 +1,23 @@
+uuid: 4ebeb2e1-5fb3-4225-9a5d-4522a78a26df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_referenz
+    - paragraphs.paragraphs_type.referenzen
+  module:
+    - link
+id: paragraph.referenzen.field_referenz
+field_name: field_referenz
+entity_type: paragraph
+bundle: referenzen
+label: Referenz
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

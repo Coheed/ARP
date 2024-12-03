@@ -1,0 +1,190 @@
+uuid: 070cb051-2ada-460e-a586-d49aa23bf57c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.richtlinien.field_behandlungsbereich
+    - field.field.node.richtlinien.field_beschreibung
+    - field.field.node.richtlinien.field_datum
+    - field.field.node.richtlinien.field_dokumente
+    - field.field.node.richtlinien.field_kurzbeschreibung
+    - field.field.node.richtlinien.field_quelle
+    - field.field.node.richtlinien.field_referenzziffer
+    - field.field.node.richtlinien.field_richtlinienkapitel
+    - field.field.node.richtlinien.field_suchwoerter_search
+    - field.field.node.richtlinien.field_synonyme_search
+    - node.type.richtlinien
+  module:
+    - datetime
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_beschreibung:
+      children:
+        - field_beschreibung
+      label: Beschreibung
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_behandlungsbereich:
+      children:
+        - field_behandlungsbereich
+      label: Behandlungsbereich
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_datum:
+      children:
+        - field_datum
+      label: Datum
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_dokumente:
+      children:
+        - field_dokumente
+      label: Dokumente
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_referenzziffer:
+      children:
+        - field_referenzziffer
+      label: Referenzziffer
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_kategorie:
+      children:
+        - field_richtlinienkapitel
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.richtlinien.default
+targetEntityType: node
+bundle: richtlinien
+mode: default
+content:
+  field_behandlungsbereich:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_beschreibung:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_datum:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_quelle:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_referenzziffer:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_richtlinienkapitel:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  field_kurzbeschreibung: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  langcode: true
+  search_api_excerpt: true

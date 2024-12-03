@@ -1,0 +1,45 @@
+uuid: 76100287-0f76-4d17-81f5-3290b115194f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job.body
+    - field.field.node.job.field_job_apply
+    - field.field.node.job.field_job_department
+    - field.field.node.job.field_job_location
+    - field.field.node.job.field_job_requirements
+    - field.field.node.job.field_job_responsibilities
+    - field.field.node.job.field_job_type
+    - node.type.job
+  module:
+    - options
+    - user
+id: node.job.teaser
+targetEntityType: node
+bundle: job
+mode: teaser
+content:
+  field_job_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_job_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_job_apply: true
+  field_job_department: true
+  field_job_requirements: true
+  field_job_responsibilities: true
+  langcode: true
+  links: true

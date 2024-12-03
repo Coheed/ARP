@@ -1,0 +1,24 @@
+uuid: 4b6030f0-415d-4c0d-8153-c381f2d26834
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_urteil
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.gerichtsurteil
+  module:
+    - text
+id: paragraph.gerichtsurteil.field_urteil
+field_name: field_urteil
+entity_type: paragraph
+bundle: gerichtsurteil
+label: Urteil
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

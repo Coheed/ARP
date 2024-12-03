@@ -1,0 +1,26 @@
+uuid: 38fe45b0-a675-4dbd-a146-3a25dded0b74
+langcode: en
+status: true
+dependencies:
+  module:
+    - simplenews
+  theme:
+    - martex
+id: martex_simplenewssubscription
+theme: martex
+region: disabled
+weight: -9
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Simplenews subscription'
+  label_display: '0'
+  provider: simplenews
+  newsletters: {  }
+  default_newsletters:
+    default: default
+  message: ''
+  show_manage: false
+  unique_id: 39d6d8a9-3f73-46f6-9cb5-8b27e8f6eac4
+visibility: {  }

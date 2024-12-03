@@ -1,0 +1,19 @@
+uuid: 547b95e5-63af-42f1-b616-c1570779afab
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_abrechnungsbestimmungen_go
+field_name: field_abrechnungsbestimmungen_go
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

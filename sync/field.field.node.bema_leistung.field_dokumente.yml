@@ -1,0 +1,29 @@
+uuid: d67f6334-6ab0-4306-a9d5-ec98362b6433
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumente
+    - node.type.bema_leistung
+    - node.type.dokumente
+id: node.bema_leistung.field_dokumente
+field_name: field_dokumente
+entity_type: node
+bundle: bema_leistung
+label: Dokumente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dokumente: dokumente
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

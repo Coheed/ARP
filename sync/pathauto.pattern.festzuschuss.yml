@@ -1,0 +1,22 @@
+uuid: 98695b24-f7dd-4ebf-a7e7-ad6f4de0e099
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: festzuschuss
+label: Festzuschuss
+type: 'canonical_entities:node'
+pattern: 'festzuschuss/[node:title]'
+selection_criteria:
+  03a63c3c-53d7-4b62-be26-7ed81e6887f4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 03a63c3c-53d7-4b62-be26-7ed81e6887f4
+    context_mapping:
+      node: node
+    bundles:
+      festzuschuss: festzuschuss
+selection_logic: and
+weight: -5
+relationships: {  }

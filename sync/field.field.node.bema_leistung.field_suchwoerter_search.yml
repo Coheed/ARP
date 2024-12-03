@@ -1,0 +1,19 @@
+uuid: 05030d2e-f90e-43a6-b7c9-574a59c521be
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suchwoerter_search
+    - node.type.bema_leistung
+id: node.bema_leistung.field_suchwoerter_search
+field_name: field_suchwoerter_search
+entity_type: node
+bundle: bema_leistung
+label: Suchwörter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

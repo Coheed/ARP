@@ -1,0 +1,86 @@
+uuid: 23d3b91c-617f-4e78-bf80-642fcee8f809
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zahnschema.field_befund_b
+    - field.field.paragraph.zahnschema.field_regelversorgung_r
+    - field.field.paragraph.zahnschema.field_therapieplanung_tp
+    - field.field.paragraph.zahnschema.field_zahn
+    - paragraphs.paragraphs_type.zahnschema
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_inline:
+      children:
+        - field_zahn
+        - field_therapieplanung_tp
+        - field_regelversorgung_r
+        - field_befund_b
+      label: Inline
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: zahnschema_backend
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+id: paragraph.zahnschema.default
+targetEntityType: paragraph
+bundle: zahnschema
+mode: default
+content:
+  field_befund_b:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_regelversorgung_r:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_therapieplanung_tp:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_zahn:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

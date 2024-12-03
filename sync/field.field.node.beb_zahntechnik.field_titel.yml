@@ -1,0 +1,19 @@
+uuid: efd0ae6b-a8bd-47a7-9c62-74f697741c45
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titel
+    - node.type.beb_zahntechnik
+id: node.beb_zahntechnik.field_titel
+field_name: field_titel
+entity_type: node
+bundle: beb_zahntechnik
+label: Titel
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

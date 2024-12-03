@@ -1,0 +1,22 @@
+uuid: 8fb0b23c-28f2-4acd-b9e7-12e647be1fb5
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: bema
+label: BEMA
+type: 'canonical_entities:node'
+pattern: 'bema/[node:title]'
+selection_criteria:
+  ea88163b-0d68-4508-b469-7ffdd84e5cdc:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ea88163b-0d68-4508-b469-7ffdd84e5cdc
+    context_mapping:
+      node: node
+    bundles:
+      bema_leistung: bema_leistung
+selection_logic: and
+weight: 0
+relationships: {  }

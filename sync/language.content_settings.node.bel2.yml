@@ -1,0 +1,11 @@
+uuid: 0246c2c3-34f3-49e7-ae4f-ddaa70048881
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.bel2
+id: node.bel2
+target_entity_type_id: node
+target_bundle: bel2
+default_langcode: site_default
+language_alterable: false

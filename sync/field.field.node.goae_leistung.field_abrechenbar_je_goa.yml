@@ -1,0 +1,29 @@
+uuid: eef384f4-37a4-4937-a169-26cde25ffe52
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechenbar_je_goa
+    - node.type.goae_leistung
+    - taxonomy.vocabulary.abrechnungsobjekt
+id: node.goae_leistung.field_abrechenbar_je_goa
+field_name: field_abrechenbar_je_goa
+entity_type: node
+bundle: goae_leistung
+label: 'Abrechenbar je'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsobjekt: abrechnungsobjekt
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

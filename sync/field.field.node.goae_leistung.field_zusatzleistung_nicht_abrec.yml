@@ -1,0 +1,97 @@
+uuid: 92b0328b-006b-48e8-bd5e-63194f8c6da0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zusatzleistung_nicht_abrec
+    - node.type.goae_leistung
+    - paragraphs.paragraphs_type.zusatzleistung_nicht_abrechenbar
+  module:
+    - entity_reference_revisions
+id: node.goae_leistung.field_zusatzleistung_nicht_abrec
+field_name: field_zusatzleistung_nicht_abrec
+entity_type: node
+bundle: goae_leistung
+label: 'Berechnung daneben ausgeschlossen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      zusatzleistung_nicht_abrechenbar: zusatzleistung_nicht_abrechenbar
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 19
+        enabled: false
+      gerichtsurteil:
+        weight: 25
+        enabled: false
+      intern:
+        weight: 26
+        enabled: false
+      kommentare_hinweise:
+        weight: 27
+        enabled: false
+      paragraph_accordion:
+        weight: 20
+        enabled: false
+      paragraph_accordion_item:
+        weight: 21
+        enabled: false
+      paragraph_card:
+        weight: 22
+        enabled: false
+      paragraph_content:
+        weight: 23
+        enabled: false
+      paragraph_content_video:
+        weight: 24
+        enabled: false
+      paragraph_layout:
+        weight: 25
+        enabled: false
+      paragraph_section:
+        weight: 26
+        enabled: false
+      paragraph_section_image_bg:
+        weight: 27
+        enabled: false
+      paragraph_section_image_side:
+        weight: 28
+        enabled: false
+      paragraph_section_video_bg:
+        weight: 29
+        enabled: false
+      paragraph_slider_block:
+        weight: 30
+        enabled: false
+      paragraph_slider_item:
+        weight: 31
+        enabled: false
+      paragraph_tab_item:
+        weight: 33
+        enabled: false
+      paragraph_tabs:
+        weight: 32
+        enabled: false
+      paragraph_views_reference:
+        weight: 34
+        enabled: false
+      referenzen:
+        weight: 43
+        enabled: false
+      suche:
+        weight: 44
+        enabled: false
+      zusatzleistung_abrechenbar:
+        weight: 35
+        enabled: false
+      zusatzleistung_nicht_abrechenbar:
+        weight: 36
+        enabled: true
+field_type: entity_reference_revisions

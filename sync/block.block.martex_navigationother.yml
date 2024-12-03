@@ -1,0 +1,25 @@
+uuid: f125e226-0107-462c-a907-5d5c39a78773
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.navigation-other
+  module:
+    - system
+  theme:
+    - martex
+id: martex_navigationother
+theme: martex
+region: navigation_other
+weight: -14
+provider: null
+plugin: 'system_menu_block:navigation-other'
+settings:
+  id: 'system_menu_block:navigation-other'
+  label: 'Navigation other'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

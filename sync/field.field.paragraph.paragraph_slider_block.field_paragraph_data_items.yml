@@ -1,0 +1,23 @@
+uuid: 5ce0f9c2-4323-4ddc-8300-ff08d2dd1195
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_data_items
+    - paragraphs.paragraphs_type.paragraph_slider_block
+id: paragraph.paragraph_slider_block.field_paragraph_data_items
+field_name: field_paragraph_data_items
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Data items'
+description: 'Number of items across all devices'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

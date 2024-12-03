@@ -1,0 +1,29 @@
+uuid: c916cb77-c4e7-42f4-9bd5-eab87ed1f075
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_befund_b
+    - paragraphs.paragraphs_type.zahnschema
+    - taxonomy.vocabulary.gvz_befundkuerzel
+id: paragraph.zahnschema.field_befund_b
+field_name: field_befund_b
+entity_type: paragraph
+bundle: zahnschema
+label: 'Befund (B)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_befundkuerzel: gvz_befundkuerzel
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,49 @@
+uuid: ea33b025-e3cc-4505-9de4-930ca01e24f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_accordion_item.field_paragraph_content
+    - field.field.paragraph.paragraph_accordion_item.field_paragraph_item_active
+    - field.field.paragraph.paragraph_accordion_item.field_paragraph_item_title
+    - paragraphs.paragraphs_type.paragraph_accordion_item
+  module:
+    - allowed_formats
+    - text
+id: paragraph.paragraph_accordion_item.default
+targetEntityType: paragraph
+bundle: paragraph_accordion_item
+mode: default
+content:
+  field_paragraph_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_paragraph_item_active:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_paragraph_item_title:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+hidden:
+  created: true
+  status: true

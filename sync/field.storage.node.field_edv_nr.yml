@@ -1,0 +1,21 @@
+uuid: e76c5d5e-0840-48aa-99e1-51b9046d6ecd
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_edv_nr
+field_name: field_edv_nr
+entity_type: node
+type: string
+settings:
+  max_length: 50
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

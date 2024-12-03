@@ -1,0 +1,23 @@
+uuid: b88a18cf-4b72-447c-a733-2ffaf8601dbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_image_side_pos
+    - paragraphs.paragraphs_type.paragraph_section_image_side
+  module:
+    - options
+id: paragraph.paragraph_section_image_side.field_paragraph_image_side_pos
+field_name: field_paragraph_image_side_pos
+entity_type: paragraph
+bundle: paragraph_section_image_side
+label: 'Image Side Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

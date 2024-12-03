@@ -1,0 +1,29 @@
+uuid: 3c11fad8-1948-4c2f-a663-b5660dfe6a22
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsbereiche
+    - node.type.abrechnungsbeispiel
+    - taxonomy.vocabulary.gvz_abrechnungsbereich
+id: node.abrechnungsbeispiel.field_abrechnungsbereiche
+field_name: field_abrechnungsbereiche
+entity_type: node
+bundle: abrechnungsbeispiel
+label: Abrechnungsbereiche
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_abrechnungsbereich: gvz_abrechnungsbereich
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: aa2b3111-5cd0-4f42-a931-e52ee2e79bab
+langcode: de
+status: true
+dependencies: {  }
+id: chairside-leistungen
+label: 'Chairside Leistungen'
+description: ''
+locked: false

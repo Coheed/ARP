@@ -1,0 +1,24 @@
+uuid: 8e9214e2-82d3-41c6-b994-3961a8abb454
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_begruendungen
+    - filter.format.full_html
+    - node.type.goz_leistung
+  module:
+    - text
+id: node.goz_leistung.field_begruendungen
+field_name: field_begruendungen
+entity_type: node
+bundle: goz_leistung
+label: Begründungen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

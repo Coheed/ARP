@@ -1,0 +1,21 @@
+uuid: 14519e60-e433-4eb9-961f-bd381bcbe8d6
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_synonyme_search
+field_name: field_synonyme_search
+entity_type: node
+type: string
+settings:
+  max_length: 999
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

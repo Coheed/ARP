@@ -1,0 +1,35 @@
+uuid: cbae3cfa-f79f-422d-8fb4-a7ce10874a26
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_leistung_no
+    - node.type.bema_leistung
+    - node.type.goae_leistung
+    - node.type.goz_analogleistung
+    - node.type.goz_leistung
+    - paragraphs.paragraphs_type.zusatzleistung_nicht_abrechenbar
+id: paragraph.zusatzleistung_nicht_abrechenbar.field_leistung_no
+field_name: field_leistung_no
+entity_type: paragraph
+bundle: zusatzleistung_nicht_abrechenbar
+label: Leistung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bema_leistung: bema_leistung
+      goz_analogleistung: goz_analogleistung
+      goz_leistung: goz_leistung
+      goae_leistung: goae_leistung
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: bema_leistung
+field_type: entity_reference

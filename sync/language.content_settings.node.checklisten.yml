@@ -1,0 +1,11 @@
+uuid: d379b13c-93b0-4c26-a586-21afb36feace
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.checklisten
+id: node.checklisten
+target_entity_type_id: node
+target_bundle: checklisten
+default_langcode: site_default
+language_alterable: false

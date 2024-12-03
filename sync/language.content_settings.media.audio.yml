@@ -1,0 +1,11 @@
+uuid: e819d98c-49cb-439f-a3c4-122580669bc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio
+target_entity_type_id: media
+target_bundle: audio
+default_langcode: site_default
+language_alterable: false

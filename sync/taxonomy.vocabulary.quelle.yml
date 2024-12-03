@@ -1,0 +1,15 @@
+uuid: 83c0321d-a52f-4d30-8243-44e9a2eca846
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Quelle
+vid: quelle
+description: null
+weight: 0
+new_revision: false

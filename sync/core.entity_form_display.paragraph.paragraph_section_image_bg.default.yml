@@ -1,0 +1,110 @@
+uuid: 2c1bc616-71f8-4753-8d1c-a65ad95f7454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_content_align
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_extra_html
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_id
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_image
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_margin
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_overlay
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_padding
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_spacing
+    - field.field.paragraph.paragraph_section_image_bg.field_paragraph_switch_column
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_section_image_bg
+  module:
+    - image
+    - imce
+    - text
+id: paragraph.paragraph_section_image_bg.default
+targetEntityType: paragraph
+bundle: paragraph_section_image_bg
+mode: default
+content:
+  field_paragraph_content_align:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraph_extra_class:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_extra_html:
+    type: text_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_id:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_image:
+    type: image_image
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      imce:
+        enabled: true
+  field_paragraph_margin:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_overlay:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_paragraph_padding:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_spacing:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraph_switch_column:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  layout_paragraphs_fields:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

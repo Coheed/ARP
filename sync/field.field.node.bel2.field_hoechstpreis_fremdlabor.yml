@@ -1,0 +1,23 @@
+uuid: c28bade4-9893-4a55-9986-128871bb7ddf
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hoechstpreis_fremdlabor
+    - node.type.bel2
+id: node.bel2.field_hoechstpreis_fremdlabor
+field_name: field_hoechstpreis_fremdlabor
+entity_type: node
+bundle: bel2
+label: 'Höchstpreis Fremdlabor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

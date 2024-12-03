@@ -1,0 +1,29 @@
+uuid: e39bfb94-11d0-499e-82a0-097b365218eb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_zahn
+    - paragraphs.paragraphs_type.zahnschema
+    - taxonomy.vocabulary.gvz_example_zahn
+id: paragraph.zahnschema.field_zahn
+field_name: field_zahn
+entity_type: paragraph
+bundle: zahnschema
+label: Zahn
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_example_zahn: gvz_example_zahn
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

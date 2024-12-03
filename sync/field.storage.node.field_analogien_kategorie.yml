@@ -1,0 +1,20 @@
+uuid: 63eda62a-dbbd-4e78-95ea-3d8443c32ca2
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_analogien_kategorie
+field_name: field_analogien_kategorie
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

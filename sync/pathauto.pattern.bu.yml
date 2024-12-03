@@ -1,0 +1,22 @@
+uuid: 6c25d407-c056-4bcf-93e0-a828e458818d
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: bu
+label: BU
+type: 'canonical_entities:node'
+pattern: 'bu/[node:title]'
+selection_criteria:
+  fe0d8378-e3b8-4108-9897-5e263c9f9380:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: fe0d8378-e3b8-4108-9897-5e263c9f9380
+    context_mapping:
+      node: node
+    bundles:
+      bu_leistung: bu_leistung
+selection_logic: and
+weight: -5
+relationships: {  }

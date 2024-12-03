@@ -1,0 +1,19 @@
+uuid: 8886ed58-42c2-415d-8820-d3b751e45461
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_amtliche_begruendung_goa
+field_name: field_amtliche_begruendung_goa
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

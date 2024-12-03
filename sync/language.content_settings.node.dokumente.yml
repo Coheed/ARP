@@ -1,0 +1,11 @@
+uuid: 3725e3ba-dd5e-47d3-8008-cb7afc9fb611
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.dokumente
+id: node.dokumente
+target_entity_type_id: node
+target_bundle: dokumente
+default_langcode: site_default
+language_alterable: false

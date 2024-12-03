@@ -1,0 +1,11 @@
+uuid: 85af8cbd-b943-4d70-9b92-ea4ee5cf5afa
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.bu_leistung
+id: node.bu_leistung
+target_entity_type_id: node
+target_bundle: bu_leistung
+default_langcode: site_default
+language_alterable: false

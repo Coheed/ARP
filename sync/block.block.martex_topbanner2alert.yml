@@ -1,0 +1,30 @@
+uuid: b9752198-eaf4-4c8e-8c12-8d4380164fa8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:76e2ebc7-960d-4f24-9fe6-7a5237750b7d'
+  module:
+    - block_content
+    - system
+  theme:
+    - martex
+id: martex_topbanner2alert
+theme: martex
+region: disabled
+weight: -4
+provider: null
+plugin: 'block_content:76e2ebc7-960d-4f24-9fe6-7a5237750b7d'
+settings:
+  id: 'block_content:76e2ebc7-960d-4f24-9fe6-7a5237750b7d'
+  label: 'Top Banner 2 - Alert'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /demo-6

@@ -1,0 +1,20 @@
+uuid: 22612dbf-8067-4f5e-bcdb-413308749fae
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_planzeit_in_min_100
+field_name: field_planzeit_in_min_100
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

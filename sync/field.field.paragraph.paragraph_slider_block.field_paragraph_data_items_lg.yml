@@ -1,0 +1,23 @@
+uuid: 19bc69bc-c3f5-4b19-a1b7-74aadcb6f80a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_data_items_lg
+    - paragraphs.paragraphs_type.paragraph_slider_block
+id: paragraph.paragraph_slider_block.field_paragraph_data_items_lg
+field_name: field_paragraph_data_items_lg
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Data Items LG'
+description: 'Number of items on screen width 992px - 1199px'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

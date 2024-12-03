@@ -1,0 +1,60 @@
+uuid: b3c79b59-e3de-4e12-a055-6057cb139c50
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.festzuschuss.field_abrechnungsart
+    - field.field.node.festzuschuss.field_abrechnungsbeispiele
+    - field.field.node.festzuschuss.field_abrechnungsbestimmungen
+    - field.field.node.festzuschuss.field_beachte
+    - field.field.node.festzuschuss.field_befund_nr
+    - field.field.node.festzuschuss.field_befundbeschreibung
+    - field.field.node.festzuschuss.field_betrag_ohne_bonus
+    - field.field.node.festzuschuss.field_dokumente
+    - field.field.node.festzuschuss.field_fz_kategorie
+    - field.field.node.festzuschuss.field_kombinierbar_mit
+    - field.field.node.festzuschuss.field_kommentare_hinweise
+    - field.field.node.festzuschuss.field_kurzbeschreibung
+    - field.field.node.festzuschuss.field_material
+    - field.field.node.festzuschuss.field_quelle
+    - field.field.node.festzuschuss.field_regelversorgung_zahnaerztl
+    - field.field.node.festzuschuss.field_regelversorgung_zahntechni
+    - field.field.node.festzuschuss.field_suchwoerter_search
+    - field.field.node.festzuschuss.field_synonyme_search
+    - field.field.node.festzuschuss.field_zielgruppe
+    - node.type.festzuschuss
+  module:
+    - user
+id: node.festzuschuss.search_result
+targetEntityType: node
+bundle: festzuschuss
+mode: search_result
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_beachte: true
+  field_befund_nr: true
+  field_befundbeschreibung: true
+  field_betrag_ohne_bonus: true
+  field_dokumente: true
+  field_fz_kategorie: true
+  field_kombinierbar_mit: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_material: true
+  field_quelle: true
+  field_regelversorgung_zahnaerztl: true
+  field_regelversorgung_zahntechni: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  search_api_excerpt: true

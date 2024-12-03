@@ -1,0 +1,49 @@
+uuid: 52fe693f-a9c5-4cee-a31f-a7a7ca8ce071
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.richtlinien.field_behandlungsbereich
+    - field.field.node.richtlinien.field_beschreibung
+    - field.field.node.richtlinien.field_datum
+    - field.field.node.richtlinien.field_dokumente
+    - field.field.node.richtlinien.field_kurzbeschreibung
+    - field.field.node.richtlinien.field_quelle
+    - field.field.node.richtlinien.field_referenzziffer
+    - field.field.node.richtlinien.field_richtlinienkapitel
+    - field.field.node.richtlinien.field_suchwoerter_search
+    - field.field.node.richtlinien.field_synonyme_search
+    - node.type.richtlinien
+  module:
+    - text
+    - user
+id: node.richtlinien.search_result
+targetEntityType: node
+bundle: richtlinien
+mode: search_result
+content:
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_behandlungsbereich: true
+  field_datum: true
+  field_dokumente: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_referenzziffer: true
+  field_richtlinienkapitel: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 4496e94a-0d9f-48c7-b049-409994c4ea2a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:113fe88c-b0b7-4fe2-8f9c-ddb27575b48e'
+  module:
+    - layout_paragraphs
+id: paragraph_section_video_bg
+label: 'Section Video Background'
+icon_uuid: 113fe88c-b0b7-4fe2-8f9c-ddb27575b48e
+icon_default: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAEmklEQVR4Xu2dQU5bMRCGZ0BdFNGWLisVQk9QbtCwg2xKTwA9QcgJCCd45ATACZpugF3TEzTcgEClLotKRSsBccdPSakSQmzHdkzzPwmJhe2Z/N8bj58Tz2PClZQCnJQ3cIYAJLGbAEAAJDEFEnMHEQIgiSmQmDuIEABJTIHE3EGEAEhiCiTmDiIEQBJTIDF3ECEAkpgCibmDCHkoQFayb4s8fV1IzN+R3fl1M3vcqDw/H3mgQAP0RchKrbU+pWiTiJcC2Rz7sIqozmpq+6Dysjl2Z3oc+AukmH2fm+Efn/5nEH3iM1cPyvPbKUHJgUwkjA4Fpbh2WJmXGSGNKweyunP6Qf5ZS8Ol+F4oRe8OKwv1+Jb7LfJKdlacYiVT1eReitTJ4WbhVQoK8Gp2usdM6yk4M04f2oqXjyrzjdA+6EUTK9az0Zz8nStW9aNyYb9rl0s7rS8TlcgHKa6UrLoK1VBA9EzE3N5l4sV+G6pJavq9XvUJkFNZBeKSPLIveWTDtxJ6wfSYL7YkRw9ZOKjmpXq6DCAdAgLkswAp+gRSyr4uKb6RBdNdUXGHJYlSAAkEpFQ72yKlrKZAvbgAEM9AdFQQ3+y65mUA8QikVGuVSZFEBesVlNMFIB6A5BuxfCUrKBo5BwHIiEBK2ekGscpGiYp/QwlAHIF0lrM6KrxuOQGIAxDZ3VhjVjpxO+eKQQkGQCyAmD/kOeXzvBOAGAK5f+vDHUBvTwAxACJfT2TDtz78QAGQIUBkFVWXc2Zv/cg9fBQAGQJEEnhDvp54M1xKPy0ABED83Em+Rxm024sI8a204XgAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGYAEktpQzsAYihUrGaDgOCnpLEI9Ni571j0ana2I+dByjFcw09JOyoPO6ee14Sh9h4xBy3qBiCGQHSz/MAO/ayGjBYAsQDSnbL0kTYiJUV7+JnvaQxAHIB0o2WGLmQK83t2BEAcgYSKFgAZEYjunhcOoCtdd2zkgz0A4gHIbbS0dAkmSfruuQVAPALRQ+XFZ/LlMb12SfgA4hlIF0Ipa1XlmWXLCopSLQAJBMQpWlDA7Pb+DVriz+RhUtHxJT0psmyeNV3nO6twTL1xhCKYA7deBEabHq0dVV6coExs50aJVSZWl3OSqqNFMbsofydSIaJxUFnY696vKKSslZBkKiVitUBjv/JS47H3/Mf+qXscSKrUuPYtL8ZPF41JzCVJFuOfWCiBE7nLTND3Qpe8hqCuwuz4pOniRPQ+ij4STVWTfqFLryh6w4zoOolE5xPYb5ptPqhXHvn88BjLXgG8pc1es6A9ACSovPaDA4i9ZkF7AEhQee0HBxB7zYL2AJCg8toPDiD2mgXtASBB5bUfHEDsNQvaA0CCyms/OIDYaxa0B4AEldd+cACx1yxoDwAJKq/94ABir1nQHn8AwzS+YLWKNwAAAAAASUVORK5CYII='
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      martex_col1: '1 Column'
+      martex_col1-10: '1 Column 10/12'
+      martex_col2-equal: '2 Columns Equal'
+      martex_col2-3-9: '2 Columns 3 and 9'
+      martex_col2-4-8: '2 Columns 4 and 8'
+      martex_col2-5-7: '2 Columns 5 and 7'
+      martex_col2-7-5: '2 Columns 7 and 5'
+      martex_col2-8-4: '2 Columns 8 and 4'
+      martex_col2-9-3: '2 Columns 9 and 3'
+      martex_col3-3-6-3: '3 Columns 3-6-3'
+      martex_col3-equal: '3 Columns Equal'
+      martex_col4-equal: '4 Columns Equal'

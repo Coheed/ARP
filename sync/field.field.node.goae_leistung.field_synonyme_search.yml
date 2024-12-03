@@ -1,0 +1,19 @@
+uuid: 9f54a875-aa3d-49bb-9145-6dab37b9b401
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_synonyme_search
+    - node.type.goae_leistung
+id: node.goae_leistung.field_synonyme_search
+field_name: field_synonyme_search
+entity_type: node
+bundle: goae_leistung
+label: Synonyme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

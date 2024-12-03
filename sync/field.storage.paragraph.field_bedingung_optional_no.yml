@@ -1,0 +1,19 @@
+uuid: 3ff24e62-198f-4921-ab04-6d0454bb822a
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_bedingung_optional_no
+field_name: field_bedingung_optional_no
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

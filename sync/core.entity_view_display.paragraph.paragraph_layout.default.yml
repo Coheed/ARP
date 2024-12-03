@@ -1,0 +1,51 @@
+uuid: b76476e4-836a-47be-9b15-70c9a7b159ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_layout.field_paragraph_content_align
+    - field.field.paragraph.paragraph_layout.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_layout.field_paragraph_gutter_class
+    - field.field.paragraph.paragraph_layout.field_paragraph_switch_column
+    - paragraphs.paragraphs_type.paragraph_layout
+  module:
+    - options
+id: paragraph.paragraph_layout.default
+targetEntityType: paragraph
+bundle: paragraph_layout
+mode: default
+content:
+  field_paragraph_content_align:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph_extra_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_gutter_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraph_switch_column:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,41 @@
+uuid: d311f4b6-2dfe-4c9a-9ff8-08d513950883
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intern.field_edv_nr
+    - field.field.paragraph.intern.field_quelle
+    - field.field.paragraph.intern.field_zielgruppe
+    - paragraphs.paragraphs_type.intern
+id: paragraph.intern.default
+targetEntityType: paragraph
+bundle: intern
+mode: default
+content:
+  field_edv_nr:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_quelle:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_zielgruppe:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

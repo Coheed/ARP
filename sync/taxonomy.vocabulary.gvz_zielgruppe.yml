@@ -1,0 +1,15 @@
+uuid: e02891bf-33db-4ff8-b40a-2eca1d793587
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'GVZ Zielgruppe'
+vid: gvz_zielgruppe
+description: null
+weight: 0
+new_revision: false

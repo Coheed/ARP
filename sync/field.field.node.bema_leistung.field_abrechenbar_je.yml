@@ -1,0 +1,29 @@
+uuid: ebfa620e-e838-488e-b7e7-c8dc99a59286
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechenbar_je
+    - node.type.bema_leistung
+    - taxonomy.vocabulary.abrechnungsobjekt
+id: node.bema_leistung.field_abrechenbar_je
+field_name: field_abrechenbar_je
+entity_type: node
+bundle: bema_leistung
+label: 'Abrechenbar je'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsobjekt: abrechnungsobjekt
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

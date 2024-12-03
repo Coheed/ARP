@@ -1,0 +1,60 @@
+uuid: 02867250-af41-4252-b359-24aa19a13d34
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.beb_97.field_abrechnungsart
+    - field.field.node.beb_97.field_abrechnungsbeispiele
+    - field.field.node.beb_97.field_beachte
+    - field.field.node.beb_97.field_beb_97_kategorie
+    - field.field.node.beb_97.field_beb_nr
+    - field.field.node.beb_97.field_beb_zahntechnik_leistung
+    - field.field.node.beb_97.field_bel2_leistung
+    - field.field.node.beb_97.field_berechnung_daneben_bel2
+    - field.field.node.beb_97.field_cad_cam_3d_druck_leistung
+    - field.field.node.beb_97.field_chairside_leistung
+    - field.field.node.beb_97.field_dokumente
+    - field.field.node.beb_97.field_kommentare_hinweise
+    - field.field.node.beb_97.field_kurzbeschreibung
+    - field.field.node.beb_97.field_leistungsbeschreibung
+    - field.field.node.beb_97.field_planzeit_in_min_100
+    - field.field.node.beb_97.field_quelle
+    - field.field.node.beb_97.field_suchwoerter_search
+    - field.field.node.beb_97.field_synonyme_search
+    - field.field.node.beb_97.field_verbrauchsmaterial
+    - field.field.node.beb_97.field_zielgruppe
+    - field.field.node.beb_97.field_zusaetzlich_berechnungsfae
+    - node.type.beb_97
+  module:
+    - user
+id: node.beb_97.search_result
+targetEntityType: node
+bundle: beb_97
+mode: search_result
+content: {  }
+hidden:
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_beachte: true
+  field_beb_97_kategorie: true
+  field_beb_nr: true
+  field_beb_zahntechnik_leistung: true
+  field_bel2_leistung: true
+  field_berechnung_daneben_bel2: true
+  field_cad_cam_3d_druck_leistung: true
+  field_chairside_leistung: true
+  field_dokumente: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_leistungsbeschreibung: true
+  field_planzeit_in_min_100: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_verbrauchsmaterial: true
+  field_zielgruppe: true
+  field_zusaetzlich_berechnungsfae: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

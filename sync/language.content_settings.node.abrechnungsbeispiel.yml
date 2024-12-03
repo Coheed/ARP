@@ -1,0 +1,11 @@
+uuid: fcebcb84-0221-4153-a597-50f9231f2b91
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.abrechnungsbeispiel
+id: node.abrechnungsbeispiel
+target_entity_type_id: node
+target_bundle: abrechnungsbeispiel
+default_langcode: site_default
+language_alterable: false

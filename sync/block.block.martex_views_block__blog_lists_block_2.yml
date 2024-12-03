@@ -1,0 +1,24 @@
+uuid: 0ca2a2c2-a675-4e36-9440-9120fb75ad66
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_lists
+  module:
+    - views
+  theme:
+    - martex
+id: martex_views_block__blog_lists_block_2
+theme: martex
+region: disabled
+weight: -14
+provider: null
+plugin: 'views_block:blog_lists-block_2'
+settings:
+  id: 'views_block:blog_lists-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

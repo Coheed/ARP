@@ -1,0 +1,11 @@
+uuid: f2f848ab-53ef-4a66-8164-7c294b45be1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_content_title_image
+label: 'Full Content with Title Image'
+description: ''
+targetEntityType: node
+cache: true

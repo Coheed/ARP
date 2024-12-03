@@ -1,0 +1,33 @@
+uuid: 320e1073-811e-41cc-b77c-6e1da988d1cd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_block:b8426762-cd61-45cf-a468-c0e0d7c505e0'
+  module:
+    - block_content
+    - node
+  theme:
+    - martex
+id: martex_blockctaprojectdetail
+theme: martex
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:b8426762-cd61-45cf-a468-c0e0d7c505e0'
+settings:
+  id: 'block_content:b8426762-cd61-45cf-a468-c0e0d7c505e0'
+  label: 'Block CTA - Project Detail'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      project: project

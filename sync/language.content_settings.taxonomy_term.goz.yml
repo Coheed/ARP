@@ -1,0 +1,11 @@
+uuid: c32ed28d-946e-4b5e-85c7-281cfe791ab3
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.goz
+id: taxonomy_term.goz
+target_entity_type_id: taxonomy_term
+target_bundle: goz
+default_langcode: site_default
+language_alterable: false

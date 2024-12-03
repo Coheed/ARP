@@ -1,0 +1,23 @@
+uuid: 6152c195-9c73-48e5-823c-3e1f631ad2bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_switch_column
+    - paragraphs.paragraphs_type.paragraph_section
+id: paragraph.paragraph_section.field_paragraph_switch_column
+field_name: field_paragraph_switch_column
+entity_type: paragraph
+bundle: paragraph_section
+label: 'Switch Column on Mobile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

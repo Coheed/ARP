@@ -1,0 +1,24 @@
+uuid: 5af6e28b-acdc-4630-b24b-34cb538f7c40
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leistungsinhalt
+    - filter.format.full_html
+    - node.type.bel2
+  module:
+    - text
+id: node.bel2.field_leistungsinhalt
+field_name: field_leistungsinhalt
+entity_type: node
+bundle: bel2
+label: Leistungsinhalt
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

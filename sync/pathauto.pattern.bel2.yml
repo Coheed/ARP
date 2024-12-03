@@ -1,0 +1,22 @@
+uuid: bb27e52f-f06a-452a-9953-cd712a596176
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: bel2
+label: BEL2
+type: 'canonical_entities:node'
+pattern: 'bel2/[node:title]'
+selection_criteria:
+  1abf8ed4-a689-46f4-80be-a5674002e606:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 1abf8ed4-a689-46f4-80be-a5674002e606
+    context_mapping:
+      node: node
+    bundles:
+      bel2: bel2
+selection_logic: and
+weight: -5
+relationships: {  }

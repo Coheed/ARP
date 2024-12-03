@@ -1,0 +1,380 @@
+uuid: 57a84564-ba48-4e65-9beb-c928eaf52b6b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.festzuschuss.field_abrechnungsart
+    - field.field.node.festzuschuss.field_abrechnungsbeispiele
+    - field.field.node.festzuschuss.field_abrechnungsbestimmungen
+    - field.field.node.festzuschuss.field_beachte
+    - field.field.node.festzuschuss.field_befund_nr
+    - field.field.node.festzuschuss.field_befundbeschreibung
+    - field.field.node.festzuschuss.field_betrag_ohne_bonus
+    - field.field.node.festzuschuss.field_dokumente
+    - field.field.node.festzuschuss.field_fz_kategorie
+    - field.field.node.festzuschuss.field_kombinierbar_mit
+    - field.field.node.festzuschuss.field_kommentare_hinweise
+    - field.field.node.festzuschuss.field_kurzbeschreibung
+    - field.field.node.festzuschuss.field_material
+    - field.field.node.festzuschuss.field_quelle
+    - field.field.node.festzuschuss.field_regelversorgung_zahnaerztl
+    - field.field.node.festzuschuss.field_regelversorgung_zahntechni
+    - field.field.node.festzuschuss.field_suchwoerter_search
+    - field.field.node.festzuschuss.field_synonyme_search
+    - field.field.node.festzuschuss.field_zielgruppe
+    - node.type.festzuschuss
+  module:
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_befund_nr
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_befundbeschreibung:
+      children:
+        - field_befundbeschreibung
+      label: Befundbeschreibung
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_material:
+      children:
+        - field_material
+      label: Material
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_betrag_ohne_bonus:
+      children:
+        - field_betrag_ohne_bonus
+      label: 'Betrag ohne Bonus'
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_kombinierbar_mit:
+      children:
+        - field_kombinierbar_mit
+      label: 'Kombinierbar mit'
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_kommentare_hinweise:
+      children:
+        - field_kommentare_hinweise
+      label: 'Kommentare & Hinweise'
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsbeispiele:
+      children:
+        - field_abrechnungsbeispiele
+      label: Abrechnungsbeispiele
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_regelversorgung_technik:
+      children:
+        - field_regelversorgung_zahntechni
+      label: 'Regelversorgung Zahntechnische Leistungen'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_regelversorgung_zahnaerztl:
+      children:
+        - field_regelversorgung_zahnaerztl
+      label: 'Regelversorgung Zahnärztliche Leistungen'
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_kategorie:
+      children:
+        - field_fz_kategorie
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_beachte:
+      children:
+        - field_beachte
+      label: Beachte
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsart:
+      children:
+        - field_abrechnungsart
+      label: Abrechnungsart
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsbestimmungen:
+      children:
+        - field_abrechnungsbestimmungen
+      label: Abrechnungsbestimmungen
+      parent_name: ''
+      region: content
+      weight: 12
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_dokumente:
+      children:
+        - field_dokumente
+      label: Dokumente
+      parent_name: ''
+      region: content
+      weight: 13
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+id: node.festzuschuss.default
+targetEntityType: node
+bundle: festzuschuss
+mode: default
+content:
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_abrechnungsbestimmungen:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_beachte:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_befund_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_befundbeschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_betrag_ohne_bonus:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_fz_kategorie:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_kombinierbar_mit:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_material:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_regelversorgung_zahnaerztl:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_regelversorgung_zahntechni:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+hidden:
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

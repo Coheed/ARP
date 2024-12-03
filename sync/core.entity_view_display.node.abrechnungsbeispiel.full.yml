@@ -1,0 +1,70 @@
+uuid: a8dfa4ea-2f11-44ab-9514-7cdd70858c24
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.abrechnungsbeispiel.field_abrechnung
+    - field.field.node.abrechnungsbeispiel.field_abrechnungs_kategorie
+    - field.field.node.abrechnungsbeispiel.field_abrechnungsart
+    - field.field.node.abrechnungsbeispiel.field_abrechnungsbereiche
+    - field.field.node.abrechnungsbeispiel.field_behandlungsbereich
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_gebuehr
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_laborpo
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_materia
+    - field.field.node.abrechnungsbeispiel.field_fallbeschreibung_dokumenta
+    - field.field.node.abrechnungsbeispiel.field_hinweise_zur_abrechnung
+    - field.field.node.abrechnungsbeispiel.field_kurzbeschreibung
+    - field.field.node.abrechnungsbeispiel.field_quelle
+    - field.field.node.abrechnungsbeispiel.field_suchwoerter_search
+    - field.field.node.abrechnungsbeispiel.field_synonyme_search
+    - field.field.node.abrechnungsbeispiel.field_zahnschema
+    - field.field.node.abrechnungsbeispiel.field_zielgruppe
+    - field.field.node.abrechnungsbeispiel.field_zuzuordnende_gebuehrennumm
+    - node.type.abrechnungsbeispiel
+  module:
+    - user
+id: node.abrechnungsbeispiel.full
+targetEntityType: node
+bundle: abrechnungsbeispiel
+mode: full
+content:
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_behandlungsbereich:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechnung: true
+  field_abrechnungs_kategorie: true
+  field_abrechnungsbereiche: true
+  field_berechnungsfaehige_gebuehr: true
+  field_berechnungsfaehige_laborpo: true
+  field_berechnungsfaehige_materia: true
+  field_fallbeschreibung_dokumenta: true
+  field_hinweise_zur_abrechnung: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zahnschema: true
+  field_zielgruppe: true
+  field_zuzuordnende_gebuehrennumm: true
+  langcode: true
+  search_api_excerpt: true

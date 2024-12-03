@@ -1,0 +1,10 @@
+uuid: b4d76aeb-2b4a-4b87-a400-18613b2ded49
+langcode: de
+status: true
+dependencies: {  }
+id: zahnschema
+label: Zahnschema
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

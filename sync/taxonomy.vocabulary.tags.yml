@@ -1,0 +1,11 @@
+uuid: 940cbeaf-6845-4a2f-b649-bc65fb5ee767
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: Tags
+vid: tags
+description: 'Verwenden Sie Schlagwörter, um Artikel zu ähnlichen Themen in Kategorien zusammenzufassen.'
+weight: 0
+new_revision: false

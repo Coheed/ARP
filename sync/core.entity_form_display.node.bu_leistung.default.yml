@@ -1,0 +1,260 @@
+uuid: 82985e20-a7b9-4b99-a21c-bfe12af6c839
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.bu_leistung.field_abrechenbar_je
+    - field.field.node.bu_leistung.field_abrechnungsart
+    - field.field.node.bu_leistung.field_abrechnungsbeispiele
+    - field.field.node.bu_leistung.field_abrechnungsbestimmungen
+    - field.field.node.bu_leistung.field_beschreibung
+    - field.field.node.bu_leistung.field_betrag
+    - field.field.node.bu_leistung.field_bu_kategorie
+    - field.field.node.bu_leistung.field_bu_nr
+    - field.field.node.bu_leistung.field_dokumentation
+    - field.field.node.bu_leistung.field_dokumentation_pdf
+    - field.field.node.bu_leistung.field_kommentare_hinweise
+    - field.field.node.bu_leistung.field_leistung
+    - field.field.node.bu_leistung.field_zielgruppe
+    - field.field.node.bu_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.bu_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.bu_leistung
+  module:
+    - field_group
+    - layout_paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_zusatzleistungen:
+      children:
+        - field_zusatzleistung_abrechenbar
+        - field_zusatzleistung_nicht_abrec
+      label: Zusatzleistungen
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+    group_intern:
+      children:
+        - field_zielgruppe
+      label: Intern
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+id: node.bu_leistung.default
+targetEntityType: node
+bundle: bu_leistung
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechenbar_je:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsart:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechnungsbeispiele:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsbestimmungen:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_beschreibung:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_betrag:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_bu_kategorie:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bu_nr:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumentation:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumentation_pdf:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_kommentare_hinweise:
+    type: layout_paragraphs
+    weight: 12
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_leistung:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_zielgruppe:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_zusatzleistung_abrechenbar:
+    type: layout_paragraphs
+    weight: 15
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_zusatzleistung_nicht_abrec:
+    type: layout_paragraphs
+    weight: 16
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 15
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

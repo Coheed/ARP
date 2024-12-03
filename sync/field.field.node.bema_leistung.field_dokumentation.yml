@@ -1,0 +1,24 @@
+uuid: 4138eef5-cabc-4b4a-aeaa-06f30049f7a1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumentation
+    - filter.format.full_html
+    - node.type.bema_leistung
+  module:
+    - text
+id: node.bema_leistung.field_dokumentation
+field_name: field_dokumentation
+entity_type: node
+bundle: bema_leistung
+label: Dokumentation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

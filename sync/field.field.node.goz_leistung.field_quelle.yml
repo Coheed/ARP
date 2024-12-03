@@ -1,0 +1,29 @@
+uuid: 596df04b-830e-4c07-8928-813dd444528d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quelle
+    - node.type.goz_leistung
+    - taxonomy.vocabulary.quelle
+id: node.goz_leistung.field_quelle
+field_name: field_quelle
+entity_type: node
+bundle: goz_leistung
+label: Quelle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quelle: quelle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

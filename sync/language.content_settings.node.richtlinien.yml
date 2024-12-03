@@ -1,0 +1,11 @@
+uuid: 5c7398e0-3a5e-43e8-801f-12a411df673f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.richtlinien
+id: node.richtlinien
+target_entity_type_id: node
+target_bundle: richtlinien
+default_langcode: site_default
+language_alterable: false

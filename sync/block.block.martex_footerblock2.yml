@@ -1,0 +1,30 @@
+uuid: 3ad689be-b61a-4e07-81ce-1f835f151748
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_block:0f984b0d-6dd8-47fb-a84f-08f9742efde0'
+  module:
+    - block_content
+    - system
+  theme:
+    - martex
+id: martex_footerblock2
+theme: martex
+region: footer
+weight: -14
+provider: null
+plugin: 'block_content:0f984b0d-6dd8-47fb-a84f-08f9742efde0'
+settings:
+  id: 'block_content:0f984b0d-6dd8-47fb-a84f-08f9742efde0'
+  label: 'Footer Block 2'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/node/*/edit\r\n/node/add/*"

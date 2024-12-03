@@ -1,0 +1,18 @@
+uuid: e74e4952-d859-4367-9f4d-00d36aa399a2
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_kfo_leistung
+field_name: field_kfo_leistung
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

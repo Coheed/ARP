@@ -1,0 +1,57 @@
+label: Subscribers
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« first'
+            last: 'last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        mail:
+          label: Email
+        user_name:
+          label: Username
+        subscriptions_target_id:
+          label: Subscriptions
+          separator: ', '
+        status:
+          label: Active
+        created:
+          label: Created
+        operations:
+          label: Operations
+      filters:
+        mail:
+          expose:
+            label: Email
+        subscriptions_target_id:
+          expose:
+            label: Newsletters
+        status:
+          expose:
+            label: Active
+        subscriptions_status:
+          expose:
+            label: Status
+      title: Subscribers
+      empty:
+        area:
+          content:
+            value: 'No subscribers found.'
+  page_1:
+    display_title: Page

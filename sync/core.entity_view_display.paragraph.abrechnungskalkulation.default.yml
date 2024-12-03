@@ -1,0 +1,88 @@
+uuid: b1b04e46-5cf2-4fc1-9128-ccf931f7b3df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.abrechnungskalkulation.field_anzahl
+    - field.field.paragraph.abrechnungskalkulation.field_betrag
+    - field.field.paragraph.abrechnungskalkulation.field_datum
+    - field.field.paragraph.abrechnungskalkulation.field_faktor
+    - field.field.paragraph.abrechnungskalkulation.field_geb_nr
+    - field.field.paragraph.abrechnungskalkulation.field_leistung_calc
+    - field.field.paragraph.abrechnungskalkulation.field_zahn_calc
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+  module:
+    - datetime
+    - text
+id: paragraph.abrechnungskalkulation.default
+targetEntityType: paragraph
+bundle: abrechnungskalkulation
+mode: default
+content:
+  field_anzahl:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_betrag:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_datum:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_faktor:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_geb_nr:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_leistung_calc:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_zahn_calc:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

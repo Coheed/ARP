@@ -1,0 +1,24 @@
+uuid: 822b1105-0d57-4a28-a628-4b6dbb5a393a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_extra_html
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_section_image_bg
+  module:
+    - text
+id: paragraph.paragraph_section_image_bg.field_paragraph_extra_html
+field_name: field_paragraph_extra_html
+entity_type: paragraph
+bundle: paragraph_section_image_bg
+label: 'Extra HTML'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

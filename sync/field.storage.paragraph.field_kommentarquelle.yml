@@ -1,0 +1,20 @@
+uuid: 9c2dc793-1469-41d1-aab5-d8f753bd6a25
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_kommentarquelle
+field_name: field_kommentarquelle
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+uuid: f208af8b-1dee-4507-b204-a83dc06d3936
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Kommentarquelle
+vid: kommentarquelle
+description: null
+weight: 0
+new_revision: false

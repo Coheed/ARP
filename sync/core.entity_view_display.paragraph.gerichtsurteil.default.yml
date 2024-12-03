@@ -1,0 +1,42 @@
+uuid: 9d4ca832-32f4-47fb-afbd-03c60c718e23
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gerichtsurteil.field_beschlossen_durch
+    - field.field.paragraph.gerichtsurteil.field_referenzen
+    - field.field.paragraph.gerichtsurteil.field_urteil
+    - paragraphs.paragraphs_type.gerichtsurteil
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.gerichtsurteil.default
+targetEntityType: paragraph
+bundle: gerichtsurteil
+mode: default
+content:
+  field_beschlossen_durch:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_referenzen:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_urteil:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

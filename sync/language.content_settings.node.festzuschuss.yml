@@ -1,0 +1,11 @@
+uuid: 6ac10e73-11d6-466f-8a0a-1e815727d23b
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.festzuschuss
+id: node.festzuschuss
+target_entity_type_id: node
+target_bundle: festzuschuss
+default_langcode: site_default
+language_alterable: false

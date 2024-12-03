@@ -1,0 +1,33 @@
+uuid: 277ec031-61a8-4707-aa09-15529dfe479a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_views_reference.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_views_reference.field_paragraph_views_reference
+    - paragraphs.paragraphs_type.paragraph_views_reference
+  module:
+    - viewsreference
+id: paragraph.paragraph_views_reference.default
+targetEntityType: paragraph
+bundle: paragraph_views_reference
+mode: default
+content:
+  field_paragraph_extra_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,16 @@
+uuid: c6534846-55f2-4528-b603-d5d2a9967e9c
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - bema
+    parent: 'bema:'
+name: 'BEMA Kategorie'
+vid: bema_kategorie
+description: 'Inhaltsverzeichnis BEMA'
+weight: 0
+new_revision: false

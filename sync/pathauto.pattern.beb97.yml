@@ -1,0 +1,22 @@
+uuid: b0ac9ab6-ad81-425a-aaac-49f133d61311
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: beb97
+label: BEB97
+type: 'canonical_entities:node'
+pattern: 'beb97/[node:title]'
+selection_criteria:
+  07e7c467-440b-48fc-b255-a52d6283c790:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 07e7c467-440b-48fc-b255-a52d6283c790
+    context_mapping:
+      node: node
+    bundles:
+      beb_97: beb_97
+selection_logic: and
+weight: -5
+relationships: {  }

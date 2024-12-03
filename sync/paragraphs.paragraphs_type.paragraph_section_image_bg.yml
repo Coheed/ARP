@@ -1,0 +1,29 @@
+uuid: 1c62e58d-5f7f-4ab8-83c4-b52864295766
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:f450fb76-e016-4dac-8e3d-3fd3c843c7cd'
+  module:
+    - layout_paragraphs
+id: paragraph_section_image_bg
+label: 'Section Image Background'
+icon_uuid: f450fb76-e016-4dac-8e3d-3fd3c843c7cd
+icon_default: 'data:image/png;base64,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'
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      martex_col1: '1 Column'
+      martex_col1-10: '1 Column 10/12'
+      martex_col2-equal: '2 Columns Equal'
+      martex_col2-3-9: '2 Columns 3 and 9'
+      martex_col2-4-8: '2 Columns 4 and 8'
+      martex_col2-5-7: '2 Columns 5 and 7'
+      martex_col2-7-5: '2 Columns 7 and 5'
+      martex_col2-8-4: '2 Columns 8 and 4'
+      martex_col2-9-3: '2 Columns 9 and 3'
+      martex_col3-3-6-3: '3 Columns 3-6-3'
+      martex_col3-equal: '3 Columns Equal'
+      martex_col4-equal: '4 Columns Equal'

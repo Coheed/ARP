@@ -1,0 +1,36 @@
+uuid: dce50b6d-bcbc-496b-aca0-1d48151edae8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_paragraph_image_position
+field_name: field_paragraph_image_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top
+      label: Top
+    -
+      value: bottom
+      label: Bottom
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+    -
+      value: background
+      label: Background
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

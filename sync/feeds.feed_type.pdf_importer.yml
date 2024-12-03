@@ -1,0 +1,94 @@
+uuid: 0126ba0a-74dd-4596-8fa8-feb2b8ebf428
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - feeds_log
+    - media
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: 'pdf importer'
+id: pdf_importer
+description: pdfss
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:media'
+processor_configuration:
+  values:
+    bundle: document
+  langcode: de
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  file_path:
+    value: file_path
+    label: file_path
+    machine_name: file_path
+    type: csv
+mappings:
+  -
+    target: name
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: path
+    map:
+      alias: file_path
+      pathauto: file_path
+    settings:
+      language: null
+  -
+    target: field_media_document
+    map:
+      target_id: file_path
+      description: title
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+      autocreate_bundle: false

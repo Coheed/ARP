@@ -1,0 +1,23 @@
+uuid: 605e5982-0481-4c51-8336-c3d3a2c55634
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_punktzahl
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_punktzahl
+field_name: field_punktzahl
+entity_type: node
+bundle: goz_analogleistung
+label: Punktzahl
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

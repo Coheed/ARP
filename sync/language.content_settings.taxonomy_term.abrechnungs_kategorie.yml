@@ -1,0 +1,11 @@
+uuid: 457f3501-7868-475f-bdc8-2c43d9746839
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.abrechnungs_kategorie
+id: taxonomy_term.abrechnungs_kategorie
+target_entity_type_id: taxonomy_term
+target_bundle: abrechnungs_kategorie
+default_langcode: site_default
+language_alterable: false

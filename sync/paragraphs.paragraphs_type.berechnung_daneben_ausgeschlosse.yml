@@ -1,0 +1,10 @@
+uuid: 6f882d3d-1249-40eb-9572-f9db3e42d923
+langcode: de
+status: true
+dependencies: {  }
+id: berechnung_daneben_ausgeschlosse
+label: 'Berechnung daneben ausgeschlossen'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

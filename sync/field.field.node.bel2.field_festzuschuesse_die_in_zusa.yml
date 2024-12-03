@@ -1,0 +1,29 @@
+uuid: 368bd914-fbf5-406a-9780-d4001481a781
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_festzuschuesse_die_in_zusa
+    - node.type.bel2
+    - node.type.festzuschuss
+id: node.bel2.field_festzuschuesse_die_in_zusa
+field_name: field_festzuschuesse_die_in_zusa
+entity_type: node
+bundle: bel2
+label: 'Festzuschüsse, die in Zusammenhang mit der BEL-Leistung berechnet werden können'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      festzuschuss: festzuschuss
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: dd287d40-2890-4966-b844-60fcc28e1986
+langcode: de
+status: true
+dependencies: {  }
+id: cad-cam-3d-druck
+label: 'CAD/CAM/3D Druck'
+description: ''
+locked: false

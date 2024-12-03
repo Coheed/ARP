@@ -1,0 +1,22 @@
+uuid: 14f26ce6-a29a-4c68-803f-6771c0a6383a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: blog_category
+label: 'Blog Category'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'blog-category/[term:name]'
+selection_criteria:
+  42044ad4-825e-4ec7-89ab-170bab9e959a:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 42044ad4-825e-4ec7-89ab-170bab9e959a
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      blog_category: blog_category
+selection_logic: and
+weight: -5
+relationships: {  }

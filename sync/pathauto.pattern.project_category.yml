@@ -1,0 +1,22 @@
+uuid: 5743c766-1189-4e53-8969-7c364ca6b2b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: project_category
+label: 'Project Category'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'project-category/[term:name]'
+selection_criteria:
+  f47dcfaa-1870-4588-b0f7-afd70c501266:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: f47dcfaa-1870-4588-b0f7-afd70c501266
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      project_category: project_category
+selection_logic: and
+weight: -5
+relationships: {  }

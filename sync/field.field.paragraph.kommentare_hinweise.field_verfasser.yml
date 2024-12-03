@@ -1,0 +1,29 @@
+uuid: 95d41d43-7ba0-4f3f-ad0d-63a628898b1a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_verfasser
+    - paragraphs.paragraphs_type.kommentare_hinweise
+id: paragraph.kommentare_hinweise.field_verfasser
+field_name: field_verfasser
+entity_type: paragraph
+bundle: kommentare_hinweise
+label: Verfasser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference

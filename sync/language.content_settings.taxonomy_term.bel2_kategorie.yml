@@ -1,0 +1,11 @@
+uuid: 0803ee63-714a-467c-b24e-7e43c54eb49e
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bel2_kategorie
+id: taxonomy_term.bel2_kategorie
+target_entity_type_id: taxonomy_term
+target_bundle: bel2_kategorie
+default_langcode: site_default
+language_alterable: false

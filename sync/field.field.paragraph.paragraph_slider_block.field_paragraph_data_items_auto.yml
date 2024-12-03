@@ -1,0 +1,23 @@
+uuid: 9adcc87d-ec1c-4212-b8e9-b74b37fd08ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_data_items_auto
+    - paragraphs.paragraphs_type.paragraph_slider_block
+id: paragraph.paragraph_slider_block.field_paragraph_data_items_auto
+field_name: field_paragraph_data_items_auto
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Data Items Auto'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

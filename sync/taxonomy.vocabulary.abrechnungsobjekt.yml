@@ -1,0 +1,15 @@
+uuid: da837b93-5fba-4c0e-a4a2-74e24687380d
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Abrechnungsobjekt
+vid: abrechnungsobjekt
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,23 @@
+uuid: 393a13d8-b8a1-4230-b147-49edd4f39746
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_video_display
+    - paragraphs.paragraphs_type.paragraph_content_video
+  module:
+    - options
+id: paragraph.paragraph_content_video.field_paragraph_video_display
+field_name: field_paragraph_video_display
+entity_type: paragraph
+bundle: paragraph_content_video
+label: 'Video Display'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: embed
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,27 @@
+uuid: 827325fe-04e8-460c-8a8d-3bd8d5c8ec65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_video
+    - paragraphs.paragraphs_type.paragraph_section_video_bg
+  module:
+    - file
+id: paragraph.paragraph_section_video_bg.field_paragraph_video
+field_name: field_paragraph_video
+entity_type: paragraph
+bundle: paragraph_section_video_bg
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: media
+  file_extensions: mp4
+  max_filesize: ''
+  description_field: false
+field_type: file

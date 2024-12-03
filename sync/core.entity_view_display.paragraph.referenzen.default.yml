@@ -1,0 +1,27 @@
+uuid: fb38f654-3b72-44dd-8c2e-544759903244
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.referenzen.field_referenz
+    - paragraphs.paragraphs_type.referenzen
+  module:
+    - link
+id: paragraph.referenzen.default
+targetEntityType: paragraph
+bundle: referenzen
+mode: default
+content:
+  field_referenz:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

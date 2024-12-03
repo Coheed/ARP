@@ -1,0 +1,24 @@
+uuid: 2f29192b-10b2-477a-b0cd-61205a58f516
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_content
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_card
+  module:
+    - text
+id: paragraph.paragraph_card.field_paragraph_content
+field_name: field_paragraph_content
+entity_type: paragraph
+bundle: paragraph_card
+label: 'Item Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

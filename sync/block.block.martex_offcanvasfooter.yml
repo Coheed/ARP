@@ -1,0 +1,25 @@
+uuid: 4af61dff-94b6-483e-a0de-8efd8e8fa3db
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c8b6de5f-416a-4de6-b384-f27b8b4caab0'
+  module:
+    - block_content
+  theme:
+    - martex
+id: martex_offcanvasfooter
+theme: martex
+region: disabled
+weight: -11
+provider: null
+plugin: 'block_content:c8b6de5f-416a-4de6-b384-f27b8b4caab0'
+settings:
+  id: 'block_content:c8b6de5f-416a-4de6-b384-f27b8b4caab0'
+  label: 'Offcanvas Footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

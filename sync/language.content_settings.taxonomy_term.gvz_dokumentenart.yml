@@ -1,0 +1,11 @@
+uuid: d3637414-dbe3-40a1-82dc-57dbb697ad8b
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.gvz_dokumentenart
+id: taxonomy_term.gvz_dokumentenart
+target_entity_type_id: taxonomy_term
+target_bundle: gvz_dokumentenart
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 15b0e54d-d68d-48aa-9cc7-0ccec4daefbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_extra_class
+id: block_content.custom_block.field_extra_class
+field_name: field_extra_class
+entity_type: block_content
+bundle: custom_block
+label: 'Extra Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

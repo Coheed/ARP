@@ -1,0 +1,29 @@
+uuid: 34d5a0d9-c1d5-4fb9-a2fa-83281f649b1e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumentenart
+    - node.type.dokumente
+    - taxonomy.vocabulary.gvz_dokumentenart
+id: node.dokumente.field_dokumentenart
+field_name: field_dokumentenart
+entity_type: node
+bundle: dokumente
+label: Dokumentenart
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gvz_dokumentenart: gvz_dokumentenart
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

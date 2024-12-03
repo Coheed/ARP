@@ -1,0 +1,20 @@
+uuid: 396a3fc0-e347-4b06-ad0c-1e3eb253edcc
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_zielgruppe
+field_name: field_zielgruppe
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

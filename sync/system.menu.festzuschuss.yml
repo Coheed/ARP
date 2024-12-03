@@ -1,0 +1,8 @@
+uuid: dd0888bf-660b-4202-9103-076209541009
+langcode: de
+status: true
+dependencies: {  }
+id: festzuschuss
+label: Festzuschuss
+description: ''
+locked: false

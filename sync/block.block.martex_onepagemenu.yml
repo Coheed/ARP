@@ -1,0 +1,29 @@
+uuid: 66b31dcc-2060-4d11-a69e-6d6401ff33c3
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.one-page-menu
+  module:
+    - system
+  theme:
+    - martex
+id: martex_onepagemenu
+theme: martex
+region: navigation_collapsible
+weight: -13
+provider: null
+plugin: 'system_menu_block:one-page-menu'
+settings:
+  id: 'system_menu_block:one-page-menu'
+  label: 'One Page Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /demo-24

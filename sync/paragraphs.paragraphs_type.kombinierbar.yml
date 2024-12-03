@@ -1,0 +1,10 @@
+uuid: dea43b04-aa50-4fdf-abd6-b954edd15fc8
+langcode: de
+status: true
+dependencies: {  }
+id: kombinierbar
+label: Kombinierbar
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

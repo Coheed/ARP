@@ -1,0 +1,11 @@
+uuid: 66985def-439f-49a9-9439-7eb3c7d42df0
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.behandlungsbereich
+id: taxonomy_term.behandlungsbereich
+target_entity_type_id: taxonomy_term
+target_bundle: behandlungsbereich
+default_langcode: site_default
+language_alterable: false

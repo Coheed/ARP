@@ -1,0 +1,29 @@
+uuid: 0d0006d9-3e97-413b-a467-90d9482b996f
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.bema
+  module:
+    - system
+  theme:
+    - martex
+id: martex_bema
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:bema'
+settings:
+  id: 'system_menu_block:bema'
+  label: BEMA
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/bema/*\r\n/bema"

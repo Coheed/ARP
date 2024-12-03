@@ -1,0 +1,24 @@
+uuid: a0768487-f66b-4b4a-aa09-0aba02302269
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - martex
+id: martex_breadcrumbs
+theme: martex
+region: title
+weight: -16
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/suche\r\n/suche/*\r\n/search\r\n/search*"

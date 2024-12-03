@@ -1,0 +1,18 @@
+uuid: 5efc2ee8-3ca1-422e-bf55-4644cc04240c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_mainmenu_absolute
+field_name: field_mainmenu_absolute
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

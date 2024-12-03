@@ -1,0 +1,24 @@
+uuid: 234aada6-e86d-42e0-a962-7161786bef22
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.beb_zahntechnik
+  module:
+    - text
+id: node.beb_zahntechnik.body
+field_name: body
+entity_type: node
+bundle: beb_zahntechnik
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

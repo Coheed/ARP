@@ -1,0 +1,18 @@
+uuid: 9d603896-55b7-4657-98fe-fbc01e06e9ec
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RCVWP-yHwxSNiQORMIabDgHMEVqOMW58w80BQgRFJ4k
+id: node_view
+label: Beitragsansicht
+description: 'Wenn aktiviert, überschreibt dies das standardmäßige Drupal-Verhalten für die Anzeige von Inhalten bei <em>/node/{node}</em>. Wenn Sie Varianten hinzufügen, können Sie Auswahlkriterien wie Beitragstyp oder Sprache oder Benutzerzugriff verwenden, um verschiedene Ansichten von Inhalten bereitzustellen. Wird keine Variante ausgewählt, wird die standardmäßige Drupal-Inhaltsansicht verwendet. Diese Seite betrifft nur Inhalte, die als Seiten betrachtet werden, nicht aber Beiträge, die in Listen oder an anderen Orten angezeigt werden.'
+use_admin_theme: false
+path: '/node/{node}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  node:
+    machine_name: node
+    label: Beitrag
+    type: 'entity:node'

@@ -1,0 +1,20 @@
+uuid: 7b0ee29d-e7c2-4585-a839-bd04a73e08a7
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_betrag
+field_name: field_betrag
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

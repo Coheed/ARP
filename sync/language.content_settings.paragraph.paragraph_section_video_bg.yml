@@ -1,0 +1,11 @@
+uuid: 47d14a49-8237-49ee-8f27-0007ae8141d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.paragraph_section_video_bg
+id: paragraph.paragraph_section_video_bg
+target_entity_type_id: paragraph
+target_bundle: paragraph_section_video_bg
+default_langcode: site_default
+language_alterable: false

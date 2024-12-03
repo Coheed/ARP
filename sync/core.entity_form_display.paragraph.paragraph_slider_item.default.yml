@@ -1,0 +1,56 @@
+uuid: b98e64f4-1bba-4d28-a1a9-36c965d49ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_slider_item.field_paragraph_content
+    - field.field.paragraph.paragraph_slider_item.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_slider_item.field_paragraph_image
+    - field.field.paragraph.paragraph_slider_item.field_paragraph_set_bg
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_slider_item
+  module:
+    - image
+    - imce
+    - text
+id: paragraph.paragraph_slider_item.default
+targetEntityType: paragraph
+bundle: paragraph_slider_item
+mode: default
+content:
+  field_paragraph_content:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_extra_class:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings:
+      imce:
+        enabled: true
+  field_paragraph_set_bg:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

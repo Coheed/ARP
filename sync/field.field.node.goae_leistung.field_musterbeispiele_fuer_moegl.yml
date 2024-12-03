@@ -1,0 +1,24 @@
+uuid: a68672f8-04c2-4fd3-b272-6b5bdd5beac3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_musterbeispiele_fuer_moegl
+    - filter.format.full_html
+    - node.type.goae_leistung
+  module:
+    - text
+id: node.goae_leistung.field_musterbeispiele_fuer_moegl
+field_name: field_musterbeispiele_fuer_moegl
+entity_type: node
+bundle: goae_leistung
+label: 'Musterbeispiele für mögliche Begründungen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

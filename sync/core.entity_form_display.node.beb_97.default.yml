@@ -1,0 +1,367 @@
+uuid: a36dd23d-4584-4b84-865b-aae55ea7a0c1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.beb_97.field_abrechnungsart
+    - field.field.node.beb_97.field_abrechnungsbeispiele
+    - field.field.node.beb_97.field_beachte
+    - field.field.node.beb_97.field_beb_97_kategorie
+    - field.field.node.beb_97.field_beb_nr
+    - field.field.node.beb_97.field_beb_zahntechnik_leistung
+    - field.field.node.beb_97.field_bel2_leistung
+    - field.field.node.beb_97.field_berechnung_daneben_bel2
+    - field.field.node.beb_97.field_cad_cam_3d_druck_leistung
+    - field.field.node.beb_97.field_chairside_leistung
+    - field.field.node.beb_97.field_dokumente
+    - field.field.node.beb_97.field_kommentare_hinweise
+    - field.field.node.beb_97.field_kurzbeschreibung
+    - field.field.node.beb_97.field_leistungsbeschreibung
+    - field.field.node.beb_97.field_planzeit_in_min_100
+    - field.field.node.beb_97.field_quelle
+    - field.field.node.beb_97.field_suchwoerter_search
+    - field.field.node.beb_97.field_synonyme_search
+    - field.field.node.beb_97.field_verbrauchsmaterial
+    - field.field.node.beb_97.field_zielgruppe
+    - field.field.node.beb_97.field_zusaetzlich_berechnungsfae
+    - node.type.beb_97
+  module:
+    - field_group
+    - layout_paragraphs
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_intern:
+      children:
+        - field_zielgruppe
+        - field_quelle
+      label: Intern
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+    group_entspricht:
+      children:
+        - field_bel2_leistung
+        - field_beb_zahntechnik_leistung
+      label: Entspricht
+      region: content
+      parent_name: ''
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+    group_zusatzleistungen:
+      children:
+        - field_zusaetzlich_berechnungsfae
+        - field_berechnung_daneben_bel2
+      label: Zusatzleistungen
+      region: content
+      parent_name: ''
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+    group_suche:
+      children:
+        - field_kurzbeschreibung
+        - field_suchwoerter_search
+        - field_synonyme_search
+      label: Suche
+      region: content
+      parent_name: ''
+      weight: 16
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+id: node.beb_97.default
+targetEntityType: node
+bundle: beb_97
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechnungsart:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechnungsbeispiele:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_beachte:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_beb_97_kategorie:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_beb_nr:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_beb_zahntechnik_leistung:
+    type: entity_reference_autocomplete
+    weight: 30
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bel2_leistung:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_berechnung_daneben_bel2:
+    type: paragraphs
+    weight: 25
+    region: content
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_cad_cam_3d_druck_leistung:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_chairside_leistung:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumente:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_kommentare_hinweise:
+    type: layout_paragraphs
+    weight: 9
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_kurzbeschreibung:
+    type: string_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistungsbeschreibung:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_planzeit_in_min_100:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_quelle:
+    type: options_select
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_suchwoerter_search:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_synonyme_search:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_verbrauchsmaterial:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_zielgruppe:
+    type: options_buttons
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_zusaetzlich_berechnungsfae:
+    type: paragraphs
+    weight: 24
+    region: content
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 17
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 18
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

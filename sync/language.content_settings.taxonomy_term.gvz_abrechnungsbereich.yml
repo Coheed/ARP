@@ -1,0 +1,11 @@
+uuid: 86a5a758-b64a-4087-bed2-f93b9282a70c
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.gvz_abrechnungsbereich
+id: taxonomy_term.gvz_abrechnungsbereich
+target_entity_type_id: taxonomy_term
+target_bundle: gvz_abrechnungsbereich
+default_langcode: site_default
+language_alterable: false

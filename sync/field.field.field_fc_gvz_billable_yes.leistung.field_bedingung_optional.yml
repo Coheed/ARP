@@ -1,0 +1,19 @@
+uuid: 5fb476d2-d724-4c27-849b-7bf642fb3a57
+langcode: de
+status: true
+dependencies:
+  config:
+    - eck.eck_type.field_fc_gvz_billable_yes.leistung
+    - field.storage.field_fc_gvz_billable_yes.field_bedingung_optional
+id: field_fc_gvz_billable_yes.leistung.field_bedingung_optional
+field_name: field_bedingung_optional
+entity_type: field_fc_gvz_billable_yes
+bundle: leistung
+label: 'Bedingung (optional)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

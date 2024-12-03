@@ -1,0 +1,21 @@
+uuid: f1fe2f3f-551b-46c7-97ff-339203b4ad55
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_datum
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+  module:
+    - datetime
+id: paragraph.abrechnungskalkulation.field_datum
+field_name: field_datum
+entity_type: paragraph
+bundle: abrechnungskalkulation
+label: Datum
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

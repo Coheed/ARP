@@ -1,0 +1,19 @@
+uuid: 42e7726c-252a-489d-9b71-41d84ef95b9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_id
+    - paragraphs.paragraphs_type.paragraph_section_image_side
+id: paragraph.paragraph_section_image_side.field_paragraph_id
+field_name: field_paragraph_id
+entity_type: paragraph
+bundle: paragraph_section_image_side
+label: Id
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

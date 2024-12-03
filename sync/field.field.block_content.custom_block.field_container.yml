@@ -1,0 +1,23 @@
+uuid: c438c145-fae3-4c95-a031-bbb6ea68145a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_container
+id: block_content.custom_block.field_container
+field_name: field_container
+entity_type: block_content
+bundle: custom_block
+label: Container
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

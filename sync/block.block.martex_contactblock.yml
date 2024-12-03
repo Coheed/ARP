@@ -1,0 +1,24 @@
+uuid: 32d65e18-04b8-4ed3-9e12-16ba299c527d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+  module:
+    - contact_block
+  theme:
+    - martex
+id: martex_contactblock
+theme: martex
+region: disabled
+weight: -13
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  label_display: '0'
+  provider: contact_block
+  contact_form: feedback
+  form_display: default
+visibility: {  }

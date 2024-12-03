@@ -1,0 +1,112 @@
+uuid: 2bd82974-23ed-4869-a738-8ece28a57092
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_berechnung_daneben_bel2
+    - node.type.beb_97
+    - paragraphs.paragraphs_type.berechnung_daneben_ausgeschlosse
+  module:
+    - entity_reference_revisions
+id: node.beb_97.field_berechnung_daneben_bel2
+field_name: field_berechnung_daneben_bel2
+entity_type: node
+bundle: beb_97
+label: 'Berechnung daneben ausgeschlossen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      berechnung_daneben_ausgeschlosse: berechnung_daneben_ausgeschlosse
+    negate: 0
+    target_bundles_drag_drop:
+      berechnung_daneben_ausgeschlosse:
+        weight: 29
+        enabled: true
+      from_library:
+        weight: 30
+        enabled: false
+      gerichtsurteil:
+        weight: 31
+        enabled: false
+      intern:
+        weight: 32
+        enabled: false
+      kombinierbar:
+        weight: 33
+        enabled: false
+      kommentare_hinweise:
+        weight: 34
+        enabled: false
+      paragraph_accordion:
+        weight: 35
+        enabled: false
+      paragraph_accordion_item:
+        weight: 36
+        enabled: false
+      paragraph_card:
+        weight: 37
+        enabled: false
+      paragraph_content:
+        weight: 38
+        enabled: false
+      paragraph_content_video:
+        weight: 39
+        enabled: false
+      paragraph_layout:
+        weight: 40
+        enabled: false
+      paragraph_section:
+        weight: 41
+        enabled: false
+      paragraph_section_image_bg:
+        weight: 42
+        enabled: false
+      paragraph_section_image_side:
+        weight: 43
+        enabled: false
+      paragraph_section_video_bg:
+        weight: 44
+        enabled: false
+      paragraph_slider_block:
+        weight: 45
+        enabled: false
+      paragraph_slider_item:
+        weight: 46
+        enabled: false
+      paragraph_tab_item:
+        weight: 48
+        enabled: false
+      paragraph_tabs:
+        weight: 47
+        enabled: false
+      paragraph_views_reference:
+        weight: 49
+        enabled: false
+      referenzen:
+        weight: 50
+        enabled: false
+      suche:
+        weight: 51
+        enabled: false
+      zusaetzlich_berechnungsfaehig:
+        weight: 52
+        enabled: false
+      zusatzleistung_abrechenbar:
+        weight: 53
+        enabled: false
+      zusatzleistung_abrechenbar_goa:
+        weight: 54
+        enabled: false
+      zusatzleistung_nicht_abrechenbar:
+        weight: 55
+        enabled: false
+      zusatzleistung_nicht_goa:
+        weight: 56
+        enabled: false
+field_type: entity_reference_revisions

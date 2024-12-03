@@ -1,0 +1,29 @@
+uuid: 939926e5-b4ca-4552-8e0b-cdb21f958054
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_goae_kategorie
+    - node.type.goae_leistung
+    - taxonomy.vocabulary.goae_kategorie
+id: node.goae_leistung.field_goae_kategorie
+field_name: field_goae_kategorie
+entity_type: node
+bundle: goae_leistung
+label: 'GOÄ Kategorie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      goae_kategorie: goae_kategorie
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

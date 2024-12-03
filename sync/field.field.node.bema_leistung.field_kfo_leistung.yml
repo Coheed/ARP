@@ -1,0 +1,21 @@
+uuid: 9905d27f-b5d9-4dc7-a650-4e90005dfe8d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kfo_leistung
+    - node.type.bema_leistung
+id: node.bema_leistung.field_kfo_leistung
+field_name: field_kfo_leistung
+entity_type: node
+bundle: bema_leistung
+label: 'KFO Leistung?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ja
+  off_label: Nein
+field_type: boolean

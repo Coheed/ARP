@@ -1,0 +1,21 @@
+uuid: 4c34d2aa-2a34-4646-bd0a-8829b3b71c8b
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_befund_nr
+field_name: field_befund_nr
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

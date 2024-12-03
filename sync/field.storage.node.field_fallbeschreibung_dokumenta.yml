@@ -1,0 +1,19 @@
+uuid: f588c7a3-4aed-49c4-96d9-ba509c215d99
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_fallbeschreibung_dokumenta
+field_name: field_fallbeschreibung_dokumenta
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

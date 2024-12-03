@@ -1,0 +1,10 @@
+uuid: 51764d7b-7d91-4cd4-accf-d57a7d00eaad
+langcode: de
+status: true
+dependencies: {  }
+id: referenzen
+label: Referenzen
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

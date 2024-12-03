@@ -1,0 +1,39 @@
+uuid: a7cb8171-8e11-433b-b99c-d1a1649e3750
+langcode: de
+status: true
+dependencies:
+  config:
+    - eck.eck_type.field_fc_gvz_billable_yes.leistung
+    - field.field.field_fc_gvz_billable_yes.leistung.field_bedingung_optional
+    - field.field.field_fc_gvz_billable_yes.leistung.field_leistung
+id: field_fc_gvz_billable_yes.leistung.default
+targetEntityType: field_fc_gvz_billable_yes
+bundle: leistung
+mode: default
+content:
+  field_bedingung_optional:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistung:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

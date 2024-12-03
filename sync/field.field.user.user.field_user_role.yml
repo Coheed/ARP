@@ -1,0 +1,20 @@
+uuid: 3a6e1a84-3995-4875-b098-5952083ba524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_role
+  module:
+    - user
+id: user.user.field_user_role
+field_name: field_user_role
+entity_type: user
+bundle: user
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

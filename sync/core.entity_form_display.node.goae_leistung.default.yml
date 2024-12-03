@@ -1,0 +1,580 @@
+uuid: e6c4756f-1f20-4477-8da0-c0d0e1321e87
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.goae_leistung.field_abrechenbar_je
+    - field.field.node.goae_leistung.field_abrechenbar_je_goa
+    - field.field.node.goae_leistung.field_abrechnungsart
+    - field.field.node.goae_leistung.field_abrechnungsbeispiele
+    - field.field.node.goae_leistung.field_abrechnungsbeispiele_goa
+    - field.field.node.goae_leistung.field_abrechnungsbestimmungen
+    - field.field.node.goae_leistung.field_abrechnungsbestimmungen_go
+    - field.field.node.goae_leistung.field_alternativer_goae_punktwer
+    - field.field.node.goae_leistung.field_amtliche_begruendung
+    - field.field.node.goae_leistung.field_amtliche_begruendung_goa
+    - field.field.node.goae_leistung.field_behandlungsbereich
+    - field.field.node.goae_leistung.field_bema_bewertungszahl
+    - field.field.node.goae_leistung.field_berechnung_daneben_ausgesc
+    - field.field.node.goae_leistung.field_beschreibung
+    - field.field.node.goae_leistung.field_dokumentation
+    - field.field.node.goae_leistung.field_dokumente
+    - field.field.node.goae_leistung.field_dokumente_goa
+    - field.field.node.goae_leistung.field_edv_nr
+    - field.field.node.goae_leistung.field_gebuehrenziffer
+    - field.field.node.goae_leistung.field_gerichtsurteil
+    - field.field.node.goae_leistung.field_goa_points
+    - field.field.node.goae_leistung.field_goae_kategorie
+    - field.field.node.goae_leistung.field_kommentare
+    - field.field.node.goae_leistung.field_kommentare_hinweise
+    - field.field.node.goae_leistung.field_kurzbeschreibung
+    - field.field.node.goae_leistung.field_leistungsinhalt
+    - field.field.node.goae_leistung.field_leistungsinhalt_goa
+    - field.field.node.goae_leistung.field_musterbeispiele_fuer_moegl
+    - field.field.node.goae_leistung.field_quelle
+    - field.field.node.goae_leistung.field_referenzziffer
+    - field.field.node.goae_leistung.field_suchwoerter_search
+    - field.field.node.goae_leistung.field_synonyme_search
+    - field.field.node.goae_leistung.field_zielgruppe
+    - field.field.node.goae_leistung.field_zusaetzlich_berechnungsfae
+    - field.field.node.goae_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.goae_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.goae_leistung
+  module:
+    - field_group
+    - layout_paragraphs
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_intern:
+      children:
+        - field_edv_nr
+        - field_zielgruppe
+        - field_quelle
+      label: Intern
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+    group_gesetzlich_abrechenbar:
+      children:
+        - field_bema_bewertungszahl
+        - field_dokumentation
+        - field_abrechenbar_je
+        - field_abrechnungsbestimmungen
+        - field_leistungsinhalt
+        - field_amtliche_begruendung_goa
+        - group_zusatzleistungen_p
+        - field_kommentare_hinweise
+        - field_abrechnungsbeispiele
+        - field_dokumente
+      label: 'Gesetzlich abrechenbar'
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_zusatzleistungen:
+      children:
+        - field_zusaetzlich_berechnungsfae
+        - field_berechnung_daneben_ausgesc
+      label: Zusatzleistungen
+      region: content
+      parent_name: group_privat_abrechnen
+      weight: 29
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_privat_abrechnen:
+      children:
+        - field_goa_points
+        - field_alternativer_goae_punktwer
+        - field_abrechenbar_je_goa
+        - field_abrechnungsbestimmungen_go
+        - field_leistungsinhalt_goa
+        - field_amtliche_begruendung
+        - group_zusatzleistungen
+        - field_kommentare
+        - field_abrechnungsbeispiele_goa
+        - field_dokumente_goa
+        - field_musterbeispiele_fuer_moegl
+      label: 'Privat abrechnen'
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_zusatzleistungen_p:
+      children:
+        - field_zusatzleistung_abrechenbar
+        - field_zusatzleistung_nicht_abrec
+      label: Zusatzleistungen
+      region: content
+      parent_name: group_gesetzlich_abrechenbar
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_suche:
+      children:
+        - field_kurzbeschreibung
+        - field_suchwoerter_search
+        - field_synonyme_search
+      label: Suche
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+id: node.goae_leistung.default
+targetEntityType: node
+bundle: goae_leistung
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechenbar_je:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechenbar_je_goa:
+    type: entity_reference_autocomplete
+    weight: 25
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsart:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abrechnungsbeispiele:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsbeispiele_goa:
+    type: entity_reference_autocomplete
+    weight: 31
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsbestimmungen:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_abrechnungsbestimmungen_go:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_alternativer_goae_punktwer:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_amtliche_begruendung:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_amtliche_begruendung_goa:
+    type: text_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_behandlungsbereich:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bema_bewertungszahl:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_berechnung_daneben_ausgesc:
+    type: paragraphs
+    weight: 29
+    region: content
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_beschreibung:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumentation:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumente:
+    type: entity_reference_autocomplete
+    weight: 18
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dokumente_goa:
+    type: entity_reference_autocomplete
+    weight: 32
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_edv_nr:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gebuehrenziffer:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gerichtsurteil:
+    type: layout_paragraphs
+    weight: 9
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_goa_points:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_goae_kategorie:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_kommentare:
+    type: paragraphs
+    weight: 30
+    region: content
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_kommentare_hinweise:
+    type: layout_paragraphs
+    weight: 16
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_kurzbeschreibung:
+    type: string_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistungsinhalt:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistungsinhalt_goa:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_musterbeispiele_fuer_moegl:
+    type: text_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_quelle:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_referenzziffer:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_suchwoerter_search:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_synonyme_search:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_zielgruppe:
+    type: options_buttons
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_zusaetzlich_berechnungsfae:
+    type: paragraphs
+    weight: 28
+    region: content
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_zusatzleistung_abrechenbar:
+    type: layout_paragraphs
+    weight: 16
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  field_zusatzleistung_nicht_abrec:
+    type: layout_paragraphs
+    weight: 17
+    region: content
+    settings:
+      view_mode: default
+      preview_view_mode: default
+      form_display_mode: default
+      nesting_depth: 0
+      require_layouts: 0
+      empty_message: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 12
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

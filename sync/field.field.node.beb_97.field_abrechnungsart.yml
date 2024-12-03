@@ -1,0 +1,29 @@
+uuid: ef86ab35-4c10-4d81-bc4c-2c91fd198c3e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsart
+    - node.type.beb_97
+    - taxonomy.vocabulary.abrechnungsart
+id: node.beb_97.field_abrechnungsart
+field_name: field_abrechnungsart
+entity_type: node
+bundle: beb_97
+label: Abrechnungsart
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsart: abrechnungsart
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

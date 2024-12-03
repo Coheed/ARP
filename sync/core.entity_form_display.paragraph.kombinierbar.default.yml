@@ -1,0 +1,32 @@
+uuid: 15160500-aac5-4308-8f1b-96682627aac1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kombinierbar.field_bedingung
+    - field.field.paragraph.kombinierbar.field_festzuschuss
+    - paragraphs.paragraphs_type.kombinierbar
+id: paragraph.kombinierbar.default
+targetEntityType: paragraph
+bundle: kombinierbar
+mode: default
+content:
+  field_bedingung:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_festzuschuss:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

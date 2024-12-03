@@ -1,0 +1,10 @@
+uuid: e340314f-5fd5-4949-aac5-b1603285ca7a
+langcode: de
+status: true
+dependencies: {  }
+id: suche
+label: Suche
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

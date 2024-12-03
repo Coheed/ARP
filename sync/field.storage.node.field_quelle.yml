@@ -1,0 +1,20 @@
+uuid: 4cf94b1d-506c-4879-9705-3b59cfd31283
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_quelle
+field_name: field_quelle
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

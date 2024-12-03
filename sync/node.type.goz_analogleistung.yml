@@ -1,0 +1,18 @@
+uuid: 4a552509-0386-45e2-a8a2-d92a63353c6f
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'GOZ Analogleistung'
+type: goz_analogleistung
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

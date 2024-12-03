@@ -1,0 +1,16 @@
+uuid: f1ed76b4-f6b7-4667-9421-f70dc4c5c583
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Analogien
+vid: analogien
+description: null
+weight: 0
+new_revision: false

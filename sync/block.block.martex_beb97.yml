@@ -1,0 +1,29 @@
+uuid: 323c409f-20b7-4e9e-af7b-87b04a1499bb
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.beb-97
+  module:
+    - system
+  theme:
+    - martex
+id: martex_beb97
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:beb-97'
+settings:
+  id: 'system_menu_block:beb-97'
+  label: "BEB '97"
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/beb97\r\n/beb97/*\r\n"

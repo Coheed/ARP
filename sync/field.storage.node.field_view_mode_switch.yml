@@ -1,0 +1,21 @@
+uuid: 3f92067e-a793-4351-96cc-0c4f8076c311
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - view_mode_switch
+id: node.field_view_mode_switch
+field_name: field_view_mode_switch
+entity_type: node
+type: view_mode_switch
+settings:
+  origin_view_modes:
+    full: full
+module: view_mode_switch
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

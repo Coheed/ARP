@@ -1,0 +1,11 @@
+uuid: 47d891af-be82-4fb1-bfe4-88571c869092
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bema_leistung
+id: node.bema_leistung
+target_entity_type_id: node
+target_bundle: bema_leistung
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: d1086ce2-3840-4a52-a1e9-bde2831ae3ea
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: goae
+label: GOÄ
+type: 'canonical_entities:node'
+pattern: 'goae/[node:title]'
+selection_criteria:
+  ba5312cd-3dd6-49d9-8b20-7e1ee1ebf9f5:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ba5312cd-3dd6-49d9-8b20-7e1ee1ebf9f5
+    context_mapping:
+      node: node
+    bundles:
+      goae_leistung: goae_leistung
+selection_logic: and
+weight: -5
+relationships: {  }

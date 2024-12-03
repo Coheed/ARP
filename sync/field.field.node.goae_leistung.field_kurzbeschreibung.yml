@@ -1,0 +1,19 @@
+uuid: 9f5f5f53-f9c9-47e0-adf4-1f8a98998fd6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.goae_leistung
+id: node.goae_leistung.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: goae_leistung
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

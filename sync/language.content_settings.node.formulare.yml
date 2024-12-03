@@ -1,0 +1,11 @@
+uuid: 78eb111c-3f19-4a2f-a549-a853fb48f920
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.formulare
+id: node.formulare
+target_entity_type_id: node
+target_bundle: formulare
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,24 @@
+uuid: bbe303ad-5e76-40d0-9fc7-9e643a5f62a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_content
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_section_image_side
+  module:
+    - text
+id: paragraph.paragraph_section_image_side.field_paragraph_content
+field_name: field_paragraph_content
+entity_type: paragraph
+bundle: paragraph_section_image_side
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 2c9e5e17-be1a-4235-aa36-3879d37e519a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bedingung
+    - paragraphs.paragraphs_type.kombinierbar
+  module:
+    - options
+id: paragraph.kombinierbar.field_bedingung
+field_name: field_bedingung
+entity_type: paragraph
+bundle: kombinierbar
+label: Bedingung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

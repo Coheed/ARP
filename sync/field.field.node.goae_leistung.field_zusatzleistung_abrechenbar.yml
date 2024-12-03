@@ -1,0 +1,97 @@
+uuid: 9f90d417-150e-48dc-ab32-c83b6cb22de7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zusatzleistung_abrechenbar
+    - node.type.goae_leistung
+    - paragraphs.paragraphs_type.zusatzleistung_abrechenbar
+  module:
+    - entity_reference_revisions
+id: node.goae_leistung.field_zusatzleistung_abrechenbar
+field_name: field_zusatzleistung_abrechenbar
+entity_type: node
+bundle: goae_leistung
+label: 'zusätzlich berechnungsfähig'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      zusatzleistung_abrechenbar: zusatzleistung_abrechenbar
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 18
+        enabled: false
+      gerichtsurteil:
+        weight: 25
+        enabled: false
+      intern:
+        weight: 26
+        enabled: false
+      kommentare_hinweise:
+        weight: 27
+        enabled: false
+      paragraph_accordion:
+        weight: 19
+        enabled: false
+      paragraph_accordion_item:
+        weight: 20
+        enabled: false
+      paragraph_card:
+        weight: 21
+        enabled: false
+      paragraph_content:
+        weight: 22
+        enabled: false
+      paragraph_content_video:
+        weight: 23
+        enabled: false
+      paragraph_layout:
+        weight: 24
+        enabled: false
+      paragraph_section:
+        weight: 25
+        enabled: false
+      paragraph_section_image_bg:
+        weight: 26
+        enabled: false
+      paragraph_section_image_side:
+        weight: 27
+        enabled: false
+      paragraph_section_video_bg:
+        weight: 28
+        enabled: false
+      paragraph_slider_block:
+        weight: 29
+        enabled: false
+      paragraph_slider_item:
+        weight: 30
+        enabled: false
+      paragraph_tab_item:
+        weight: 32
+        enabled: false
+      paragraph_tabs:
+        weight: 31
+        enabled: false
+      paragraph_views_reference:
+        weight: 33
+        enabled: false
+      referenzen:
+        weight: 43
+        enabled: false
+      suche:
+        weight: 44
+        enabled: false
+      zusatzleistung_abrechenbar:
+        weight: 34
+        enabled: true
+      zusatzleistung_nicht_abrechenbar:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

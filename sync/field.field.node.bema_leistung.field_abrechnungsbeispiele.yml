@@ -1,0 +1,29 @@
+uuid: cd64397c-59e2-46e2-928b-a9bbcbc81b40
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsbeispiele
+    - node.type.abrechnungsbeispiel
+    - node.type.bema_leistung
+id: node.bema_leistung.field_abrechnungsbeispiele
+field_name: field_abrechnungsbeispiele
+entity_type: node
+bundle: bema_leistung
+label: Abrechnungsbeispiele
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      abrechnungsbeispiel: abrechnungsbeispiel
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

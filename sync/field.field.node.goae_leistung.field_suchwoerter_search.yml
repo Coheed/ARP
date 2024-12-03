@@ -1,0 +1,19 @@
+uuid: ffeddf30-fc4d-4d82-a31e-cc01b57f7206
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suchwoerter_search
+    - node.type.goae_leistung
+id: node.goae_leistung.field_suchwoerter_search
+field_name: field_suchwoerter_search
+entity_type: node
+bundle: goae_leistung
+label: Suchwörter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

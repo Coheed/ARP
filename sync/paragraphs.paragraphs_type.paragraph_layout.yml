@@ -1,0 +1,28 @@
+uuid: 6f5409ec-34e8-4634-b2e7-1ab853b70f92
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:ae9b3acb-7d0c-4901-8315-be97f0bee161'
+  module:
+    - layout_paragraphs
+id: paragraph_layout
+label: Layout
+icon_uuid: ae9b3acb-7d0c-4901-8315-be97f0bee161
+icon_default: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAADjklEQVR4Xu2dQVYTQRCGu9jpArkAAW/ADYg7yMYjEC+g5ATGEwS9gOEGugF2xhtwA0k4AMhCdylrxgcvPIJOT88wleSb91jRPV39/3/91T2TNy2ByxUC4ioaggkQ4kwEEAIhzhBwFg4ZsiiE7H+63BUNbVVtO4t5ocMRkZFKGJ2+3fw+byIPMmTv4/jAiOhLkO2Fnrnz4DXohRHTP3u3dTwb6j1COkeTz/bPrvO5LFt4w5PD1pvbSd0RAhmN8nxHSk5IZzDuB5H3jYa06oOrfjjpbfWlPbjaeC43P0KQjVXHpNn56/UvXX8p+4PxoVX+QbPBMHqGgK1oe0bIZCQSdoHEAQIavkrnaHyFXTkgI8sQWwobIRP1EQ5RZAhAiDMdQAiEOEPAWThkCIQ4Q8BZOGQIhDhDwFk4ZAiEOEPAWThkCIQ4Q8BZOGQIhDhDwFk4ZAiEOEPAWTjRGaIajjXIsIl5SJjuxL5uzl6Lalg7byZe7drb2IOYsaMJsRe/+a8jYgapqu3e4LK9Jvot5n5TlVdnvc1RTJ+q2pb5NQ+EVIX+nPtAyBxQyJAaFYdlzQOXGlJYclgWllVYLJU0xLKwrCQhYVlYVpKAojtjWVhWtGhmO2BZWFaSgKI7Y1lYVrRosKz/QMazrCRN/bszloVlJcmLVRarrCQBRXfGsrCsaNGwymKVxY8ciqYNRZ2iXlQr1bSjqFPUk5SEZWFZSQKK7oxlYVnRomEfwj6EfUjRtKGoU9SLaqWadhR1inqSkrAsLCtJQNGdsSwsK1o07EPYh7APKZo2FHWKelGtVNOOok5RT1ISloVlJQkoujOWhWVFi4Z9CPsQ9iFF04aiTlEvqpVq2lHUKepJSnoSy8qO5bFzYOzv6S8JaifJyU7cyHpuX8C7jutTVWvdjj0xNf4DZlXFyn3mIgAhzoQBId4IsYMlr+1Lny+cxbWa4aiOpTOYfAkSXq8mAs5mnR0sydGrfkjJj17NDid+Fm4usK1miTEyfv4O67ZMtqvMBqbZ8Jdw9Nvju2+nZocUD2M/i72EsDQypezz7ae9VjcbPM8QSGmEh3zQWTIeEPLXvibGlPaDyFZzYa7AyLbEtXzon/Raw9nZ3suQ2X/kT1bDtJ09O7LjpO0ZElcqAga2PVPT82lYGz12QMCjhKQOTv9yCEBIOdxq6wUhtUFb7sYQUg632npBSG3QlrsxhJTDrbZefwCLhjW6Z81gogAAAABJRU5ErkJggg=='
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      martex_col1: '1 Column'
+      martex_col2-equal: '2 Columns Equal'
+      martex_col2-3-9: '2 Columns 3 and 9'
+      martex_col2-4-8: '2 Columns 4 and 8'
+      martex_col2-5-7: '2 Columns 5 and 7'
+      martex_col2-7-5: '2 Columns 7 and 5'
+      martex_col2-8-4: '2 Columns 8 and 4'
+      martex_col2-9-3: '2 Columns 9 and 3'
+      martex_col3-3-6-3: '3 Columns 3-6-3'
+      martex_col3-equal: '3 Columns Equal'
+      martex_col4-equal: '4 Columns Equal'

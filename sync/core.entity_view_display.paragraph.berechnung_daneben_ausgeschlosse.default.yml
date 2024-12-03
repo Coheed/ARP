@@ -1,0 +1,32 @@
+uuid: cbc12567-b321-4112-8d6c-76dd1cf5e8c3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.berechnung_daneben_ausgeschlosse.field_bedingung_optional
+    - field.field.paragraph.berechnung_daneben_ausgeschlosse.field_leistung_bel2
+    - paragraphs.paragraphs_type.berechnung_daneben_ausgeschlosse
+  module:
+    - text
+id: paragraph.berechnung_daneben_ausgeschlosse.default
+targetEntityType: paragraph
+bundle: berechnung_daneben_ausgeschlosse
+mode: default
+content:
+  field_bedingung_optional:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_leistung_bel2:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

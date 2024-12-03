@@ -1,0 +1,29 @@
+uuid: cfc39f43-2ca3-492e-8213-abeaecd994c1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chairside_leistung
+    - node.type.beb_97
+    - taxonomy.vocabulary.chairside_leistungen
+id: node.beb_97.field_chairside_leistung
+field_name: field_chairside_leistung
+entity_type: node
+bundle: beb_97
+label: 'Chairside Leistung'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      chairside_leistungen: chairside_leistungen
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

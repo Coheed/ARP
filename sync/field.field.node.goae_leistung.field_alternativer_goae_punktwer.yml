@@ -1,0 +1,19 @@
+uuid: 8ca126c4-f4ef-4c9a-b0a3-c104fa4a309c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternativer_goae_punktwer
+    - node.type.goae_leistung
+id: node.goae_leistung.field_alternativer_goae_punktwer
+field_name: field_alternativer_goae_punktwer
+entity_type: node
+bundle: goae_leistung
+label: 'Alternativer GOÄ-Punktwert'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

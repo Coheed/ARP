@@ -1,0 +1,28 @@
+uuid: 8cfb8316-c1e7-49a9-984e-7cf0385b5a77
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dokumente
+    - node.type.dokumente
+id: node.dokumente.field_dokumente
+field_name: field_dokumente
+entity_type: node
+bundle: dokumente
+label: Dokumente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dokumente: dokumente
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

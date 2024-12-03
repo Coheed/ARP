@@ -1,0 +1,32 @@
+uuid: aee3c747-5a85-4d80-a265-c55427cf5094
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zusatzleistung_nicht_goa.field_bedingung_optional_no
+    - field.field.paragraph.zusatzleistung_nicht_goa.field_leistung_no
+    - paragraphs.paragraphs_type.zusatzleistung_nicht_goa
+  module:
+    - text
+id: paragraph.zusatzleistung_nicht_goa.default
+targetEntityType: paragraph
+bundle: zusatzleistung_nicht_goa
+mode: default
+content:
+  field_bedingung_optional_no:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_leistung_no:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

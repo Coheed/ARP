@@ -1,0 +1,13 @@
+uuid: 7d7fd3d6-1667-4232-9d03-05c1a22eac68
+langcode: de
+status: false
+dependencies:
+  module:
+    - feeds
+_core:
+  default_config_hash: 8I9Vm3L0dLCdctKfCjpw5vLwMetyaJzxbWNMzb2V7-I
+id: feeds_feed.full
+label: 'Gesamter Feed'
+description: ''
+targetEntityType: feeds_feed
+cache: true

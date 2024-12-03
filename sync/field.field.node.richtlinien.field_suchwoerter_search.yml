@@ -1,0 +1,19 @@
+uuid: 62c95c5e-d483-4671-8d00-6b3e7128bb83
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suchwoerter_search
+    - node.type.richtlinien
+id: node.richtlinien.field_suchwoerter_search
+field_name: field_suchwoerter_search
+entity_type: node
+bundle: richtlinien
+label: Suchwörter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

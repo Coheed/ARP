@@ -1,0 +1,15 @@
+uuid: c313e5eb-26ee-4648-9bc7-6dc9fa3e9cb6
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Behandlungsbereich
+vid: behandlungsbereich
+description: null
+weight: 0
+new_revision: false

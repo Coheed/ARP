@@ -1,0 +1,24 @@
+uuid: db24e3b4-c654-4eac-a7d3-0c14cc0fc4ee
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.checklisten
+  module:
+    - text
+id: node.checklisten.body
+field_name: body
+entity_type: node
+bundle: checklisten
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

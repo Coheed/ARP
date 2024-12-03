@@ -1,0 +1,21 @@
+uuid: 9937932b-b57f-4e40-a684-132e56876ed2
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_gebuehrenziffer
+field_name: field_gebuehrenziffer
+entity_type: node
+type: string
+settings:
+  max_length: 90
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

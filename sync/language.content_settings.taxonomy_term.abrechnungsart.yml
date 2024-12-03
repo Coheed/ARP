@@ -1,0 +1,11 @@
+uuid: 6e582113-663e-48b1-b427-b05b462a3be5
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.abrechnungsart
+id: taxonomy_term.abrechnungsart
+target_entity_type_id: taxonomy_term
+target_bundle: abrechnungsart
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 7ab06b63-b79b-460c-a63e-9b186c493242
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kurzbeschreibung_fuer_teas
+    - paragraphs.paragraphs_type.suche
+id: paragraph.suche.field_kurzbeschreibung_fuer_teas
+field_name: field_kurzbeschreibung_fuer_teas
+entity_type: paragraph
+bundle: suche
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

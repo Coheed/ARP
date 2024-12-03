@@ -1,0 +1,8 @@
+uuid: d7d474ed-b671-4d16-ac1a-2484557acede
+langcode: en
+status: true
+dependencies: {  }
+id: bema
+label: BEMA
+description: ''
+locked: false

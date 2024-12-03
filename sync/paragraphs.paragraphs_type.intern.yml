@@ -1,0 +1,10 @@
+uuid: 6c3cec39-482c-44f8-8ea9-28542608d1c1
+langcode: de
+status: true
+dependencies: {  }
+id: intern
+label: Intern
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

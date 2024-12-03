@@ -1,0 +1,10 @@
+uuid: ad8f8431-be6e-4c35-9683-ac27e7191aff
+langcode: de
+status: true
+dependencies: {  }
+id: zusaetzlich_berechnungsfaehig
+label: 'zusätzlich berechnungsfähig'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

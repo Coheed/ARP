@@ -1,0 +1,103 @@
+uuid: e4cf39c3-2a97-4acf-a585-69a5d7f56a63
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.goz_analogleistung.field_abrechnungsart
+    - field.field.node.goz_analogleistung.field_abrechnungsbeispiele
+    - field.field.node.goz_analogleistung.field_analogien_kategorie
+    - field.field.node.goz_analogleistung.field_analognummer
+    - field.field.node.goz_analogleistung.field_analogziffer
+    - field.field.node.goz_analogleistung.field_behandlungsbereich
+    - field.field.node.goz_analogleistung.field_beschreibung_analog
+    - field.field.node.goz_analogleistung.field_dokumente
+    - field.field.node.goz_analogleistung.field_eindeutige_analognummer_zf
+    - field.field.node.goz_analogleistung.field_es_handelt_sich_um_eine_ve
+    - field.field.node.goz_analogleistung.field_kommentare_hinweise
+    - field.field.node.goz_analogleistung.field_kurzbeschreibung
+    - field.field.node.goz_analogleistung.field_punktzahl
+    - field.field.node.goz_analogleistung.field_quelle
+    - field.field.node.goz_analogleistung.field_suchwoerter_search
+    - field.field.node.goz_analogleistung.field_synonyme_search
+    - field.field.node.goz_analogleistung.field_zeit_in_min
+    - field.field.node.goz_analogleistung.field_zielgruppe
+    - node.type.goz_analogleistung
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_punktzahl
+        - field_analognummer
+        - field_analogziffer
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.goz_analogleistung.teaser
+targetEntityType: node
+bundle: goz_analogleistung
+mode: teaser
+content:
+  field_analognummer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_analogziffer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_beschreibung_analog:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_punktzahl:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_analogien_kategorie: true
+  field_behandlungsbereich: true
+  field_dokumente: true
+  field_eindeutige_analognummer_zf: true
+  field_es_handelt_sich_um_eine_ve: true
+  field_kommentare_hinweise: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zeit_in_min: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

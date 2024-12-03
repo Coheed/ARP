@@ -1,0 +1,20 @@
+uuid: 8475531e-1309-46da-a142-f9157b9ea125
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_betrag
+field_name: field_betrag
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 441055cd-4ec2-4a97-af6a-9c115c44f5e9
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_regelversorgung_r
+field_name: field_regelversorgung_r
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

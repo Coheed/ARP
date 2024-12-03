@@ -1,0 +1,282 @@
+uuid: 461ab013-6a2e-481d-bade-e2533424f1da
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.goz_analogleistung.field_abrechnungsart
+    - field.field.node.goz_analogleistung.field_abrechnungsbeispiele
+    - field.field.node.goz_analogleistung.field_analogien_kategorie
+    - field.field.node.goz_analogleistung.field_analognummer
+    - field.field.node.goz_analogleistung.field_analogziffer
+    - field.field.node.goz_analogleistung.field_behandlungsbereich
+    - field.field.node.goz_analogleistung.field_beschreibung_analog
+    - field.field.node.goz_analogleistung.field_dokumente
+    - field.field.node.goz_analogleistung.field_eindeutige_analognummer_zf
+    - field.field.node.goz_analogleistung.field_es_handelt_sich_um_eine_ve
+    - field.field.node.goz_analogleistung.field_kommentare_hinweise
+    - field.field.node.goz_analogleistung.field_kurzbeschreibung
+    - field.field.node.goz_analogleistung.field_punktzahl
+    - field.field.node.goz_analogleistung.field_quelle
+    - field.field.node.goz_analogleistung.field_suchwoerter_search
+    - field.field.node.goz_analogleistung.field_synonyme_search
+    - field.field.node.goz_analogleistung.field_zeit_in_min
+    - field.field.node.goz_analogleistung.field_zielgruppe
+    - node.type.goz_analogleistung
+  module:
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_kategorie:
+      children:
+        - field_analogien_kategorie
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_nummern:
+      children:
+        - field_analogziffer
+        - field_analognummer
+        - field_punktzahl
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_beschreibung:
+      children: {  }
+      label: Beschreibung
+      parent_name: ''
+      region: hidden
+      weight: 18
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_grundlegendes:
+      children:
+        - field_beschreibung_analog
+        - field_zeit_in_min
+      label: Grundlegendes
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_kommentare_hinweise:
+      children:
+        - field_kommentare_hinweise
+      label: 'Kommentare & Hinweise'
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_abrechnungsart:
+      children:
+        - field_abrechnungsart
+      label: Abrechnungsart
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_dokumente:
+      children:
+        - field_dokumente
+      label: Dokumente
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_abrechnungsbeispiele:
+      children:
+        - field_abrechnungsbeispiele
+      label: Abrechnungsbeispiele
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_behandlungsbereich:
+      children:
+        - field_behandlungsbereich
+      label: Behandlungsbereich
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+id: node.goz_analogleistung.default
+targetEntityType: node
+bundle: goz_analogleistung
+mode: default
+content:
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_analogien_kategorie:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_analognummer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_analogziffer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_behandlungsbereich:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_beschreibung_analog:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_punktzahl:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_zeit_in_min:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+hidden:
+  field_eindeutige_analognummer_zf: true
+  field_es_handelt_sich_um_eine_ve: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

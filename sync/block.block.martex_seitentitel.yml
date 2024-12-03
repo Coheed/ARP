@@ -1,0 +1,18 @@
+uuid: b67ecfa7-87b0-4f75-b7b0-b322e9d5af58
+langcode: de
+status: true
+dependencies:
+  theme:
+    - martex
+id: martex_seitentitel
+theme: martex
+region: disabled
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Seitentitel
+  label_display: visible
+  provider: core
+visibility: {  }

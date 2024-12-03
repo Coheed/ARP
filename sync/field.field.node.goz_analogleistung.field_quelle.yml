@@ -1,0 +1,29 @@
+uuid: 3218d6f6-3f2d-4801-bb13-58775c1351f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quelle
+    - node.type.goz_analogleistung
+    - taxonomy.vocabulary.quelle
+id: node.goz_analogleistung.field_quelle
+field_name: field_quelle
+entity_type: node
+bundle: goz_analogleistung
+label: Quelle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quelle: quelle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: quelle
+field_type: entity_reference

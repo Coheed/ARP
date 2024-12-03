@@ -1,0 +1,22 @@
+uuid: 63581b00-7949-4453-be8b-5752f9e21065
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: gvzanalog
+label: Analogleistung
+type: 'canonical_entities:node'
+pattern: 'gvzanalog/[node:title]'
+selection_criteria:
+  8a28bdcc-3e75-4d3f-81a2-e30f45835fad:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8a28bdcc-3e75-4d3f-81a2-e30f45835fad
+    context_mapping:
+      node: node
+    bundles:
+      goz_analogleistung: goz_analogleistung
+selection_logic: and
+weight: -5
+relationships: {  }

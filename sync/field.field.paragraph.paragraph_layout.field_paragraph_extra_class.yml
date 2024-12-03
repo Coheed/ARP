@@ -1,0 +1,19 @@
+uuid: 1b91ce93-dc3e-4b19-8cc0-29f8ef636f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_extra_class
+    - paragraphs.paragraphs_type.paragraph_layout
+id: paragraph.paragraph_layout.field_paragraph_extra_class
+field_name: field_paragraph_extra_class
+entity_type: paragraph
+bundle: paragraph_layout
+label: 'Extra Class'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

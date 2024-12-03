@@ -1,0 +1,19 @@
+uuid: a74ad8f4-d490-4c08-935f-1d2096cada3f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.richtlinien
+id: node.richtlinien.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: richtlinien
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

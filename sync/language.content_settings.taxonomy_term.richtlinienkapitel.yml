@@ -1,0 +1,11 @@
+uuid: 1f03202b-81ff-447e-b3b0-6597e54e5b8b
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.richtlinienkapitel
+id: taxonomy_term.richtlinienkapitel
+target_entity_type_id: taxonomy_term
+target_bundle: richtlinienkapitel
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,24 @@
+uuid: a6c32cf2-6f29-4203-ae58-2486d2c9dd5e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beachte
+    - filter.format.full_html
+    - node.type.festzuschuss
+  module:
+    - text
+id: node.festzuschuss.field_beachte
+field_name: field_beachte
+entity_type: node
+bundle: festzuschuss
+label: Beachte
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

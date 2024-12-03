@@ -1,0 +1,384 @@
+uuid: 781cd3a1-768b-4851-8ed8-8b1fb2326760
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.beb_97.field_abrechnungsart
+    - field.field.node.beb_97.field_abrechnungsbeispiele
+    - field.field.node.beb_97.field_beachte
+    - field.field.node.beb_97.field_beb_97_kategorie
+    - field.field.node.beb_97.field_beb_nr
+    - field.field.node.beb_97.field_beb_zahntechnik_leistung
+    - field.field.node.beb_97.field_bel2_leistung
+    - field.field.node.beb_97.field_berechnung_daneben_bel2
+    - field.field.node.beb_97.field_cad_cam_3d_druck_leistung
+    - field.field.node.beb_97.field_chairside_leistung
+    - field.field.node.beb_97.field_dokumente
+    - field.field.node.beb_97.field_kommentare_hinweise
+    - field.field.node.beb_97.field_kurzbeschreibung
+    - field.field.node.beb_97.field_leistungsbeschreibung
+    - field.field.node.beb_97.field_planzeit_in_min_100
+    - field.field.node.beb_97.field_quelle
+    - field.field.node.beb_97.field_suchwoerter_search
+    - field.field.node.beb_97.field_synonyme_search
+    - field.field.node.beb_97.field_verbrauchsmaterial
+    - field.field.node.beb_97.field_zielgruppe
+    - field.field.node.beb_97.field_zusaetzlich_berechnungsfae
+    - node.type.beb_97
+  module:
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_beb_nr
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_kategorie:
+      children:
+        - field_beb_97_kategorie
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_bel2_leistung:
+      children:
+        - field_bel2_leistung
+      label: 'BEL2 Leistung'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_beb_zahntechnik_leistung:
+      children:
+        - field_beb_zahntechnik_leistung
+      label: 'BEB Zahntechnik Leistung'
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_planzeit_in_min_100:
+      children:
+        - field_planzeit_in_min_100
+      label: 'Planzeit in min. / 100'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_verbrauchsmaterial:
+      children:
+        - field_verbrauchsmaterial
+      label: Verbrauchsmaterial
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_zusaetzlich_berechnungsfae:
+      children:
+        - field_zusaetzlich_berechnungsfae
+      label: 'zusätzlich berechnungsfähig'
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_beachte:
+      children:
+        - field_beachte
+      label: Beachte
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_berechnung_daneben_ausgesc:
+      children:
+        - field_berechnung_daneben_bel2
+      label: 'Berechnung daneben ausgeschlossen'
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_leistungsbeschreibung:
+      children:
+        - field_leistungsbeschreibung
+      label: Leistungsbeschreibung
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_kommentare_und_hinweise:
+      children:
+        - field_kommentare_hinweise
+      label: 'Kommentare & Hinweise'
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsbeispiele:
+      children:
+        - field_abrechnungsbeispiele
+      label: Abrechnungsbeispiele
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsart:
+      children:
+        - field_abrechnungsart
+      label: Abrechnungsart
+      parent_name: ''
+      region: content
+      weight: 12
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_dokumente:
+      children:
+        - field_dokumente
+      label: Dokumente
+      parent_name: ''
+      region: content
+      weight: 13
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+id: node.beb_97.default
+targetEntityType: node
+bundle: beb_97
+mode: default
+content:
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_beachte:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_beb_97_kategorie:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_beb_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_beb_zahntechnik_leistung:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_bel2_leistung:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_berechnung_daneben_bel2:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_leistungsbeschreibung:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_planzeit_in_min_100:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_verbrauchsmaterial:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_zusaetzlich_berechnungsfae:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+hidden:
+  field_cad_cam_3d_druck_leistung: true
+  field_chairside_leistung: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

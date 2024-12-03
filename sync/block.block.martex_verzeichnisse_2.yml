@@ -1,0 +1,29 @@
+uuid: 55fcd811-3fdf-45de-9f2b-c575b4a1406f
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.verzeichnisse
+  module:
+    - system
+  theme:
+    - martex
+id: martex_verzeichnisse_2
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:verzeichnisse'
+settings:
+  id: 'system_menu_block:verzeichnisse'
+  label: Verzeichnisse
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/search*"

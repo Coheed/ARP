@@ -1,0 +1,102 @@
+uuid: e63506a1-5331-4217-b96e-eef08165fbe7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.dokumente.field_beschreibung
+    - field.field.node.dokumente.field_dokumente
+    - field.field.node.dokumente.field_dokumentenart
+    - field.field.node.dokumente.field_kurzbeschreibung
+    - field.field.node.dokumente.field_kurzbeschreibung_doku
+    - field.field.node.dokumente.field_suchwoerter_search
+    - field.field.node.dokumente.field_synonyme_search
+    - node.type.dokumente
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_beschreibung:
+      children:
+        - field_beschreibung
+      label: Beschreibung
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_dokumente:
+      children:
+        - field_dokumente
+      label: Dokumente
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_dokumentenart:
+      children:
+        - field_dokumentenart
+      label: Dokumentenart
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+id: node.dokumente.default
+targetEntityType: node
+bundle: dokumente
+mode: default
+content:
+  field_beschreibung:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dokumentenart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_kurzbeschreibung: true
+  field_kurzbeschreibung_doku: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

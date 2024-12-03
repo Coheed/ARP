@@ -1,0 +1,516 @@
+uuid: a48568af-30dc-4733-8f44-666436e8fae6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.goae_leistung.field_abrechenbar_je
+    - field.field.node.goae_leistung.field_abrechenbar_je_goa
+    - field.field.node.goae_leistung.field_abrechnungsart
+    - field.field.node.goae_leistung.field_abrechnungsbeispiele
+    - field.field.node.goae_leistung.field_abrechnungsbeispiele_goa
+    - field.field.node.goae_leistung.field_abrechnungsbestimmungen
+    - field.field.node.goae_leistung.field_abrechnungsbestimmungen_go
+    - field.field.node.goae_leistung.field_alternativer_goae_punktwer
+    - field.field.node.goae_leistung.field_amtliche_begruendung
+    - field.field.node.goae_leistung.field_amtliche_begruendung_goa
+    - field.field.node.goae_leistung.field_behandlungsbereich
+    - field.field.node.goae_leistung.field_bema_bewertungszahl
+    - field.field.node.goae_leistung.field_berechnung_daneben_ausgesc
+    - field.field.node.goae_leistung.field_beschreibung
+    - field.field.node.goae_leistung.field_dokumentation
+    - field.field.node.goae_leistung.field_dokumente
+    - field.field.node.goae_leistung.field_dokumente_goa
+    - field.field.node.goae_leistung.field_edv_nr
+    - field.field.node.goae_leistung.field_gebuehrenziffer
+    - field.field.node.goae_leistung.field_gerichtsurteil
+    - field.field.node.goae_leistung.field_goa_points
+    - field.field.node.goae_leistung.field_goae_kategorie
+    - field.field.node.goae_leistung.field_kommentare
+    - field.field.node.goae_leistung.field_kommentare_hinweise
+    - field.field.node.goae_leistung.field_kurzbeschreibung
+    - field.field.node.goae_leistung.field_leistungsinhalt
+    - field.field.node.goae_leistung.field_leistungsinhalt_goa
+    - field.field.node.goae_leistung.field_musterbeispiele_fuer_moegl
+    - field.field.node.goae_leistung.field_quelle
+    - field.field.node.goae_leistung.field_referenzziffer
+    - field.field.node.goae_leistung.field_suchwoerter_search
+    - field.field.node.goae_leistung.field_synonyme_search
+    - field.field.node.goae_leistung.field_zielgruppe
+    - field.field.node.goae_leistung.field_zusaetzlich_berechnungsfae
+    - field.field.node.goae_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.goae_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.goae_leistung
+  module:
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_kategorie:
+      children:
+        - field_edv_nr
+        - field_kurzbeschreibung
+        - field_quelle
+        - field_suchwoerter_search
+        - field_zielgruppe
+      label: Kategorie
+      parent_name: ''
+      region: hidden
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_nummern:
+      children:
+        - field_bema_bewertungszahl
+      label: Nummern
+      parent_name: group_gesetzlich_abrechnen
+      region: content
+      weight: 39
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_grundlegendes:
+      children:
+        - field_behandlungsbereich
+        - field_beschreibung
+        - field_abrechnungsart
+      label: Grundlegendes
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_gesetzlich_abrechnen:
+      children:
+        - group_nummern
+        - field_dokumentation
+        - field_abrechenbar_je
+        - field_abrechnungsbestimmungen
+        - group_leistungsinhalt_gesetzlich
+        - field_amtliche_begruendung
+        - field_zusatzleistung_abrechenbar
+        - field_zusatzleistung_nicht_abrec
+        - group_kommentare_hinweise_privat
+        - field_abrechnungsbeispiele
+        - field_dokumente
+      label: 'Gesetzlich abrechnen'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: gesetzlich_abrechnen
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_nummern_gesetzlich:
+      children:
+        - field_goa_points
+        - field_alternativer_goae_punktwer
+      label: Nummern
+      parent_name: group_privat_abrechnen
+      region: content
+      weight: 29
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_privat_abrechnen:
+      children:
+        - group_nummern_gesetzlich
+        - field_abrechenbar_je_goa
+        - field_abrechnungsbestimmungen_go
+        - group_leistungsinhalt
+        - field_amtliche_begruendung_goa
+        - field_zusaetzlich_berechnungsfae
+        - field_berechnung_daneben_ausgesc
+        - group_kommentare_hinweise
+        - field_abrechnungsbeispiele_goa
+        - field_dokumente_goa
+        - field_musterbeispiele_fuer_moegl
+      label: 'Privat abrechnen'
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: privat_abrechnen
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_nummern_privat:
+      children:
+        - field_gebuehrenziffer
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_gerichtsurteile:
+      children:
+        - field_gerichtsurteil
+      label: Gerichtsurteile
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_leistungsinhalt:
+      children:
+        - field_leistungsinhalt_goa
+      label: Leistungsinhalt
+      parent_name: group_privat_abrechnen
+      region: content
+      weight: 32
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_leistungsinhalt_gesetzlich:
+      children:
+        - field_leistungsinhalt
+      label: Leistungsinhalt
+      parent_name: group_gesetzlich_abrechnen
+      region: content
+      weight: 43
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_kommentare_hinweise:
+      children:
+        - field_kommentare
+      label: 'Kommentare & Hinweise'
+      parent_name: group_privat_abrechnen
+      region: content
+      weight: 36
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_kommentare_hinweise_privat:
+      children:
+        - field_kommentare_hinweise
+      label: 'Kommentare & Hinweise'
+      parent_name: group_gesetzlich_abrechnen
+      region: content
+      weight: 47
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+id: node.goae_leistung.default
+targetEntityType: node
+bundle: goae_leistung
+mode: default
+content:
+  field_abrechenbar_je:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_abrechenbar_je_goa:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  field_abrechnungsbeispiele_goa:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_abrechnungsbestimmungen:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_abrechnungsbestimmungen_go:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_alternativer_goae_punktwer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_amtliche_begruendung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_amtliche_begruendung_goa:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_behandlungsbereich:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_bema_bewertungszahl:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_berechnung_daneben_ausgesc:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_dokumentation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  field_dokumente_goa:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_gebuehrenziffer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_gerichtsurteil:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_goa_points:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_goae_kategorie:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_kommentare:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 48
+    region: content
+  field_leistungsinhalt:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_leistungsinhalt_goa:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_musterbeispiele_fuer_moegl:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_referenzziffer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_zusaetzlich_berechnungsfae:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_zusatzleistung_abrechenbar:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_zusatzleistung_nicht_abrec:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 46
+    region: content
+hidden:
+  field_edv_nr: true
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,16 @@
+uuid: b2075cfb-8ed2-4fba-9322-726de1eb8d18
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - festzuschuss
+    parent: 'festzuschuss:'
+name: 'Festzuschuss Kategorie'
+vid: festzuschuss_kategorie
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,10 @@
+uuid: 1a4e7fb5-9ab9-4558-be05-be5a669a1fa1
+langcode: de
+status: true
+dependencies: {  }
+id: zusatzleistung_nicht_goa
+label: 'Zusatzleistung nicht abrechenbar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

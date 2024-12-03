@@ -1,0 +1,11 @@
+uuid: 8cfc3f0e-31e6-4e7a-a4f1-a5e24c71428a
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.gvz_planungskuerzel
+id: taxonomy_term.gvz_planungskuerzel
+target_entity_type_id: taxonomy_term
+target_bundle: gvz_planungskuerzel
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,59 @@
+uuid: 9effefcd-2ac2-43d0-8866-a5747765c5e5
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.bu_leistung.field_abrechenbar_je
+    - field.field.node.bu_leistung.field_abrechnungsart
+    - field.field.node.bu_leistung.field_abrechnungsbeispiele
+    - field.field.node.bu_leistung.field_abrechnungsbestimmungen
+    - field.field.node.bu_leistung.field_beschreibung
+    - field.field.node.bu_leistung.field_betrag
+    - field.field.node.bu_leistung.field_bu_kategorie
+    - field.field.node.bu_leistung.field_bu_nr
+    - field.field.node.bu_leistung.field_dokumentation
+    - field.field.node.bu_leistung.field_dokumentation_pdf
+    - field.field.node.bu_leistung.field_kommentare_hinweise
+    - field.field.node.bu_leistung.field_leistung
+    - field.field.node.bu_leistung.field_zielgruppe
+    - field.field.node.bu_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.bu_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.bu_leistung
+  module:
+    - text
+    - user
+id: node.bu_leistung.search_result
+targetEntityType: node
+bundle: bu_leistung
+mode: search_result
+content:
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechenbar_je: true
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_betrag: true
+  field_bu_kategorie: true
+  field_bu_nr: true
+  field_dokumentation: true
+  field_dokumentation_pdf: true
+  field_kommentare_hinweise: true
+  field_leistung: true
+  field_zielgruppe: true
+  field_zusatzleistung_abrechenbar: true
+  field_zusatzleistung_nicht_abrec: true
+  langcode: true
+  search_api_excerpt: true

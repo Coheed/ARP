@@ -1,0 +1,15 @@
+uuid: 915b972f-a70d-4a80-95be-ecc53845a41d
+langcode: en
+status: true
+dependencies: {  }
+name: 6col_rect
+label: 6col-rect
+effects:
+  7535b3e2-5b97-4962-9a1a-eeb70bfc6aad:
+    uuid: 7535b3e2-5b97-4962-9a1a-eeb70bfc6aad
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

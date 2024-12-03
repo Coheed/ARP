@@ -1,0 +1,39 @@
+uuid: 7a9c3473-83e4-49b1-a6b0-a30f76adb0dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_paragraph_shadow
+field_name: field_paragraph_shadow
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: shadow-default
+      label: Default
+    -
+      value: shadow-none
+      label: 'Shadow None'
+    -
+      value: shadow-sm
+      label: 'Shadow SM'
+    -
+      value: shadow
+      label: 'Shadow MD'
+    -
+      value: shadow-lg
+      label: 'Shadow LG'
+    -
+      value: shadow-xl
+      label: 'Shadow XL'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

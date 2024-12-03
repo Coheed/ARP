@@ -1,0 +1,39 @@
+uuid: b2acf549-0b68-4f66-9de0-a5d90f3661c2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intern.field_edv_nr
+    - field.field.paragraph.intern.field_quelle
+    - field.field.paragraph.intern.field_zielgruppe
+    - paragraphs.paragraphs_type.intern
+id: paragraph.intern.default
+targetEntityType: paragraph
+bundle: intern
+mode: default
+content:
+  field_edv_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_quelle:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_zielgruppe:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

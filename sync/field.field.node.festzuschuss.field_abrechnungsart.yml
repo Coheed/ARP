@@ -1,0 +1,29 @@
+uuid: 5fec7436-19cd-4e56-88b6-b4d73b2416e4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsart
+    - node.type.festzuschuss
+    - taxonomy.vocabulary.abrechnungsart
+id: node.festzuschuss.field_abrechnungsart
+field_name: field_abrechnungsart
+entity_type: node
+bundle: festzuschuss
+label: Abrechnungsart
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsart: abrechnungsart
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

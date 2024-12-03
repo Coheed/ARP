@@ -1,0 +1,24 @@
+uuid: 18f83d3f-bf7a-44a5-a871-062abd8abd31
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_verbrauchsmaterial
+    - filter.format.full_html
+    - node.type.bel2
+  module:
+    - text
+id: node.bel2.field_verbrauchsmaterial
+field_name: field_verbrauchsmaterial
+entity_type: node
+bundle: bel2
+label: Verbrauchsmaterial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

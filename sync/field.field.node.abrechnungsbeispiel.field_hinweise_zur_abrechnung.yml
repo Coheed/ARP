@@ -1,0 +1,24 @@
+uuid: 6ce778f3-5155-4be8-8f34-d172b4e40177
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hinweise_zur_abrechnung
+    - filter.format.full_html
+    - node.type.abrechnungsbeispiel
+  module:
+    - text
+id: node.abrechnungsbeispiel.field_hinweise_zur_abrechnung
+field_name: field_hinweise_zur_abrechnung
+entity_type: node
+bundle: abrechnungsbeispiel
+label: 'Hinweise zur Abrechnung'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

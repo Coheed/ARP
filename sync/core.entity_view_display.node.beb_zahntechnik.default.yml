@@ -1,0 +1,39 @@
+uuid: b5e68504-0be0-42b2-8a0e-a66a639027cf
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.beb_zahntechnik.body
+    - field.field.node.beb_zahntechnik.field_titel
+    - node.type.beb_zahntechnik
+  module:
+    - text
+    - user
+id: node.beb_zahntechnik.default
+targetEntityType: node
+bundle: beb_zahntechnik
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_titel:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

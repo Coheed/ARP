@@ -1,0 +1,24 @@
+uuid: 4314087a-3138-4ed2-8084-dc49b9c48c66
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leistung
+    - filter.format.full_html
+    - node.type.bu_leistung
+  module:
+    - text
+id: node.bu_leistung.field_leistung
+field_name: field_leistung
+entity_type: node
+bundle: bu_leistung
+label: Leistung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: f5fbd46a-2401-4dc4-a6cc-27c9aa83e41a
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_leistungsinhalt
+field_name: field_leistungsinhalt
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 235654de-8ae5-4c23-beff-89fa157e532b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_responsibilities
+    - filter.format.full_html
+    - node.type.job
+  module:
+    - text
+id: node.job.field_job_responsibilities
+field_name: field_job_responsibilities
+entity_type: node
+bundle: job
+label: Responsibilities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

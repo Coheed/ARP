@@ -1,0 +1,29 @@
+uuid: c369a08c-fd11-4e02-a945-0ca41855d0b3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_behandlungsbereich
+    - node.type.goz_analogleistung
+    - taxonomy.vocabulary.behandlungsbereich
+id: node.goz_analogleistung.field_behandlungsbereich
+field_name: field_behandlungsbereich
+entity_type: node
+bundle: goz_analogleistung
+label: Behandlungsbereich
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      behandlungsbereich: behandlungsbereich
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

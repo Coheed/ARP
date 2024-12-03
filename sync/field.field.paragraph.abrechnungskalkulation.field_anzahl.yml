@@ -1,0 +1,23 @@
+uuid: c642b120-8c6b-4c29-a526-2cf7d7d97167
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_anzahl
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+id: paragraph.abrechnungskalkulation.field_anzahl
+field_name: field_anzahl
+entity_type: paragraph
+bundle: abrechnungskalkulation
+label: Anzahl
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

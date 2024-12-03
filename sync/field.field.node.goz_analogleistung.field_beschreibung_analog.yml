@@ -1,0 +1,24 @@
+uuid: a9da5ec3-1f27-4cfe-afac-5a61454c2ff1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung_analog
+    - filter.format.full_html
+    - node.type.goz_analogleistung
+  module:
+    - text
+id: node.goz_analogleistung.field_beschreibung_analog
+field_name: field_beschreibung_analog
+entity_type: node
+bundle: goz_analogleistung
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

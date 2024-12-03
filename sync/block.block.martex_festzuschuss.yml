@@ -1,0 +1,29 @@
+uuid: e05be6dd-ba63-480d-a5e1-072035428b67
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.festzuschuss
+  module:
+    - system
+  theme:
+    - martex
+id: martex_festzuschuss
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:festzuschuss'
+settings:
+  id: 'system_menu_block:festzuschuss'
+  label: Festzuschuss
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/festzuschuss\r\n/festzuschuss/*"

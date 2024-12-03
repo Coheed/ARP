@@ -1,0 +1,19 @@
+uuid: e10b2851-f613-4123-a2a1-9ac124f95ee0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.bel2
+id: node.bel2.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: bel2
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

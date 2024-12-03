@@ -1,0 +1,19 @@
+uuid: ed0b18d9-f955-4e47-926d-b671a63dc8a4
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_zuzuordnende_gebuehrennumm
+field_name: field_zuzuordnende_gebuehrennumm
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 1d7b054b-e761-4609-85e4-697c7b7fc673
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beb_nr
+    - node.type.beb_97
+id: node.beb_97.field_beb_nr
+field_name: field_beb_nr
+entity_type: node
+bundle: beb_97
+label: BEB-Nr.
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

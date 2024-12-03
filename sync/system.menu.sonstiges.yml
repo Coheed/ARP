@@ -1,0 +1,8 @@
+uuid: fd0cd526-715a-44f4-a141-fb8e8f621095
+langcode: de
+status: true
+dependencies: {  }
+id: sonstiges
+label: Sonstiges
+description: ''
+locked: false

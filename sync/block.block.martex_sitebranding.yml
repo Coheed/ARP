@@ -1,0 +1,23 @@
+uuid: 66264e58-4689-4be6-b5ab-37671a59625f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - martex
+id: martex_sitebranding
+theme: martex
+region: branding
+weight: -15
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

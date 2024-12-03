@@ -1,0 +1,11 @@
+uuid: bfa72660-34e3-4a01-84da-80d511867f89
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lBXDpdDPXQtrfTJQhr6MjRJJEEyYSoRJ0acdvHLsWeA
+id: en
+label: Englisch
+direction: ltr
+weight: 0
+locked: false

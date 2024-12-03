@@ -1,0 +1,11 @@
+uuid: fc102010-0f88-4546-b14d-4188b3629185
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.paragraph_section_image_bg
+id: paragraph.paragraph_section_image_bg
+target_entity_type_id: paragraph
+target_bundle: paragraph_section_image_bg
+default_langcode: site_default
+language_alterable: false

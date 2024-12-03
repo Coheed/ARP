@@ -1,0 +1,21 @@
+uuid: e06a7ab5-afb1-4a2b-b901-18079f2060ba
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_es_handelt_sich_um_eine_ve
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_es_handelt_sich_um_eine_ve
+field_name: field_es_handelt_sich_um_eine_ve
+entity_type: node
+bundle: goz_analogleistung
+label: 'Es handelt sich um eine Verlangensleistung'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ja
+  off_label: Nein
+field_type: boolean

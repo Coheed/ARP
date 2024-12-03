@@ -1,0 +1,10 @@
+uuid: 23b7151d-f555-437e-bf6c-1a58dd976b8a
+langcode: de
+status: true
+dependencies: {  }
+id: abrechnungskalkulation
+label: Abrechnungskalkulation
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

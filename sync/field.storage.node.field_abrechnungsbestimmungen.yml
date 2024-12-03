@@ -1,0 +1,19 @@
+uuid: 61fc2fec-a0f1-4620-9160-7453b4e8534a
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_abrechnungsbestimmungen
+field_name: field_abrechnungsbestimmungen
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

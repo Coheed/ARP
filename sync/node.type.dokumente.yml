@@ -1,0 +1,17 @@
+uuid: db3fed66-bbb3-43fc-878c-d0b500f2dc93
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Dokumente
+type: dokumente
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,333 @@
+uuid: f2077e8f-c912-46c7-acf2-9622d5cffa39
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.abrechnungsbeispiel.field_abrechnung
+    - field.field.node.abrechnungsbeispiel.field_abrechnungs_kategorie
+    - field.field.node.abrechnungsbeispiel.field_abrechnungsart
+    - field.field.node.abrechnungsbeispiel.field_abrechnungsbereiche
+    - field.field.node.abrechnungsbeispiel.field_behandlungsbereich
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_gebuehr
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_laborpo
+    - field.field.node.abrechnungsbeispiel.field_berechnungsfaehige_materia
+    - field.field.node.abrechnungsbeispiel.field_fallbeschreibung_dokumenta
+    - field.field.node.abrechnungsbeispiel.field_hinweise_zur_abrechnung
+    - field.field.node.abrechnungsbeispiel.field_kurzbeschreibung
+    - field.field.node.abrechnungsbeispiel.field_quelle
+    - field.field.node.abrechnungsbeispiel.field_suchwoerter_search
+    - field.field.node.abrechnungsbeispiel.field_synonyme_search
+    - field.field.node.abrechnungsbeispiel.field_zahnschema
+    - field.field.node.abrechnungsbeispiel.field_zielgruppe
+    - field.field.node.abrechnungsbeispiel.field_zuzuordnende_gebuehrennumm
+    - node.type.abrechnungsbeispiel
+  module:
+    - blazy
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_zahnschema:
+      children:
+        - field_zahnschema
+      label: Zahnschema
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungstabelle:
+      children:
+        - field_abrechnung
+      label: Abrechnungstabelle
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_fallbeschreibung_dokumenta:
+      children:
+        - field_fallbeschreibung_dokumenta
+      label: 'Fallbeschreibung / Dokumentation'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsbereiche:
+      children:
+        - field_abrechnungsbereiche
+      label: Abrechnungsbereiche
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_kategorie:
+      children:
+        - field_abrechnungs_kategorie
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_berechnungsfaehige_materia:
+      children:
+        - field_berechnungsfaehige_materia
+      label: 'Berechnungsfähige Materialien'
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_berechnungsfaehige_gebuehr:
+      children:
+        - field_berechnungsfaehige_gebuehr
+      label: 'Berechnungsfähige Gebührenpositionen'
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_berechnungsfaehige_laborpo:
+      children:
+        - field_berechnungsfaehige_laborpo
+      label: 'Berechnungsfähige Laborpositionen'
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_hinweise_zur_abrechnung:
+      children:
+        - field_hinweise_zur_abrechnung
+      label: 'Hinweise zur Abrechnung'
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_zuzuordnende_gebuehrennumm:
+      children:
+        - field_zuzuordnende_gebuehrennumm
+      label: 'Zuzuordnende Gebührennummern'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_behandlungsbereich_versorg:
+      children:
+        - field_behandlungsbereich
+      label: 'Behandlungsbereich / Versorgungsform'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+    group_abrechnungsart:
+      children:
+        - field_abrechnungsart
+      label: Abrechnungsart
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+id: node.abrechnungsbeispiel.default
+targetEntityType: node
+bundle: abrechnungsbeispiel
+mode: default
+content:
+  field_abrechnung:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_abrechnungs_kategorie:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_abrechnungsbereiche:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_behandlungsbereich:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_berechnungsfaehige_gebuehr:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_berechnungsfaehige_laborpo:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_berechnungsfaehige_materia:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_fallbeschreibung_dokumenta:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_hinweise_zur_abrechnung:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_zahnschema:
+    type: blazy_entity
+    label: hidden
+    settings:
+      view_mode: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_zuzuordnende_gebuehrennumm:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+hidden:
+  field_kurzbeschreibung: true
+  field_quelle: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

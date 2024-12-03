@@ -1,0 +1,24 @@
+uuid: 25710000-b886-4151-a543-587ef787d78d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leistungsbeschreibung
+    - filter.format.full_html
+    - node.type.beb_97
+  module:
+    - text
+id: node.beb_97.field_leistungsbeschreibung
+field_name: field_leistungsbeschreibung
+entity_type: node
+bundle: beb_97
+label: Leistungsbeschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

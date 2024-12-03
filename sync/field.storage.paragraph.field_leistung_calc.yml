@@ -1,0 +1,19 @@
+uuid: e9f4302d-08f2-4e6e-8846-576001c28e17
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_leistung_calc
+field_name: field_leistung_calc
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

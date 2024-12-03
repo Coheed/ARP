@@ -1,0 +1,29 @@
+uuid: 65a1082c-da9a-4c7f-9cba-7dfedbbb6f46
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beb_zahntechnik_leistung
+    - node.type.beb_zahntechnik
+    - node.type.bel2
+id: node.bel2.field_beb_zahntechnik_leistung
+field_name: field_beb_zahntechnik_leistung
+entity_type: node
+bundle: bel2
+label: 'BEB Zahntechnik Leistung'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      beb_zahntechnik: beb_zahntechnik
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

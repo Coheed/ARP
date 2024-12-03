@@ -1,0 +1,19 @@
+uuid: 0b565168-09ef-4ac8-bcce-ae94df595ac9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_synonyme_search
+    - node.type.richtlinien
+id: node.richtlinien.field_synonyme_search
+field_name: field_synonyme_search
+entity_type: node
+bundle: richtlinien
+label: Synonyme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

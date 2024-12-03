@@ -1,0 +1,23 @@
+uuid: 51ca981c-c2bb-45a3-8579-ab0d98ea405e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_planzeit_in_min_100
+    - node.type.beb_97
+id: node.beb_97.field_planzeit_in_min_100
+field_name: field_planzeit_in_min_100
+entity_type: node
+bundle: beb_97
+label: 'Planzeit in min. / 100'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

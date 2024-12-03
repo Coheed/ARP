@@ -1,0 +1,20 @@
+uuid: 88355d8b-ccf9-4a23-8b49-1f2c9551b34a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - martex
+id: martex_messages
+theme: martex
+region: disabled
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

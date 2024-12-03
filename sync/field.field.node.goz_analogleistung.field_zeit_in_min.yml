@@ -1,0 +1,23 @@
+uuid: b4eb342a-cf9c-4931-9439-7c56e71cb6f1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zeit_in_min
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_zeit_in_min
+field_name: field_zeit_in_min
+entity_type: node
+bundle: goz_analogleistung
+label: 'Zeit (in Min)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

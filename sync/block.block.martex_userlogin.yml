@@ -1,0 +1,20 @@
+uuid: 2454c246-d2c2-4ee5-bc07-5b393c07da79
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - martex
+id: martex_userlogin
+theme: martex
+region: disabled
+weight: -8
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: '0'
+  provider: user
+visibility: {  }

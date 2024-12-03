@@ -1,0 +1,9 @@
+uuid: 1413b55b-8eff-43df-ac21-2b95ac77e2cc
+langcode: de
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.field_fc_gvz_billable_yes
+name: field_fc_gvz_billable_no
+type: field_fc_gvz_billable_no
+description: ''

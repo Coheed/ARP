@@ -1,0 +1,24 @@
+uuid: d30070a1-0cfa-4e3b-a315-4d9a843aa65f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung
+    - filter.format.full_html
+    - node.type.richtlinien
+  module:
+    - text
+id: node.richtlinien.field_beschreibung
+field_name: field_beschreibung
+entity_type: node
+bundle: richtlinien
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

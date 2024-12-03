@@ -1,0 +1,13 @@
+uuid: b986888c-6de4-47f4-9495-3a4585069ccf
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: T0xVUPLXklJ1liu4ukvaguMb-aMY1oMxO2PsCRB8-qg
+name: Newsletter-Ausgabe
+type: simplenews_issue
+description: '<em>Newsletter-Ausgabe</em> für Newsletter verwenden.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

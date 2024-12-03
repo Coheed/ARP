@@ -1,0 +1,30 @@
+uuid: 5cf1d3af-dadc-4f00-9f34-43fab16ce8ab
+langcode: de
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_bedingung
+field_name: field_bedingung
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: kombinierbar_im_selben_kiefer
+      label: 'kombinierbar im selben Kiefer'
+    -
+      value: kombinierbar_am_selben_zahn
+      label: 'kombinierbar am selben Zahn'
+    -
+      value: kombination_ausgeschlossen
+      label: 'Kombination ausgeschlossen'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: b93b2bb4-cf24-484a-b773-5deaa605e819
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edv_nr
+    - node.type.bema_leistung
+id: node.bema_leistung.field_edv_nr
+field_name: field_edv_nr
+entity_type: node
+bundle: bema_leistung
+label: 'EDV Nr.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

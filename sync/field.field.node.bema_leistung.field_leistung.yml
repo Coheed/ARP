@@ -1,0 +1,24 @@
+uuid: f2b3d5c6-eac1-49ae-87d7-931511d029ab
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leistung
+    - filter.format.full_html
+    - node.type.bema_leistung
+  module:
+    - text
+id: node.bema_leistung.field_leistung
+field_name: field_leistung
+entity_type: node
+bundle: bema_leistung
+label: Leistung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

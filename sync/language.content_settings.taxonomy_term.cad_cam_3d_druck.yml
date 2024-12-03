@@ -1,0 +1,11 @@
+uuid: b27901cd-507d-422f-8bdf-0a2d5fdbd68f
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cad_cam_3d_druck
+id: taxonomy_term.cad_cam_3d_druck
+target_entity_type_id: taxonomy_term
+target_bundle: cad_cam_3d_druck
+default_langcode: site_default
+language_alterable: false

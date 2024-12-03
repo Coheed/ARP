@@ -1,0 +1,77 @@
+uuid: b600ee88-4636-4b2b-a5ea-1d2ebdaafe30
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.abrechnungskalkulation.field_anzahl
+    - field.field.paragraph.abrechnungskalkulation.field_betrag
+    - field.field.paragraph.abrechnungskalkulation.field_datum
+    - field.field.paragraph.abrechnungskalkulation.field_faktor
+    - field.field.paragraph.abrechnungskalkulation.field_geb_nr
+    - field.field.paragraph.abrechnungskalkulation.field_leistung_calc
+    - field.field.paragraph.abrechnungskalkulation.field_zahn_calc
+    - paragraphs.paragraphs_type.abrechnungskalkulation
+  module:
+    - datetime
+    - text
+id: paragraph.abrechnungskalkulation.default
+targetEntityType: paragraph
+bundle: abrechnungskalkulation
+mode: default
+content:
+  field_anzahl:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_betrag:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_datum:
+    type: datetime_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_faktor:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_geb_nr:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistung_calc:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_zahn_calc:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

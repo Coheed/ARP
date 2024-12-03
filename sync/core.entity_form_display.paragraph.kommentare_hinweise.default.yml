@@ -1,0 +1,47 @@
+uuid: 59ab7614-5004-48cf-93f4-a2d73bb5039d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kommentare_hinweise.field_kommentarquelle
+    - field.field.paragraph.kommentare_hinweise.field_kommentartext
+    - field.field.paragraph.kommentare_hinweise.field_verfasser
+    - paragraphs.paragraphs_type.kommentare_hinweise
+  module:
+    - text
+id: paragraph.kommentare_hinweise.default
+targetEntityType: paragraph
+bundle: kommentare_hinweise
+mode: default
+content:
+  field_kommentarquelle:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_kommentartext:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_verfasser:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

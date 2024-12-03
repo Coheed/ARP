@@ -1,0 +1,21 @@
+uuid: 61953da3-3898-4f96-8faa-654eaba8aa11
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_beb_nr
+field_name: field_beb_nr
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

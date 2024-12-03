@@ -1,0 +1,25 @@
+uuid: ed44e0b9-561b-41e4-a9ae-a9eac170b5d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_data_speed
+    - paragraphs.paragraphs_type.paragraph_slider_block
+id: paragraph.paragraph_slider_block.field_paragraph_data_speed
+field_name: field_paragraph_data_speed
+entity_type: paragraph
+bundle: paragraph_slider_block
+label: 'Data speed'
+description: 'Duration of transition between slides (in ms)'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1000
+default_value_callback: ''
+settings:
+  min: 500
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

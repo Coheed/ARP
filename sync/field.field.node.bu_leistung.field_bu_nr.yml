@@ -1,0 +1,19 @@
+uuid: b829ce9d-d8c2-4d67-88f6-b481d59cf07d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bu_nr
+    - node.type.bu_leistung
+id: node.bu_leistung.field_bu_nr
+field_name: field_bu_nr
+entity_type: node
+bundle: bu_leistung
+label: 'BU Nr.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 8bf66e00-4a2b-4897-8a33-ad8a60dce15d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cad_cam_3d_druck_leistung
+    - node.type.beb_97
+    - taxonomy.vocabulary.cad_cam_3d_druck
+id: node.beb_97.field_cad_cam_3d_druck_leistung
+field_name: field_cad_cam_3d_druck_leistung
+entity_type: node
+bundle: beb_97
+label: 'CAD/CAM/3D Druck Leistung'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cad_cam_3d_druck: cad_cam_3d_druck
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

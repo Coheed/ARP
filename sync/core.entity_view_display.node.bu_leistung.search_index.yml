@@ -1,0 +1,125 @@
+uuid: 5e4c1130-0d8d-4e9b-b0d2-7e5c1cd0da0a
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.bu_leistung.field_abrechenbar_je
+    - field.field.node.bu_leistung.field_abrechnungsart
+    - field.field.node.bu_leistung.field_abrechnungsbeispiele
+    - field.field.node.bu_leistung.field_abrechnungsbestimmungen
+    - field.field.node.bu_leistung.field_beschreibung
+    - field.field.node.bu_leistung.field_betrag
+    - field.field.node.bu_leistung.field_bu_kategorie
+    - field.field.node.bu_leistung.field_bu_nr
+    - field.field.node.bu_leistung.field_dokumentation
+    - field.field.node.bu_leistung.field_dokumentation_pdf
+    - field.field.node.bu_leistung.field_kommentare_hinweise
+    - field.field.node.bu_leistung.field_leistung
+    - field.field.node.bu_leistung.field_zielgruppe
+    - field.field.node.bu_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.bu_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.bu_leistung
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.bu_leistung.search_index
+targetEntityType: node
+bundle: bu_leistung
+mode: search_index
+content:
+  field_abrechenbar_je:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_dokumentation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_dokumentation_pdf:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_leistung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_zusatzleistung_abrechenbar:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_zusatzleistung_nicht_abrec:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechnungsbestimmungen: true
+  field_betrag: true
+  field_bu_kategorie: true
+  field_bu_nr: true
+  field_zielgruppe: true
+  langcode: true
+  search_api_excerpt: true

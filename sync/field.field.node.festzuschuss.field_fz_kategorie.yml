@@ -1,0 +1,29 @@
+uuid: 2871afc1-f457-4650-8d02-f942bc26c705
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fz_kategorie
+    - node.type.festzuschuss
+    - taxonomy.vocabulary.festzuschuss_kategorie
+id: node.festzuschuss.field_fz_kategorie
+field_name: field_fz_kategorie
+entity_type: node
+bundle: festzuschuss
+label: 'FZ Kategorie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      festzuschuss_kategorie: festzuschuss_kategorie
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

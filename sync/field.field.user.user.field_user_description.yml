@@ -1,0 +1,24 @@
+uuid: 976241de-111b-464c-82a5-0c6e1bd6e515
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_description
+    - filter.format.restricted_html
+  module:
+    - text
+    - user
+id: user.user.field_user_description
+field_name: field_user_description
+entity_type: user
+bundle: user
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

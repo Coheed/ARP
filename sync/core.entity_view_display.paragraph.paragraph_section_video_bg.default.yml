@@ -1,0 +1,54 @@
+uuid: 4cb99df4-6adb-4366-8dea-245bbe18493e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_id
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_image
+    - field.field.paragraph.paragraph_section_video_bg.field_paragraph_video
+    - paragraphs.paragraphs_type.paragraph_section_video_bg
+  module:
+    - file
+    - image
+id: paragraph.paragraph_section_video_bg.default
+targetEntityType: paragraph
+bundle: paragraph_section_video_bg
+mode: default
+content:
+  field_paragraph_extra_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraph_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph_video:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

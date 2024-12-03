@@ -1,0 +1,16 @@
+uuid: bb7890fc-de89-443a-94f4-05972f7c2ff4
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - richtlinien
+    parent: 'richtlinien:'
+name: Richtlinienkapitel
+vid: richtlinienkapitel
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,190 @@
+uuid: 783a33ed-3951-446c-ad36-11eefe26cf5a
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.goae_leistung.field_abrechenbar_je
+    - field.field.node.goae_leistung.field_abrechenbar_je_goa
+    - field.field.node.goae_leistung.field_abrechnungsart
+    - field.field.node.goae_leistung.field_abrechnungsbeispiele
+    - field.field.node.goae_leistung.field_abrechnungsbeispiele_goa
+    - field.field.node.goae_leistung.field_abrechnungsbestimmungen
+    - field.field.node.goae_leistung.field_abrechnungsbestimmungen_go
+    - field.field.node.goae_leistung.field_alternativer_goae_punktwer
+    - field.field.node.goae_leistung.field_amtliche_begruendung
+    - field.field.node.goae_leistung.field_amtliche_begruendung_goa
+    - field.field.node.goae_leistung.field_behandlungsbereich
+    - field.field.node.goae_leistung.field_bema_bewertungszahl
+    - field.field.node.goae_leistung.field_berechnung_daneben_ausgesc
+    - field.field.node.goae_leistung.field_beschreibung
+    - field.field.node.goae_leistung.field_dokumentation
+    - field.field.node.goae_leistung.field_dokumente
+    - field.field.node.goae_leistung.field_dokumente_goa
+    - field.field.node.goae_leistung.field_edv_nr
+    - field.field.node.goae_leistung.field_gebuehrenziffer
+    - field.field.node.goae_leistung.field_gerichtsurteil
+    - field.field.node.goae_leistung.field_goa_points
+    - field.field.node.goae_leistung.field_goae_kategorie
+    - field.field.node.goae_leistung.field_kommentare
+    - field.field.node.goae_leistung.field_kommentare_hinweise
+    - field.field.node.goae_leistung.field_kurzbeschreibung
+    - field.field.node.goae_leistung.field_leistungsinhalt
+    - field.field.node.goae_leistung.field_leistungsinhalt_goa
+    - field.field.node.goae_leistung.field_musterbeispiele_fuer_moegl
+    - field.field.node.goae_leistung.field_quelle
+    - field.field.node.goae_leistung.field_referenzziffer
+    - field.field.node.goae_leistung.field_suchwoerter_search
+    - field.field.node.goae_leistung.field_synonyme_search
+    - field.field.node.goae_leistung.field_zielgruppe
+    - field.field.node.goae_leistung.field_zusaetzlich_berechnungsfae
+    - field.field.node.goae_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.goae_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.goae_leistung
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.goae_leistung.full
+targetEntityType: node
+bundle: goae_leistung
+mode: full
+content:
+  field_abrechenbar_je:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_abrechnungsbestimmungen:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_behandlungsbereich:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_bema_bewertungszahl:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_dokumentation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_dokumente:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_gerichtsurteil:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_zusatzleistung_abrechenbar:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_zusatzleistung_nicht_abrec:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechenbar_je_goa: true
+  field_abrechnungsbeispiele_goa: true
+  field_abrechnungsbestimmungen_go: true
+  field_alternativer_goae_punktwer: true
+  field_amtliche_begruendung: true
+  field_amtliche_begruendung_goa: true
+  field_berechnung_daneben_ausgesc: true
+  field_dokumente_goa: true
+  field_edv_nr: true
+  field_gebuehrenziffer: true
+  field_goa_points: true
+  field_goae_kategorie: true
+  field_kommentare: true
+  field_kurzbeschreibung: true
+  field_leistungsinhalt: true
+  field_leistungsinhalt_goa: true
+  field_musterbeispiele_fuer_moegl: true
+  field_quelle: true
+  field_referenzziffer: true
+  field_suchwoerter_search: true
+  field_synonyme_search: true
+  field_zielgruppe: true
+  field_zusaetzlich_berechnungsfae: true
+  langcode: true
+  search_api_excerpt: true

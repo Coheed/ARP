@@ -1,0 +1,16 @@
+uuid: 81aa6672-9c36-4617-9602-1444e67ab13d
+langcode: de
+status: true
+dependencies: {  }
+id: pdf
+label: PDF
+media_types:
+  document: document
+  audio: 0
+  image: 0
+  remote_video: 0
+  video: 0
+form_mode: ''
+upload_location: /sites/default/files/2024-09
+show_alt: null
+show_title: null

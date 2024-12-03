@@ -1,0 +1,335 @@
+uuid: c29cf96c-674f-4c69-9564-7d06bb63f90f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.bu_leistung.field_abrechenbar_je
+    - field.field.node.bu_leistung.field_abrechnungsart
+    - field.field.node.bu_leistung.field_abrechnungsbeispiele
+    - field.field.node.bu_leistung.field_abrechnungsbestimmungen
+    - field.field.node.bu_leistung.field_beschreibung
+    - field.field.node.bu_leistung.field_betrag
+    - field.field.node.bu_leistung.field_bu_kategorie
+    - field.field.node.bu_leistung.field_bu_nr
+    - field.field.node.bu_leistung.field_dokumentation
+    - field.field.node.bu_leistung.field_dokumentation_pdf
+    - field.field.node.bu_leistung.field_kommentare_hinweise
+    - field.field.node.bu_leistung.field_leistung
+    - field.field.node.bu_leistung.field_zielgruppe
+    - field.field.node.bu_leistung.field_zusatzleistung_abrechenbar
+    - field.field.node.bu_leistung.field_zusatzleistung_nicht_abrec
+    - node.type.bu_leistung
+  module:
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_nummern:
+      children:
+        - field_bu_nr
+      label: Nummern
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: numbers_node
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_grundlegendes:
+      children:
+        - field_beschreibung
+        - field_leistung
+      label: Grundlegendes
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_kategorie:
+      children:
+        - field_bu_kategorie
+      label: Kategorie
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: node_category
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_betrag:
+      children:
+        - field_betrag
+      label: Betrag
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_abrechnungsart:
+      children:
+        - field_abrechnungsart
+      label: Abrechnungsart
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_abrechnungsbestimmungen:
+      children:
+        - field_abrechnungsbestimmungen
+      label: Abrechnungsbestimmungen
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_zusatzleistungen:
+      children:
+        - field_zusatzleistung_abrechenbar
+        - field_zusatzleistung_nicht_abrec
+      label: Zusatzleistungen
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_dokumentation:
+      children:
+        - field_dokumentation
+      label: Dokumentation
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_dokumentation_pdf:
+      children:
+        - field_dokumentation_pdf
+      label: 'Dokumentation (PDF)'
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_kommentare_hinweise:
+      children:
+        - field_kommentare_hinweise
+      label: 'Kommentare & Hinweise'
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_abrechnungsbeispiele:
+      children:
+        - field_abrechnungsbeispiele
+      label: Abrechnungsbeispiele
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+    group_abrechenbar_je:
+      children:
+        - field_abrechenbar_je
+      label: 'Abrechenbar je'
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: true
+        description: ''
+        required_fields: false
+id: node.bu_leistung.default
+targetEntityType: node
+bundle: bu_leistung
+mode: default
+content:
+  field_abrechenbar_je:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_abrechnungsbestimmungen:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_betrag:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_bu_kategorie:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_bu_nr:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_dokumentation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_dokumentation_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_leistung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_zusatzleistung_abrechenbar:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_zusatzleistung_nicht_abrec:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  field_zielgruppe: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

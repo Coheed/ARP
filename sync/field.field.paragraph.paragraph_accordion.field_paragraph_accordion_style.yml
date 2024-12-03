@@ -1,0 +1,21 @@
+uuid: 7511acee-02a4-4b8b-bbaf-447894bd98b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_accordion_style
+    - paragraphs.paragraphs_type.paragraph_accordion
+  module:
+    - options
+id: paragraph.paragraph_accordion.field_paragraph_accordion_style
+field_name: field_paragraph_accordion_style
+entity_type: paragraph
+bundle: paragraph_accordion
+label: 'Accordion Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

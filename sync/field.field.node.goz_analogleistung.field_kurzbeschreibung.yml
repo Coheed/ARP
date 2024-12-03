@@ -1,0 +1,19 @@
+uuid: b0d25b50-665e-4dfd-8446-b539f22e3cd3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kurzbeschreibung
+    - node.type.goz_analogleistung
+id: node.goz_analogleistung.field_kurzbeschreibung
+field_name: field_kurzbeschreibung
+entity_type: node
+bundle: goz_analogleistung
+label: 'Kurzbeschreibung für Teaser und Suchergebnis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

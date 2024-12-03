@@ -1,0 +1,49 @@
+uuid: 7ab85a59-d8b1-4a9b-bba7-d766fb659dcd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zahnschema.field_befund_b
+    - field.field.paragraph.zahnschema.field_regelversorgung_r
+    - field.field.paragraph.zahnschema.field_therapieplanung_tp
+    - field.field.paragraph.zahnschema.field_zahn
+    - paragraphs.paragraphs_type.zahnschema
+id: paragraph.zahnschema.default
+targetEntityType: paragraph
+bundle: zahnschema
+mode: default
+content:
+  field_befund_b:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_regelversorgung_r:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_therapieplanung_tp:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_zahn:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

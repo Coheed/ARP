@@ -1,0 +1,19 @@
+uuid: 1520ba7d-55a9-4b92-9958-d3761f203671
+langcode: de
+status: true
+dependencies:
+  module:
+    - eck
+id: field_fc_gvz_billable_yes.field_bedingung_optional
+field_name: field_bedingung_optional
+entity_type: field_fc_gvz_billable_yes
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

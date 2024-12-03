@@ -1,0 +1,36 @@
+uuid: 0e39f885-350b-4730-a545-0fdc9a8cbb0d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.berechnung_daneben_ausgeschlosse.field_bedingung_optional
+    - field.field.paragraph.berechnung_daneben_ausgeschlosse.field_leistung_bel2
+    - paragraphs.paragraphs_type.berechnung_daneben_ausgeschlosse
+  module:
+    - text
+id: paragraph.berechnung_daneben_ausgeschlosse.default
+targetEntityType: paragraph
+bundle: berechnung_daneben_ausgeschlosse
+mode: default
+content:
+  field_bedingung_optional:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_leistung_bel2:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

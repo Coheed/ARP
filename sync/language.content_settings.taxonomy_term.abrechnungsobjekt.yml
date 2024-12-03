@@ -1,0 +1,11 @@
+uuid: 030f97c8-1b29-4ab4-84e9-14d67a524a32
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.abrechnungsobjekt
+id: taxonomy_term.abrechnungsobjekt
+target_entity_type_id: taxonomy_term
+target_bundle: abrechnungsobjekt
+default_langcode: site_default
+language_alterable: false

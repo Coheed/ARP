@@ -1,0 +1,16 @@
+uuid: c1d54405-5dc5-4248-942e-c0793a427221
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'GOÄ Kategorie'
+vid: goae_kategorie
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,11 @@
+uuid: cb448f81-3bfc-4557-929c-f5e84bcb3644
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.from_library
+id: paragraph.from_library
+target_entity_type_id: paragraph
+target_bundle: from_library
+default_langcode: site_default
+language_alterable: false

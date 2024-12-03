@@ -1,0 +1,37 @@
+uuid: 9553d8d1-a2de-42cd-88bb-3bd6891a13a0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zuzuordnende_gebuehrennumm
+    - node.type.abrechnungsbeispiel
+    - node.type.bema_leistung
+    - node.type.bu_leistung
+    - node.type.goae_leistung
+    - node.type.goz_analogleistung
+    - node.type.goz_leistung
+id: node.abrechnungsbeispiel.field_zuzuordnende_gebuehrennumm
+field_name: field_zuzuordnende_gebuehrennumm
+entity_type: node
+bundle: abrechnungsbeispiel
+label: 'Zuzuordnende Gebührennummer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bema_leistung: bema_leistung
+      bu_leistung: bu_leistung
+      goz_analogleistung: goz_analogleistung
+      goz_leistung: goz_leistung
+      goae_leistung: goae_leistung
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: bema_leistung
+field_type: entity_reference

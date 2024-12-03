@@ -1,0 +1,29 @@
+uuid: 58a35776-81d2-43e1-a067-409fcb92b872
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quelle
+    - node.type.festzuschuss
+    - taxonomy.vocabulary.quelle
+id: node.festzuschuss.field_quelle
+field_name: field_quelle
+entity_type: node
+bundle: festzuschuss
+label: Quelle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quelle: quelle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

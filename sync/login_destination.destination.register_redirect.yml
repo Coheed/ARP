@@ -1,0 +1,15 @@
+uuid: 402ac697-0647-4b8d-832d-97e0cef4efca
+langcode: en
+status: true
+dependencies: {  }
+name: register_redirect
+label: 'Register Redirect'
+triggers:
+  registration: registration
+destination_path: 'internal:/user'
+pages_type: 0
+pages: ''
+language: ''
+roles: {  }
+weight: 0
+enabled: true

@@ -1,0 +1,39 @@
+uuid: 73d9ca8b-2f50-4af6-9bd8-40b3bb2c0384
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_berechnungsfaehige_laborpo
+    - node.type.abrechnungsbeispiel
+    - node.type.beb_97
+    - node.type.beb_zahntechnik
+    - node.type.bel2
+    - node.type.bema_leistung
+    - node.type.goae_leistung
+    - node.type.goz_leistung
+id: node.abrechnungsbeispiel.field_berechnungsfaehige_laborpo
+field_name: field_berechnungsfaehige_laborpo
+entity_type: node
+bundle: abrechnungsbeispiel
+label: 'Berechnungsfähige Laborpositionen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      beb_97: beb_97
+      beb_zahntechnik: beb_zahntechnik
+      bel2: bel2
+      bema_leistung: bema_leistung
+      goz_leistung: goz_leistung
+      goae_leistung: goae_leistung
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: beb_97
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 6926abd4-8501-4f35-8afd-e73399a99df0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kfo_leistung
+    - node.type.goz_leistung
+id: node.goz_leistung.field_kfo_leistung
+field_name: field_kfo_leistung
+entity_type: node
+bundle: goz_leistung
+label: 'KFO Leistung?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ja
+  off_label: Nein
+field_type: boolean

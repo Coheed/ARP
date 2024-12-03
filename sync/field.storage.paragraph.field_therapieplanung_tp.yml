@@ -1,0 +1,20 @@
+uuid: 8d6bb1e1-1a60-4956-9381-9b26cd6c1326
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_therapieplanung_tp
+field_name: field_therapieplanung_tp
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

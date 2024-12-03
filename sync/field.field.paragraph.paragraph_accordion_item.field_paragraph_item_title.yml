@@ -1,0 +1,24 @@
+uuid: a8866c0d-1c53-48ce-a63b-ea7254657cb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_item_title
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.paragraph_accordion_item
+  module:
+    - text
+id: paragraph.paragraph_accordion_item.field_paragraph_item_title
+field_name: field_paragraph_item_title
+entity_type: paragraph
+bundle: paragraph_accordion_item
+label: 'Item Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

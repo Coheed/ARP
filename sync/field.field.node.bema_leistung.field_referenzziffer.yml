@@ -1,0 +1,32 @@
+uuid: 5ce599f8-05a3-40fe-93c3-e6b61919057e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referenzziffer
+    - node.type.bema_leistung
+    - node.type.goae_leistung
+    - node.type.goz_leistung
+id: node.bema_leistung.field_referenzziffer
+field_name: field_referenzziffer
+entity_type: node
+bundle: bema_leistung
+label: Referenzziffer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bema_leistung: bema_leistung
+      goz_leistung: goz_leistung
+      goae_leistung: goae_leistung
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: bema_leistung
+field_type: entity_reference

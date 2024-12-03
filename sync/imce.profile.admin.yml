@@ -1,0 +1,26 @@
+uuid: eaa7ada8-5d3d-4703-8758-e5f81c729be6
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oKIjMkQZj_No1FKB9qTajCMwvFqGXHp9t4PU773Vfhw
+id: admin
+label: Adminprofil
+description: 'Konfiguration für Adminstratoren'
+conf:
+  usertab: false
+  extensions: '*'
+  maxsize: 0.0
+  quota: 0.0
+  maxwidth: 0
+  maxheight: 0
+  replace: 0
+  thumbnail_style: ''
+  thumbnail_grid_style: false
+  ignore_usage: false
+  url_alter: false
+  folders:
+    -
+      path: .
+      permissions:
+        all: true

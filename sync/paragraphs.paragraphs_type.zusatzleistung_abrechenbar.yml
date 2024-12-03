@@ -1,0 +1,10 @@
+uuid: ba5eda45-e828-4822-9c3d-cf2e89d95e8a
+langcode: de
+status: true
+dependencies: {  }
+id: zusatzleistung_abrechenbar
+label: 'Zusatzleistung abrechenbar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

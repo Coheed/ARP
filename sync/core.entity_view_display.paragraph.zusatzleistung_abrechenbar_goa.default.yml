@@ -1,0 +1,32 @@
+uuid: 6315ef25-f5d5-44f2-bac4-c07ac96e663f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zusatzleistung_abrechenbar_goa.field_bedingung_optional
+    - field.field.paragraph.zusatzleistung_abrechenbar_goa.field_leistung
+    - paragraphs.paragraphs_type.zusatzleistung_abrechenbar_goa
+  module:
+    - text
+id: paragraph.zusatzleistung_abrechenbar_goa.default
+targetEntityType: paragraph
+bundle: zusatzleistung_abrechenbar_goa
+mode: default
+content:
+  field_bedingung_optional:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_leistung:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

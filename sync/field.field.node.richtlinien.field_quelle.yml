@@ -1,0 +1,29 @@
+uuid: 62cadf9a-9bde-420a-b8a5-ec1873304b66
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quelle
+    - node.type.richtlinien
+    - taxonomy.vocabulary.quelle
+id: node.richtlinien.field_quelle
+field_name: field_quelle
+entity_type: node
+bundle: richtlinien
+label: Quelle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quelle: quelle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

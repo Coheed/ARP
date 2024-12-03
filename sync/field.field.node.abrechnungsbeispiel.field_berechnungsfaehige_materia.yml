@@ -1,0 +1,24 @@
+uuid: 7b8955ce-1537-42ab-8562-04b264be6a49
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_berechnungsfaehige_materia
+    - filter.format.full_html
+    - node.type.abrechnungsbeispiel
+  module:
+    - text
+id: node.abrechnungsbeispiel.field_berechnungsfaehige_materia
+field_name: field_berechnungsfaehige_materia
+entity_type: node
+bundle: abrechnungsbeispiel
+label: 'Berechnungsfähige Materialien'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: 54e14ec8-49ab-48a9-9ab3-f0950dd71e32
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechnungsbeispiele_goa
+    - node.type.abrechnungsbeispiel
+    - node.type.goae_leistung
+id: node.goae_leistung.field_abrechnungsbeispiele_goa
+field_name: field_abrechnungsbeispiele_goa
+entity_type: node
+bundle: goae_leistung
+label: Abrechnungsbeispiele
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      abrechnungsbeispiel: abrechnungsbeispiel
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

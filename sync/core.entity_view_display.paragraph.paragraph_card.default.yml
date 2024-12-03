@@ -1,0 +1,90 @@
+uuid: d8eeb1bd-6020-43cc-a0e8-2d371cd4ee6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_card.field_paragraph_content
+    - field.field.paragraph.paragraph_card.field_paragraph_extra_class
+    - field.field.paragraph.paragraph_card.field_paragraph_image
+    - field.field.paragraph.paragraph_card.field_paragraph_image_position
+    - field.field.paragraph.paragraph_card.field_paragraph_padding
+    - field.field.paragraph.paragraph_card.field_paragraph_shadow
+    - field.field.paragraph.paragraph_card.field_paragraph_shadow_bg
+    - field.field.paragraph.paragraph_card.field_paragraph_shadow_bg_class
+    - paragraphs.paragraphs_type.paragraph_card
+  module:
+    - image
+    - options
+    - text
+id: paragraph.paragraph_card.default
+targetEntityType: paragraph
+bundle: paragraph_card
+mode: default
+content:
+  field_paragraph_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraph_extra_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph_image_position:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_paragraph_padding:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_paragraph_shadow:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_paragraph_shadow_bg:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_paragraph_shadow_bg_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden: {  }

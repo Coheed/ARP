@@ -1,0 +1,24 @@
+uuid: b9e58915-9360-4125-a326-b2719bcb6235
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung
+    - filter.format.full_html
+    - node.type.goz_leistung
+  module:
+    - text
+id: node.goz_leistung.field_beschreibung
+field_name: field_beschreibung
+entity_type: node
+bundle: goz_leistung
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: 45a54697-46ab-4613-a2e3-e6fba9386019
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_festzuschuss
+field_name: field_festzuschuss
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

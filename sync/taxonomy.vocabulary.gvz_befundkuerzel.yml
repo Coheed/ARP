@@ -1,0 +1,16 @@
+uuid: e46baf53-abf0-47a5-97b6-f4c470d12023
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'GVZ Befundkürzel'
+vid: gvz_befundkuerzel
+description: null
+weight: 0
+new_revision: false

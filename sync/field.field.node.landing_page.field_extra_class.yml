@@ -1,0 +1,19 @@
+uuid: 2856e8da-9dc5-46cb-a5f8-3d484e6da8ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extra_class
+    - node.type.landing_page
+id: node.landing_page.field_extra_class
+field_name: field_extra_class
+entity_type: node
+bundle: landing_page
+label: 'Extra Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

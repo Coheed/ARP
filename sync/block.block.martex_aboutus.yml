@@ -1,0 +1,30 @@
+uuid: a6e70901-6570-4607-b164-895f8262adeb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2f261954-1fe6-47c3-a503-2eae9e07ef82'
+  module:
+    - block_content
+    - system
+  theme:
+    - martex
+id: martex_aboutus
+theme: martex
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'block_content:2f261954-1fe6-47c3-a503-2eae9e07ef82'
+settings:
+  id: 'block_content:2f261954-1fe6-47c3-a503-2eae9e07ef82'
+  label: 'About us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/blog-sidebar\r\n/blog-category/*"

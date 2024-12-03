@@ -1,0 +1,23 @@
+uuid: 8a7157f0-027e-4f2f-b89e-829debf9ab90
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_betrag_ohne_bonus
+    - node.type.festzuschuss
+id: node.festzuschuss.field_betrag_ohne_bonus
+field_name: field_betrag_ohne_bonus
+entity_type: node
+bundle: festzuschuss
+label: 'Betrag ohne Bonus'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

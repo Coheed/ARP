@@ -1,0 +1,24 @@
+uuid: 1ca17864-9d0c-4095-957c-9f49729c610a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bedingung_optional
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.zusatzleistung_abrechenbar_goa
+  module:
+    - text
+id: paragraph.zusatzleistung_abrechenbar_goa.field_bedingung_optional
+field_name: field_bedingung_optional
+entity_type: paragraph
+bundle: zusatzleistung_abrechenbar_goa
+label: 'Bedingung (optional)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

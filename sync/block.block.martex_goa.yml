@@ -1,0 +1,29 @@
+uuid: b10207a1-92f7-4fdd-8273-76d516985abb
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.goae
+  module:
+    - system
+  theme:
+    - martex
+id: martex_goa
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:goae'
+settings:
+  id: 'system_menu_block:goae'
+  label: GOÄ
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/goae\r\n/goae/*"
