@@ -1,0 +1,94 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="/themes/custom/martex/js/customScripts/bemagozcompare.js"></script>
+<script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
+
+
+<div class="hidden-container" id="bemaGoz">
+<div class="container my-5">
+<div class="row">
+<!-- BEMA-Eingabefeld -->
+<div class="col-md-6">
+<p><label for="bema-number">BEMA-Nummer</label>
+ <input class="form-control" type="text" id="bema-number" placeholder="Nummer eingeben" oninput="fetchBemaGozComparison()"></p>
+ <p class="mt-2">Bewertungszahl: <span id="evaluation-value">-</span></p>
+ <p>
+    <label for="bema-service">BEMA-Leistung</label>
+    <textarea class="form-control leistung" type="text" id="bema-service" placeholder="BEMA-Leistung bearbeiten"></textarea>
+  </p>
+
+  <div class="d-flex align-items-start justify-content-between">
+    <div class="einfach">
+        <label for="bema-service">Punktwert</label>
+        <input class="form-control punktwert"  type="text" id="punktwert" placeholder="0.00">
+        <small>AOK Bayern BEMA Punktwert (editierbar)</small>
+    </div>
+    <div class="mitfaktor">
+        <label for="bema-service">Honorar bei aktuellem Punktwert</label>
+        <input class="form-control bema-berechnet"  type="text" id="bema-berechnet" placeholder="0.00€">
+    </div>
+  </div>
+</div>
+ <!-- GOZ-Ausgabefelder -->
+ <div class="col-md-6">
+ <p><label class="disabled" for="goz-number">GOZ-Nummer</label> 
+ <input class="form-control" type="text" id="goz-number" placeholder="Nur lesbar" readonly=""></p>
+ <p class="mt-2">Punktzahl: <span id="points-value">-</span></p>
+
+ <p>
+    <label for="goz-service">GOZ-Leistung</label>
+    <textarea class="form-control leistung"  type="text" id="goz-service" placeholder="GOZ-Leistung bearbeiten"></textarea>
+  </p>
+
+  <div class="d-flex align-items-start justify-content-between mb-3">
+    <div class="einfach">
+        <label for="goz-service">Honorar Einfachsatz</label>
+        <input class="form-control einfachsatz"  type="text" id="einfachsatz" placeholder="0.00€">
+    </div>
+    <div class="mitfaktor">
+        <label for="goz-service">Honorar 2.3 Fach</label>
+        <input class="form-control berechnet"  type="text" id="berechnet" placeholder="0.00€">
+    </div>
+  </div>
+  <span class="fw-semibold">GOZ-Honorar auf BEMA-Niveau</span>
+  <div class="d-flex align-items-start justify-content-between">
+    <div class="einfach">
+        <label for="goz-service">Erforderlicher Faktor</label>
+        <input class="form-control neededFactor "  type="text" id="neededFactor" placeholder="0.00">
+        <small id="neededFactorlong"></small>
+    </div>
+    <div class="mitfaktor">
+        <label for="goz-service">GOZ Honorar</label>
+        <input class="form-control gozhonorar"  type="text" id="gozhonorar" placeholder="0.00€">
+    </div>
+  </div>
+</div>
+ </div>
+ <div class="row mt-4">
+  <div class="col-12">
+      <label for="moderator-comment" class="form-label">Kommentar</label>
+      <textarea class="form-control" id="moderator-comment" rows="4" placeholder="Kommentar hinzufügen..."></textarea>
+  </div>
+</div>
+ <div class="row mt-4">
+    <div class="col-12 text-center">
+      <button class="btn btn-primary" onclick="saveBemaGozData()">Speichern</button>
+    </div>
+  </div>
+ </div>
+ </div>
+
+ <script>
+    function sendHeightToParent() {
+    const height = document.body.scrollHeight; // Höhe des Inhalts
+    window.parent.postMessage({ iframeHeight: height }, "*");
+}
+
+// Event-Listener für Änderungen (z. B. beim Wechseln des Grads)
+document.addEventListener("DOMContentLoaded", sendHeightToParent); // Initiale Höhe senden
+window.addEventListener("resize", sendHeightToParent); // Auf Resizing reagieren
+
+// Spezielle Änderungen im DOM (z. B. neue Felder)
+const observer = new MutationObserver(sendHeightToParent);
+observer.observe(document.body, { childList: true, subtree: true });
+</script>

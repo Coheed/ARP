@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEMA-GOZ Vergleich</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <script src="/themes/custom/martex/js/customScripts/bemagozcompare_front.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5 bemagozcompare">
+        <h2 class="text-center mb-4">BEMA-GOZ Vergleich</h2>
+        
+        <div class="row">
+            <!-- BEMA Abschnitt -->
+            <div class="col-md-6">
+                <h4>BEMA</h4>
+                <div class="mb-3">
+                    <label for="bema-number" class="form-label">BEMA-Nummer</label>
+                    <input class="form-control" type="text" id="bema-number" placeholder="Nummer eingeben" oninput="fetchBemaGozComparison()">
+                </div>
+                <div class="mb-3">
+                    <strong>Bewertungszahl:</strong> <span id="evaluation-value">-</span>
+                </div>
+                <div class="mb-3">
+                    <strong>BEMA-Leistung:</strong>
+                    <div id="bema-service" class="border p-2 rounded bg-light"></div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex flex-row gap-2"><strong for="punktwert" class="form-label m-0 ">Punktwert:</strong> <span class="muted">AOK Bayern BEMA Punktwert (editierbar)</span></div>
+                    <input class="form-control" type="text" id="punktwert" value="1.2563">
+                </div>
+                <div class="mb-3">
+                    <strong>Honorar bei aktuellem Punktwert:</strong>
+                    <div id="bema-berechnet" class="border p-2 rounded bg-light">0.00€</div>
+                </div>
+            </div>
+
+            <!-- GOZ Abschnitt -->
+            <div class="col-md-6">
+                <h4>GOZ</h4>
+                <div class="mb-3">
+                    <label for="goz-number" class="form-label">GOZ-Nummer</label>
+                    <input class="form-control" type="text" id="goz-number" placeholder="Nur lesbar" readonly>
+                </div>
+                <div class="mb-3">
+                    <strong>Punktzahl:</strong> <span id="points-value">-</span>
+                </div>
+                <div class="mb-3">
+                    <strong>GOZ-Leistung:</strong>
+                    <div id="goz-service" class="border p-2 rounded bg-light"></div>
+                </div>
+                <div class="mb-3">
+                    <strong>Honorar Einfachsatz:</strong>
+                    <div id="einfachsatz" class="border p-2 rounded bg-light">0.00€</div>
+                </div>
+                <div class="mb-3">
+                    <strong>Honorar 2.3 Fach:</strong>
+                    <div id="berechnet" class="border p-2 rounded bg-light">0.00€</div>
+                </div>
+                <div class="mb-3">
+                    <strong>Erforderlicher Faktor:</strong>
+                    <div id="neededFactor" class="border p-2 rounded bg-light fw-semibold text-danger">0.00</div>
+                    <small id="neededFactorlong" class="text-muted"></small>
+                </div>
+                <div class="mb-3">
+                    <strong>GOZ Honorar:</strong>
+                    <div id="gozhonorar" class="border p-2 rounded bg-light">0.00€</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3">
+                    <strong class="">Kommentar</strong>
+                    <div id="moderator-comment" class="border p-2 rounded bg-light text-muted">Kein Kommentar vorhanden</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="bemagozcompare_view.js"></script>
+</body>
+</html>
+
+<style>
+    .bemagozcompare{
+        font-family:'Poppins', sans-serif;
+    }
+</style>
+<script>
+    function sendHeightToParent() {
+    const height = document.body.scrollHeight; // Höhe des Inhalts
+    window.parent.postMessage({ iframeHeight: height + 60 }, "*");
+}
+
+// Event-Listener für Änderungen (z. B. beim Wechseln des Grads)
+document.addEventListener("DOMContentLoaded", sendHeightToParent); // Initiale Höhe senden
+window.addEventListener("resize", sendHeightToParent); // Auf Resizing reagieren
+
+// Spezielle Änderungen im DOM (z. B. neue Felder)
+const observer = new MutationObserver(sendHeightToParent);
+observer.observe(document.body, { childList: true, subtree: true });
+</script>
