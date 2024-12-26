@@ -1,9 +1,0 @@
-uuid: d3f17b80-a3be-4fdf-911d-eb4886a1f284
-langcode: de
-status: true
-dependencies:
-  config:
-    - eck.eck_entity_type.field_fc_gvz_billable_yes
-name: field_fc_gvz_billable_yes
-type: leistung
-description: ''

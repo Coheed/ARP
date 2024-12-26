@@ -1,0 +1,29 @@
+uuid: c01ae587-06d4-4967-a7ef-952c9c11697f
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.sonstiges
+  module:
+    - system
+  theme:
+    - martex
+id: martex_sonstiges
+theme: martex
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:sonstiges'
+settings:
+  id: 'system_menu_block:sonstiges'
+  label: Sonstiges
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/sonstiges\r\n/sonstiges/*"

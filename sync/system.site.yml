@@ -2,8 +2,8 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: de
 uuid: e5cb5543-cb96-4032-9d45-4b355031516a
-name: 'abrechnung dental'
-mail: admin@example.com
+name: 'Abrechnung Dental'
+mail: webmaster@dhug.de
 slogan: ''
 page:
   403: ''

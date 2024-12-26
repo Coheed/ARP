@@ -1,8 +1,8 @@
+uuid: null
 langcode: de
-status: true
+status: false
 dependencies:
   module:
-    - search
     - system
   theme:
     - claro

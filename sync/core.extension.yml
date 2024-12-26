@@ -31,7 +31,6 @@ module:
   entity_reference_revisions: 0
   entity_usage: 0
   feeds: 0
-  feeds_log: 0
   field: 0
   field_group: 0
   field_ui: 0

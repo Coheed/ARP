@@ -1,0 +1,160 @@
+uuid: 527d0c31-1920-414a-92a7-a48fbbce9a02
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.sonstiges.body
+    - field.field.node.sonstiges.field_abrechenbar_je
+    - field.field.node.sonstiges.field_abrechnungsart
+    - field.field.node.sonstiges.field_abrechnungsbeispiele
+    - field.field.node.sonstiges.field_abrechnungsbestimmungen
+    - field.field.node.sonstiges.field_beschreibung
+    - field.field.node.sonstiges.field_betrag
+    - field.field.node.sonstiges.field_dokumentation
+    - field.field.node.sonstiges.field_dokumentation_pdf
+    - field.field.node.sonstiges.field_kommentare_hinweise
+    - field.field.node.sonstiges.field_leistung
+    - field.field.node.sonstiges.field_sonstiges_kategorie
+    - field.field.node.sonstiges.field_zielgruppe
+    - field.field.node.sonstiges.field_zusatzleistung_abrechenbar
+    - field.field.node.sonstiges.field_zusatzleistung_nicht_abrec
+    - node.type.sonstiges
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.sonstiges.default
+targetEntityType: node
+bundle: sonstiges
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_abrechenbar_je:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_abrechnungsart:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_abrechnungsbeispiele:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_abrechnungsbestimmungen:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_beschreibung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_betrag:
+    type: number_decimal
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_dokumentation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_dokumentation_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_kommentare_hinweise:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_leistung:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_sonstiges_kategorie:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_zielgruppe:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_zusatzleistung_abrechenbar:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_zusatzleistung_nicht_abrec:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: e62abe53-73f0-468e-bf41-06101935d4ae
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abrechenbar_je
+    - node.type.sonstiges
+    - taxonomy.vocabulary.abrechnungsobjekt
+id: node.sonstiges.field_abrechenbar_je
+field_name: field_abrechenbar_je
+entity_type: node
+bundle: sonstiges
+label: 'Abrechenbar je'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      abrechnungsobjekt: abrechnungsobjekt
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

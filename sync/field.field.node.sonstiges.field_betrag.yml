@@ -1,0 +1,23 @@
+uuid: 0ab40301-7f9d-4f21-aca7-1e223915ba53
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_betrag
+    - node.type.sonstiges
+id: node.sonstiges.field_betrag
+field_name: field_betrag
+entity_type: node
+bundle: sonstiges
+label: Betrag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: decimal

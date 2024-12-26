@@ -1,0 +1,67 @@
+uuid: e76baada-cc1f-4f6b-a086-8e7adcc19253
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sonstiges.body
+    - field.field.node.sonstiges.field_abrechenbar_je
+    - field.field.node.sonstiges.field_abrechnungsart
+    - field.field.node.sonstiges.field_abrechnungsbeispiele
+    - field.field.node.sonstiges.field_abrechnungsbestimmungen
+    - field.field.node.sonstiges.field_beschreibung
+    - field.field.node.sonstiges.field_betrag
+    - field.field.node.sonstiges.field_dokumentation
+    - field.field.node.sonstiges.field_dokumentation_pdf
+    - field.field.node.sonstiges.field_kommentare_hinweise
+    - field.field.node.sonstiges.field_leistung
+    - field.field.node.sonstiges.field_sonstiges_kategorie
+    - field.field.node.sonstiges.field_zielgruppe
+    - field.field.node.sonstiges.field_zusatzleistung_abrechenbar
+    - field.field.node.sonstiges.field_zusatzleistung_nicht_abrec
+    - node.type.sonstiges
+  module:
+    - text
+    - user
+id: node.sonstiges.teaser
+targetEntityType: node
+bundle: sonstiges
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_beschreibung:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_abrechenbar_je: true
+  field_abrechnungsart: true
+  field_abrechnungsbeispiele: true
+  field_abrechnungsbestimmungen: true
+  field_betrag: true
+  field_dokumentation: true
+  field_dokumentation_pdf: true
+  field_kommentare_hinweise: true
+  field_leistung: true
+  field_sonstiges_kategorie: true
+  field_zielgruppe: true
+  field_zusatzleistung_abrechenbar: true
+  field_zusatzleistung_nicht_abrec: true
+  langcode: true
+  search_api_excerpt: true

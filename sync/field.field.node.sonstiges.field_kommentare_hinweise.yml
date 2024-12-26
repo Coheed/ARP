@@ -1,0 +1,118 @@
+uuid: e90ab811-9f7e-4854-9656-2242b32e54b4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kommentare_hinweise
+    - node.type.sonstiges
+    - paragraphs.paragraphs_type.kommentare_hinweise
+  module:
+    - entity_reference_revisions
+id: node.sonstiges.field_kommentare_hinweise
+field_name: field_kommentare_hinweise
+entity_type: node
+bundle: sonstiges
+label: 'Kommentare / Hinweise'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      kommentare_hinweise: kommentare_hinweise
+    negate: 0
+    target_bundles_drag_drop:
+      abrechnungskalkulation:
+        weight: 31
+        enabled: false
+      berechnung_daneben_ausgeschlosse:
+        weight: 29
+        enabled: false
+      from_library:
+        weight: 20
+        enabled: false
+      gerichtsurteil:
+        weight: 28
+        enabled: false
+      intern:
+        weight: 29
+        enabled: false
+      kombinierbar:
+        weight: 30
+        enabled: false
+      kommentare_hinweise:
+        weight: 21
+        enabled: true
+      paragraph_accordion:
+        weight: 22
+        enabled: false
+      paragraph_accordion_item:
+        weight: 23
+        enabled: false
+      paragraph_card:
+        weight: 24
+        enabled: false
+      paragraph_content:
+        weight: 25
+        enabled: false
+      paragraph_content_video:
+        weight: 26
+        enabled: false
+      paragraph_layout:
+        weight: 27
+        enabled: false
+      paragraph_section:
+        weight: 28
+        enabled: false
+      paragraph_section_image_bg:
+        weight: 29
+        enabled: false
+      paragraph_section_image_side:
+        weight: 30
+        enabled: false
+      paragraph_section_video_bg:
+        weight: 31
+        enabled: false
+      paragraph_slider_block:
+        weight: 32
+        enabled: false
+      paragraph_slider_item:
+        weight: 33
+        enabled: false
+      paragraph_tab_item:
+        weight: 35
+        enabled: false
+      paragraph_tabs:
+        weight: 34
+        enabled: false
+      paragraph_views_reference:
+        weight: 36
+        enabled: false
+      referenzen:
+        weight: 47
+        enabled: false
+      suche:
+        weight: 48
+        enabled: false
+      zahnschema:
+        weight: 55
+        enabled: false
+      zusaetzlich_berechnungsfaehig:
+        weight: 52
+        enabled: false
+      zusatzleistung_abrechenbar:
+        weight: 37
+        enabled: false
+      zusatzleistung_abrechenbar_goa:
+        weight: 50
+        enabled: false
+      zusatzleistung_nicht_abrechenbar:
+        weight: 38
+        enabled: false
+      zusatzleistung_nicht_goa:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

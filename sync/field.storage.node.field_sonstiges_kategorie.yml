@@ -1,16 +1,16 @@
-uuid: 1d8a75d8-2161-4176-acfc-663c4381313d
+uuid: 070d397a-ce80-4d73-98d3-341ce2189208
 langcode: de
 status: true
 dependencies:
   module:
-    - eck
     - node
-id: field_fc_gvz_billable_yes.field_leistung
-field_name: field_leistung
-entity_type: field_fc_gvz_billable_yes
+    - taxonomy
+id: node.field_sonstiges_kategorie
+field_name: field_sonstiges_kategorie
+entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

@@ -1,0 +1,11 @@
+uuid: 0fb30f36-ced4-42ec-8f04-324eebd5c2d0
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.sonstiges
+id: node.sonstiges
+target_entity_type_id: node
+target_bundle: sonstiges
+default_langcode: site_default
+language_alterable: false

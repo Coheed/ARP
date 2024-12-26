@@ -3,13 +3,14 @@ langcode: de
 status: true
 dependencies:
   module:
+    - media
     - node
 id: node.field_dokumente
 field_name: field_dokumente
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: media
 module: core
 locked: false
 cardinality: -1
