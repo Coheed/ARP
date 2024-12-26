@@ -1,0 +1,42 @@
+calculators.goz_points:
+  path: '/api/calculators/goz-points/{gozNumber}'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::getGozPoints'
+    _title: 'GOZ Points API'
+  requirements:
+    _permission: 'access content'
+    gozNumber: '\d+'
+
+calculators.bema_goz_comparison:
+  path: '/api/calculators/bema-goz-comparison/{number}'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::bemaGozComparison'
+    _title: 'BEMA-GOZ Comparison API'
+  requirements:
+    _permission: 'access content'
+    number: '[0-9a-zA-Z]+'
+
+calculators.bema_goz_save:
+  path: '/api/calculators/bema-goz-comparison/save'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::saveBemaGozData'
+    _title: 'Save BEMA-GOZ Data API'
+  requirements:
+    _permission: 'access content'
+    number: '[0-9a-zA-Z]+'
+
+calculators.get_moderator_comment:
+  path: '/api/calculators/moderator-comment/{bemaNumber}'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::getModeratorComment'
+    _title: 'Lade Moderator-Kommentar'
+  requirements:
+    _permission: 'access content'
+
+calculators.save_moderator_comment:
+  path: '/api/calculators/moderator-comment/save'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::saveModeratorComment'
+    _title: 'Speichere Moderator-Kommentar'
+  requirements:
+    _permission: 'access content'
