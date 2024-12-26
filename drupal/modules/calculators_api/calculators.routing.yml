@@ -15,3 +15,28 @@ calculators.bema_goz_comparison:
   requirements:
     _permission: 'access content'
     number: '[0-9a-zA-Z]+'
+
+calculators.bema_goz_save:
+  path: '/api/calculators/bema-goz-comparison/save'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::saveBemaGozData'
+    _title: 'Save BEMA-GOZ Data API'
+  requirements:
+    _permission: 'access content'
+    number: '[0-9a-zA-Z]+'
+
+calculators.get_moderator_comment:
+  path: '/api/calculators/moderator-comment/{bemaNumber}'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::getModeratorComment'
+    _title: 'Lade Moderator-Kommentar'
+  requirements:
+    _permission: 'access content'
+
+calculators.save_moderator_comment:
+  path: '/api/calculators/moderator-comment/save'
+  defaults:
+    _controller: '\Drupal\calculators\Controller\CalculatorsController::saveModeratorComment'
+    _title: 'Speichere Moderator-Kommentar'
+  requirements:
+    _permission: 'access content'
