@@ -2,7 +2,6 @@
 
 // phpcs:ignoreFile
 
-
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -625,9 +624,6 @@ $settings['update_free_access'] = FALSE;
  * @see \Drupal\Component\FileSystem\FileSystem::getOsTemporaryDirectory()
  */
 # $settings['file_temp_path'] = '/tmp';
-$settings['file_temp_path'] = '/tmp';
-
-$settings['translations'] = '/tmp/translations';
 
 /**
  * Session write interval:
@@ -906,8 +902,7 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-#$settings['config_sync_directory'] = 'sites/default/files/config_dNAJVc1hUTIQuQbYqPCiJ-HjBRdMd_lJ6-crr8D8Ds1Jy0gAkxS5ywmtjac9M5sIGBSc1TRuHw/sync';
-$settings['config_sync_directory'] = '../sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_dNAJVc1hUTIQuQbYqPCiJ-HjBRdMd_lJ6-crr8D8Ds1Jy0gAkxS5ywmtjac9M5sIGBSc1TRuHw/sync';
 
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';

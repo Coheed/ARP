@@ -1,0 +1,7 @@
+name: 'Calculators API'
+type: module
+description: 'API für verschiedene Rechner wie GOZ-Steigerungsrechner.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:node

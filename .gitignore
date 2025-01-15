@@ -70,3 +70,4 @@
 /drupal/modules/contrib/
 /drupal/themes/contrib/
 .ddev
+permission_drupal.sh
